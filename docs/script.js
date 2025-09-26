@@ -40,6 +40,15 @@ const students = [
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
+  {
+    name: "THE-AGAG",
+    photo: "img/agag.png",
+    role: "Développeur Java & Spigot",
+    email: "the-agag@exemple.com",
+    github: "https://github.com/THE-AGAG",
+    tech: ["Java", "Spigot", "Bukkit", "Maven", "Git"],
+    bio: "Créateur de plugins / Mods Minecraft."
+  },
     {
     name: "B2spirit66",
     photo: "img/cropped-bonnibel 2.jpg",
@@ -48,15 +57,9 @@ const students = [
     github: "https://github.com/B2spirit66",
     tech: ["Python", "HTML", "Docker"],
     bio: "want to do pentesting."
-  },  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-    role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },  {
+  },
+
+ {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
