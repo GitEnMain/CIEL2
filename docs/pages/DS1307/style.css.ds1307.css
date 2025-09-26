@@ -21,12 +21,12 @@ img {
 }
 .header {
     display: flex;
-    align-items: normal; /* aligne verticalement l'image et le texte */
-    gap: 10px; /* espace entre le texte et l'image */
+    align-items: normal;
+    gap: 10px; 
   }
   
   .arduino-logo {
-    width: 70px; /* taille petite */
-    height: auto; /* conserve les proportions */
+    width: 70px;
+    height: auto;
   }
   
