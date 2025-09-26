@@ -49,7 +49,7 @@ const students = [
     tech: ["Java", "Spigot", "Bukkit", "Maven", "Git"],
     bio: "Créateur de plugins / Mods Minecraft."
   },
-    {
+  {
     name: "B2spirit66",
     photo: "img/cropped-bonnibel 2.jpg",
     role: "Étudiant BTS CIEL",
@@ -58,9 +58,7 @@ const students = [
     tech: ["Python", "HTML", "Docker"],
     bio: "want to do pentesting."
   },
-
- {
-  },  {
+  {
     name: "anto",
     photo: "img/antonin-upjv_pic.PNG",
     role: "Étudiant BTS CIEL",
@@ -68,7 +66,8 @@ const students = [
     github: "https://github.com/antonin-upjv",
     tech: ["UX", "UI", "Pixelmator Pro"],
     bio: "Hobbyist UX/UI designer"
-  },  {
+  },
+  {
     name: "Mams05",
     photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
@@ -76,28 +75,17 @@ const students = [
     github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-  },  {
-<<<<<<< HEAD
-    name: "mhbvl6",
-    photo: "img/kidbuu.png",
-    role: "Ingénieur",
-    email: "cars60@gmail.com",
-    github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Maths Spé", "Porshe"],
-    bio: "gt3rs."
-  },    {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-=======
+  },
+  {
     name: "Tutur9",
     photo: "img/logopdp.png",
->>>>>>> 9c3c32e3e79b7aacbab0b125f41451120934002a
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Python", "HTML", "Docker"],
     bio: "Recherche d'argent."
-  },  {
+  },
+  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -105,7 +93,8 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-  },  {
+  },
+  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -113,7 +102,8 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-  },  {
+  },
+  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -121,7 +111,8 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-  },  {
+  },
+  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -129,7 +120,8 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-  },  {
+  },
+  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -137,7 +129,8 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-  },  {
+  },
+  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -145,7 +138,8 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-  },  {
+  },  
+  {
     name: "Lucas, zwakss1",
     photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
@@ -153,7 +147,7 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Master sur pokemon Unite"
-  },
+  }
 ];
 
 
