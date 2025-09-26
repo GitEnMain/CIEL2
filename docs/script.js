@@ -49,13 +49,13 @@ const students = [
     tech: ["Python", "HTML", "Docker"],
     bio: "want to do pentesting."
   },  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
+    name: "anto",
+    photo: "img/antonin-upjv_pic.PNG",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    email: "antonin.lespagnol@etud.u-picardie.fr",
+    github: "https://github.com/antonin-upjv",
+    tech: ["UX", "UI", "Pixelmator Pro"],
+    bio: "Hobbyist UX/UI designer"
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
