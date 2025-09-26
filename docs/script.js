@@ -113,6 +113,67 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
+<<<<<<< HEAD
+=======
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+    name: "aAdri1",
+    photo: "img/Shrek.jpg",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+<<<<<<< HEAD
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+=======
+  },  
+  {
+>>>>>>> b70f092c7784672387c0da1dabf9b55b2f0587c8
     name: "Lucas, zwakss1",
     photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
