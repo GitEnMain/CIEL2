@@ -48,7 +48,57 @@ const students = [
     github: "https://github.com/B2spirit66",
     tech: ["Python", "HTML", "Docker"],
     bio: "want to do pentesting."
+<<<<<<< HEAD
   },  {
+=======
+  },
+  {
+    name: "anto",
+    photo: "img/antonin-upjv_pic.PNG",
+    role: "Étudiant BTS CIEL",
+    email: "antonin.lespagnol@etud.u-picardie.fr",
+    github: "https://github.com/antonin-upjv",
+    tech: ["UX", "UI", "Pixelmator Pro"],
+    bio: "Hobbyist UX/UI designer"
+  },
+  {
+    name: "Mams05",
+    photo: "img/fcb.jpg",
+>>>>>>> 7382a1777f89514d95177d3db112fbdf00db3c00
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+    name: "Tutur9",
+    photo: "img/logopdp.png",
+    role: "Étudiant BTS CIEL",
+    email: "acatteau2@eduhdf.fr",
+    github: "https://github.com/GitEnMain/CIEL2.git",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Recherche d'argent."
+  },
+  {
+<<<<<<< HEAD
+    name: "Orzo12",
+    photo: "img/Dragon Ball Z.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "https://github.com/orzo12",
+=======
+    name: "raizoFR",
+    photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
+    role: "Étudiant BTS CIEL",
+    email: "bryancramer51@gmail.com",
+    github: "",
+>>>>>>> 5f5470a10231c43e477b7053d4329d88a3c9b17e
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+>>>>>>> b70f092c7784672387c0da1dabf9b55b2f0587c8
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -56,6 +106,7 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
+<<<<<<< HEAD
   },  {
     name: "Valentin760",
     photo: "img/Paris_Saint-Germain_Logo.svg.png",
@@ -107,6 +158,12 @@ const students = [
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
+=======
+  },
+  {
+    name: "aAdri1",
+    photo: "img/Shrek.jpg",
+>>>>>>> b70f092c7784672387c0da1dabf9b55b2f0587c8
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
