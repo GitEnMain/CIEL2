@@ -13,14 +13,14 @@
 // =============================================================
 
 const students = [
-  {
-    name: "mhbvl6",
-    photo: "img/kidbuu.png",
-    role: "Ingénieur",
-    email: "cars60@gmail.com",
-    github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Maths Spé", "Porshe"],
-    bio: "gt3rs."
+{
+    name: "Albert Einstein",
+    photo: "img/einstein.png",
+    role: "Physicien théoricien — Prix Nobel 1921 ",
+    email: "albert.einstein@groscerveau.com",
+    github: "https://github.com/albert-einstein",
+    tech: ["Physique quantique", "Relativité générale"],
+    bio: "L’imagination est plus importante que le savoir."
   },
   {
     name: "Alice Liddell",
@@ -69,21 +69,34 @@ const students = [
     tech: ["UX", "UI", "Pixelmator Pro"],
     bio: "Hobbyist UX/UI designer"
   },  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
+    name: "Mams05",
+    photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "mthiam@eduhdf.fr",
+    github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },  {
+<<<<<<< HEAD
+    name: "mhbvl6",
+    photo: "img/kidbuu.png",
+    role: "Ingénieur",
+    email: "cars60@gmail.com",
+    github: "https://github.com/GitEnMain/CIEL2.git",
+    tech: ["Maths Spé", "Porshe"],
+    bio: "gt3rs."
+  },    {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
+=======
+    name: "Tutur9",
+    photo: "img/logopdp.png",
+>>>>>>> 9c3c32e3e79b7aacbab0b125f41451120934002a
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "acatteau2@eduhdf.fr",
+    github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    bio: "Recherche d'argent."
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
