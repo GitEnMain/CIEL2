@@ -1,0 +1,61 @@
+/* Effet d'agrandissement sur les images au survol */
+img:hover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.25);
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+/* General style for the page body */
+body {
+  padding-left: 1em; /* Shift content to the right */
+  font-family: Georgia, "Arial", Times New Roman, Times, serif; /* Main font */
+  color: #FFFFFF;  /* Text color: white */
+  background: radial-gradient(circle, #fffb01, #710171); /* Radial gradient: pale orange to purple */
+}
+
+/* Style for headers */
+h1, h2, h3, h4, h5, h6{
+  font-family: "Comic Sans MS", Helvetica, sans-serif; /* Header font */
+  color: #FFFFFF; /* Header text color: white */
+}
+h1 {
+  font-size: 2.5em; /* Size for h1 headers */
+}
+p, li {
+  font-family: "Comic Sans MS", Helvetica, sans-serif; /* Font for paragraphs */
+  font-size: 1.2em; /* Size for paragraphs */
+  line-height: 1.6; /* Line spacing */
+  margin-bottom: 1em; /* Space below paragraphs */
+  text-align: justify; /* Justified text */
+  text-justify: inter-word; /* Justify by word spacing */
+  text-shadow: 1px 1px 2px #000000; /* Text shadow for better readability */
+  color: #000000; /* Paragraph text color: white */
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.accordion.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: rgb(255, 255, 255);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
