@@ -14,13 +14,13 @@
 
 const students = [
   {
-    name: "Albert Einstein",
-    photo: "img/einstein.png",
-    role: "Physicien théoricien — Prix Nobel 1921 ",
-    email: "albert.einstein@groscerveau.com",
-    github: "https://github.com/albert-einstein",
-    tech: ["Physique quantique", "Relativité générale"],
-    bio: "L’imagination est plus importante que le savoir."
+    name: "mhbvl6",
+    photo: "img/kidbuu.png",
+    role: "Ingénieur",
+    email: "cars60@gmail.com",
+    github: "https://github.com/GitEnMain/CIEL2.git",
+    tech: ["Maths Spé", "Porshe"],
+    bio: "gt3rs."
   },
   {
     name: "Alice Liddell",
