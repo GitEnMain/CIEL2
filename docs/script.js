@@ -138,7 +138,7 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Master sur pokemon Unite"
-  }
+  },
 ];
 
 
