@@ -121,13 +121,13 @@ const students = [
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
+    name: "Lucas, zwakss1",
+    photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    bio: "Master sur pokemon Unite"
   },
 ];
 
