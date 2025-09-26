@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trombinoscope — BTS CIEL 2e année</title>
+  <meta name="description" content="Mini-projet Git/GitHub : Trombinoscope de la classe. Chaque élève complète ses infos dans le JavaScript." />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="title"><span class="badge">Mini-projet</span> Trombinoscope — BTS CIEL 2e année</div>
+      <div class="panel">
+        <div class="controls">
+          <label class="search" aria-label="Rechercher par nom, techno ou rôle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 21l-4.2-4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <input id="q" type="search" placeholder="Rechercher un(e) camarade ou une techno…" autocomplete="off" />
+          </label>
+          <div class="hint">Astuce : appuie sur <span class="kbd">/</span> pour chercher</div>
+        </div>
+      </div>
+    </header>
+
+    <main id="list" class="grid" aria-live="polite"></main>
+    <p id="empty" class="empty" hidden>Aucune personne ne correspond à cette recherche.</p>
+
+    <footer>
+      <p>
+        Chaque élève édite le <span class="kbd">JavaScript</span> (tableau <span class="kbd">students</span>) pour ajouter sa fiche : nom, photo, email, GitHub et 3 technos.
+      </p>
+    </footer>
+  </div>
+
+  <!-- =============================================================
+       GUIDE PROF / TP (à laisser en commentaire dans le code)
+
+       1) Chaque étudiant clone le dépôt et ouvre index.html.
+       2) Dans script.js, chercher le tableau `students` et ajouter son objet.
+       3) Commit & push. Vérifier l’affichage sur GitHub Pages.
+
+       Conseils:
+       - Image (un avatar est conseillé) : ajoutez l'image dans /img/prenom.jpg puis photo: "img/prenom.jpg"
+       - Respecter la confidentialité: email facultatif.
+       - Imposer 3 tags techno minimum par élève (ex: "Python", "Linux", "Cisco").
+     ============================================================= -->
+</body>
+</html>
