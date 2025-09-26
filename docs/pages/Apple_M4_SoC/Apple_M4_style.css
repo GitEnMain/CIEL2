@@ -1,0 +1,45 @@
+body {
+    color:#D3D3D3;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+
+h1 {
+    color: #30598E;
+    text-align: center;
+}
+
+h2 {
+    color: #5F8BC0;
+    text-align: justify;
+}
+
+.media-image {
+    text-align: center;
+}
+
+.media-interface {
+    width: 30px;
+}
+
+li {
+    color: #86B3E6;
+}
+
+a:link {
+    color: #86B3E6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:active {
+    color: red;
+}
