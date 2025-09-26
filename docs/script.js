@@ -57,11 +57,11 @@ const students = [
     tech: ["UX", "UI", "Pixelmator Pro"],
     bio: "Hobbyist UX/UI designer"
   },  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
+    name: "Mams05",
+    photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "mthiam@eduhdf.fr",
+    github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },  {
