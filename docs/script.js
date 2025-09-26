@@ -50,7 +50,7 @@ const students = [
     bio: "want to do pentesting."
   },  {
     name: "anto",
-    photo: "img/antonin-upjv.PNG",
+    photo: "img/antonin-upjv_pic.PNG",
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
