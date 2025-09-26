@@ -14,13 +14,13 @@
 
 const students = [
   {
-    name: "Albert Einstein",
-    photo: "img/einstein.png",
-    role: "Physicien théoricien — Prix Nobel 1921 ",
-    email: "albert.einstein@groscerveau.com",
-    github: "https://github.com/albert-einstein",
-    tech: ["Physique quantique", "Relativité générale"],
-    bio: "L’imagination est plus importante que le savoir."
+    name: "mhbvl6",
+    photo: "img/kidbuu.png",
+    role: "Ingénieur",
+    email: "cars60@gmail.com",
+    github: "https://github.com/GitEnMain/CIEL2.git",
+    tech: ["Maths Spé", "Porshe"],
+    bio: "gt3rs."
   },
   {
     name: "Alice Liddell",
@@ -60,13 +60,14 @@ const students = [
   },
 
  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
+  },  {
+    name: "anto",
+    photo: "img/antonin-upjv_pic.PNG",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    email: "antonin.lespagnol@etud.u-picardie.fr",
+    github: "https://github.com/antonin-upjv",
+    tech: ["UX", "UI", "Pixelmator Pro"],
+    bio: "Hobbyist UX/UI designer"
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
@@ -131,6 +132,14 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
+  },  {
+    name: "Lucas, zwakss1",
+    photo: "img/fish.jpg",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Master sur pokemon Unite"
   },
 ];
 
