@@ -13,6 +13,16 @@
 // =============================================================
 
 const students = [
+<<<<<<< HEAD
+  {
+    name: "mhbvl6",
+    photo: "img/kidbuu.png",
+    role: "Ingénieur",
+    email: "cars60@gmail.com",
+    github: "https://github.com/GitEnMain/CIEL2.git",
+    tech: ["Maths Spé", "Porsche"],
+    bio: "gt3rs."
+=======
 {
     name: "Albert Einstein",
     photo: "img/einstein.png",
@@ -21,6 +31,7 @@ const students = [
     github: "https://github.com/albert-einstein",
     tech: ["Physique quantique", "Relativité générale"],
     bio: "L’imagination est plus importante que le savoir."
+>>>>>>> 7382a1777f89514d95177d3db112fbdf00db3c00
   },
   {
     name: "Alice Liddell",
@@ -40,6 +51,11 @@ const students = [
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
+<<<<<<< HEAD
+    {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+=======
   {
     name: "THE-AGAG",
     photo: "img/Java_Logo_Gaetan.png",
@@ -52,10 +68,25 @@ const students = [
   {
     name: "B2spirit66",
     photo: "img/cropped-bonnibel 2.jpg",
+>>>>>>> 7382a1777f89514d95177d3db112fbdf00db3c00
     role: "Étudiant BTS CIEL",
-    email: "placeholder@placeholder.com",
-    github: "https://github.com/B2spirit66",
+    email: "",
+    github: "",
     tech: ["Python", "HTML", "Docker"],
+<<<<<<< HEAD
+    bio: "Veut bosser en devops."
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+=======
     bio: "want to do pentesting."
   },
   {
@@ -70,9 +101,10 @@ const students = [
   {
     name: "Mams05",
     photo: "img/fcb.jpg",
+>>>>>>> 7382a1777f89514d95177d3db112fbdf00db3c00
     role: "Étudiant BTS CIEL",
-    email: "mthiam@eduhdf.fr",
-    github: "https://github.com/GitEnMain/CIEL2.git",
+    email: "",
+    github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -86,11 +118,19 @@ const students = [
     bio: "Recherche d'argent."
   },
   {
+<<<<<<< HEAD
     name: "Orzo12",
     photo: "img/Dragon Ball Z.png",
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
+=======
+    name: "raizoFR",
+    photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
+    role: "Étudiant BTS CIEL",
+    email: "bryancramer51@gmail.com",
+    github: "",
+>>>>>>> 5f5470a10231c43e477b7053d4329d88a3c9b17e
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -138,16 +178,35 @@ const students = [
     github: "",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
+<<<<<<< HEAD
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+=======
   },  
   {
     name: "Lucas, zwakss1",
     photo: "img/fish.jpg",
+>>>>>>> 7382a1777f89514d95177d3db112fbdf00db3c00
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
     tech: ["Python", "HTML", "Docker"],
+<<<<<<< HEAD
+    bio: "Veut bosser en devops."
+  },
+=======
     bio: "Master sur pokemon Unite"
   }
+>>>>>>> 7382a1777f89514d95177d3db112fbdf00db3c00
 ];
 
 
