@@ -65,13 +65,13 @@ const students = [
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
+    name: "Tutur9",
+    photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "acatteau2@eduhdf.fr",
+    github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    bio: "Recherche d'argent."
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
