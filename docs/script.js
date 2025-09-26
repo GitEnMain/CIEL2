@@ -41,13 +41,13 @@ const students = [
     bio: "Smashing !"
   },
     {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
+    name: "B2spirit66",
+    photo: "img/cropped-bonnibel 2.jpg",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "placeholder@placeholder.com",
+    github: "https://github.com/B2spirit66",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    bio: "want to do pentesting."
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
