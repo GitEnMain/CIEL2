@@ -19,7 +19,7 @@ const students = [
     role: "Ingénieur",
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Maths Spé", "Porshe"],
+    tech: ["Maths Spé", "Porsche"],
     bio: "gt3rs."
   },
   {
@@ -41,30 +41,6 @@ const students = [
     bio: "Smashing !"
   },
     {
-    name: "B2spirit66",
-    photo: "img/cropped-bonnibel 2.jpg",
-    role: "Étudiant BTS CIEL",
-    email: "placeholder@placeholder.com",
-    github: "https://github.com/B2spirit66",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "want to do pentesting."
-  },  {
-    name: "anto",
-    photo: "img/antonin-upjv_pic.PNG",
-    role: "Étudiant BTS CIEL",
-    email: "antonin.lespagnol@etud.u-picardie.fr",
-    github: "https://github.com/antonin-upjv",
-    tech: ["UX", "UI", "Pixelmator Pro"],
-    bio: "Hobbyist UX/UI designer"
-  },  {
-    name: "Mams05",
-    photo: "img/fcb.jpg",
-    role: "Étudiant BTS CIEL",
-    email: "mthiam@eduhdf.fr",
-    github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -121,13 +97,37 @@ const students = [
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },  {
-    name: "Lucas, zwakss1",
-    photo: "img/fish.jpg",
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Master sur pokemon Unite"
+    bio: "Veut bosser en devops."
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
   },
 ];
 
