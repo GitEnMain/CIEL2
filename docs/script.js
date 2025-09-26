@@ -14,6 +14,18 @@
 
 const students = [
   {
+<<<<<<< HEAD
+=======
+    name: "mhbvl6",
+    photo: "img/kidbuu.png",
+    role: "Ingénieur",
+    email: "cars60@gmail.com",
+    github: "https://github.com/GitEnMain/CIEL2.git",
+    tech: ["Maths Spé", "Porsche"],
+    bio: "gt3rs."
+  },
+  {
+>>>>>>> d4e0db3988215ea87e460a4db63e9d37c81b037c
     name: "Albert Einstein",
     photo: "img/einstein.png",
     role: "Physicien théoricien — Prix Nobel 1921 ",
@@ -40,7 +52,20 @@ const students = [
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
+<<<<<<< HEAD
     {
+=======
+  {
+    name: "THE-AGAG",
+    photo: "img/Java_Logo_Gaetan.png",
+    role: "Développeur Java & Spigot",
+    email: "the-agag@exemple.com",
+    github: "https://github.com/THE-AGAG",
+    tech: ["Java", "Spigot", "Bukkit", "Maven", "Git"],
+    bio: "Créateur de plugins / Mods Minecraft."
+  },
+  {
+>>>>>>> d4e0db3988215ea87e460a4db63e9d37c81b037c
     name: "B2spirit66",
     photo: "img/cropped-bonnibel 2.jpg",
     role: "Étudiant BTS CIEL",
@@ -64,7 +89,6 @@ const students = [
   {
     name: "Mams05",
     photo: "img/fcb.jpg",
->>>>>>> 7382a1777f89514d95177d3db112fbdf00db3c00
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
@@ -81,24 +105,30 @@ const students = [
     bio: "Recherche d'argent."
   },
   {
-<<<<<<< HEAD
     name: "Orzo12",
     photo: "img/Dragon Ball Z.png",
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
-=======
+    tech: "",
+    bio: "",
+  },
+  {
     name: "raizoFR",
     photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
     github: "",
->>>>>>> 5f5470a10231c43e477b7053d4329d88a3c9b17e
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
   {
+<<<<<<< HEAD
 >>>>>>> b70f092c7784672387c0da1dabf9b55b2f0587c8
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d4e0db3988215ea87e460a4db63e9d37c81b037c
     name: "Yanis Dupont",
     photo: "img/lapin.png",
     role: "Étudiant BTS CIEL",
@@ -180,12 +210,26 @@ const students = [
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
+<<<<<<< HEAD
+=======
+=======
+  },  
+  {
+>>>>>>> b70f092c7784672387c0da1dabf9b55b2f0587c8
+    name: "Lucas, zwakss1",
+    photo: "img/fish.jpg",
+>>>>>>> d4e0db3988215ea87e460a4db63e9d37c81b037c
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
     tech: ["Python", "HTML", "Docker"],
+<<<<<<< HEAD
     bio: "Veut bosser en devops."
   },
+=======
+    bio: "Master sur pokemon Unite"
+  }
+>>>>>>> d4e0db3988215ea87e460a4db63e9d37c81b037c
 ];
 
 
