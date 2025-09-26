@@ -65,6 +65,7 @@ const students = [
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },  {
+<<<<<<< HEAD
     name: "mhbvl6",
     photo: "img/kidbuu.png",
     role: "Ingénieur",
@@ -75,11 +76,15 @@ const students = [
   },    {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
+=======
+    name: "Tutur9",
+    photo: "img/logopdp.png",
+>>>>>>> 9c3c32e3e79b7aacbab0b125f41451120934002a
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "acatteau2@eduhdf.fr",
+    github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    bio: "Recherche d'argent."
   },  {
     name: "Yanis Dupont",
     photo: "img/lapin.png",
