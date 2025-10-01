@@ -59,7 +59,7 @@ body {
 .textBipo{
   display: inline-block;
   font-size: 2em;
-  margin-bottom: 50px; /* réduit l’espace en bas*/
+  margin-bottom: 200px; /* réduit l’espace en bas*/
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /*relief */
 }
@@ -120,8 +120,8 @@ body {
   display: flex;           /* mettre en ligne l'image et le texte */ 
   align-items: center;     /* centre verticalement */
   justify-content: center; /* centre horizontalement */
-  gap: 100px;               /* espace entre image et texte */
-  margin-bottom: 100px;     /* espace sous le conteneur */
+  gap: 200px;               /* espace entre image et texte */
+  margin-bottom: 200px;     /* espace en dessous*/
 }
 
 .transBi { /* image du transistor */
@@ -131,6 +131,28 @@ body {
 }
 
 .transBipo { /* texte à côté de l'image */
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  margin-bottom: 100px;
+}
+
+
+.MOST{/* image + texte */
+  display: flex;           /* mettre en ligne l'image et le texte */ 
+  align-items: center;     /* centre verticalement */
+  justify-content: center; /* centre horizontalement */
+  gap: 200px;               /* espace entre image et texte */
+  margin-bottom: 200px;     /* espace en dessous*/
+}
+
+.transMOSFET{
+  max-width: 350px;  /* largeur max de l'image */
+  height: auto;/* conserve les proportions */
+  margin-right: 40px;
+}
+
+.textMOSFET{
   font-size: 2em;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
