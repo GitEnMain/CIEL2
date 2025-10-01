@@ -1,17 +1,30 @@
-// =============================================================
-//  👇👇👇 ÉLÈVES : COMPLÉTEZ / AJOUTEZ VOTRE FICHE ICI 👇👇👇
-//  Modèle d'objet :
-//  {
-//    name: "Prénom NOM",
-//    photo: "img/prenom.jpg" // facultatif, sinon avatar à initiales
-//    role: "Étudiant(e) BTS CIEL",
-//    email: "prenom.nom@exemple.com", // facultatif
-//    github: "https://github.com/votre-pseudo", // facultatif
-//    pages : "chemin d'accès"
-//    tech: ["Python", "Réseaux", "Linux"], // 1–5 éléments
-//    bio: "Centres d’intérêt / mot-clé (optionnel)"
-//  }
-// =============================================================
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("themeToggle");
+  if (!btn) return;
+
+  // Lire le thème stocké
+  let theme = localStorage.getItem("theme") || "auto";
+  applyTheme(theme);
+
+  btn.addEventListener("click", () => {
+    if (theme === "dark") theme = "light";
+    else theme = "dark";
+    applyTheme(theme);
+    localStorage.setItem("theme", theme);
+  });
+
+  function applyTheme(mode) {
+    if (mode === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      btn.textContent = "🌙";
+    } else if (mode === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+      btn.textContent = "☀️";
+    }
+  }
+});
+
+
 
 const students = [
   {
@@ -86,6 +99,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
+    web: "pages/condensateur/condensateur.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -95,7 +109,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	pages : "C:\Users\acatteau2\CIEL2\docs\pages\DS1307\DS1307.html",
+	Web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -130,8 +144,8 @@ const students = [
     name: "aAdri1",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "a.pottier2006@gmail.com",
+    github: "https://github.com/aAdri1",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -239,7 +253,6 @@ document.addEventListener('error', (e)=>{
     }
   }
 }, true);
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("themeToggle");
