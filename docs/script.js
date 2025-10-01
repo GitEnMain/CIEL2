@@ -135,8 +135,8 @@ const students = [
     name: "Valentin760",
     photo: "img/Paris_Saint-Germain_Logo.svg.png",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "valentin.banquet@sfr.fr",
+    github: "https://github.com/Valentin760",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
