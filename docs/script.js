@@ -91,7 +91,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Python", "HTML", "Docker"],
+    tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
   {
