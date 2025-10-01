@@ -126,7 +126,13 @@ header.hero { display: grid; gap: 10px; align-items: center; margin: 8px 0 20px;
   color: var(--muted);
   margin: 8px 14px;
   line-height: 1.4;
+  flex-grow: 1;           /* occupe l’espace dispo */
+  display: -webkit-box;   /* permet un effet “multi-ligne tronquée” */
+  -webkit-line-clamp: 4;  /* limite à 4 lignes visibles */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
+
 
 .card-footer {
   margin-top: auto;
