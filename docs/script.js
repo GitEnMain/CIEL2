@@ -99,7 +99,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
-    web: "pages/condensateur/condensateur.html",
+    Web: "pages/condensateur/condensateur.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
