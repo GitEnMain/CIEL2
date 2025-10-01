@@ -19,17 +19,18 @@ setInterval(() => showSlide(index + 1), 3000);
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll('.media-image-title');
 
+  images.forEach(img => {
+    img.style.transition = "transform 0.3s ease"; // on met la transition une seule fois
 
+    img.addEventListener('mouseenter', () => {
+      img.style.transform = 'scale(1.1)';
+    });
 
-
-const img = document.querySelector('.media-image-title');
-
-img.addEventListener('mouseenter', () => {
-  img.style.transform = 'scale(1.1)'; // Grossit de 10%
-  img.style.transition = 'transform 0.3s ease'; // Animation douce
-});
-
-img.addEventListener('mouseleave', () => {
-  img.style.transform = 'scale(1)'; // Retour à la taille normale
+    img.addEventListener('mouseleave', () => {
+      img.style.transform = 'scale(1)';
+    });
+  });
 });
