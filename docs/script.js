@@ -142,14 +142,13 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
-    name: "aAdri1",
+    name: "Adrien (aAdri1)",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
-    Web: "file:///P:/apottier5/CIEL%20(2)/RMPE/potentiomettre.html",
 
   },
   {
