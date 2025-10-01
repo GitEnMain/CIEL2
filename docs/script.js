@@ -82,8 +82,8 @@ const students = [
     name: "Mams05",
     photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "mthiam@eduhdf.fr",
+    github: "https://github.com/mams05",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -93,7 +93,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Python", "HTML", "Docker"],
+    tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
   {
