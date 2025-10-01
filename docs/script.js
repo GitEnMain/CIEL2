@@ -66,7 +66,7 @@ const students = [
     bio: "gt3rs."
   },
   {
-    name: "THE-AGAG",
+    name: "THE-AGAG (Gaëtan)",
     photo: "img/Java_Logo_Gaetan.png",
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
