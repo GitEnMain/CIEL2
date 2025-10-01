@@ -51,21 +51,22 @@ const students = [
     role: "Explorateur, naturaliste et présentateur de documentaires animaliers",
     email: "nigel.delajungle@cocotier.com",
     github: "https://github.com/GitEnMain",
-    Web: "pages/raspberry/raspberry.html",
+    web: "pages/raspberry/raspberry.html",
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
   {
-    name: "mhbvl6",
+    name: "Mohamed mhbvl6",
     photo: "img/kidbuu.png",
-    role: "Ingénieur",
+    role: "Ingénieur en informatqiue",
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Maths Spé", "Porsche"],
+    web: "pages/resistance/resistance.html",
+    tech: ["Automobile", "Porsche", "Boxe Anglaise"],
     bio: "gt3rs."
   },
   {
-    name: "THE-AGAG",
+    name: "THE-AGAG (Gaëtan)",
     photo: "img/Java_Logo_Gaetan.png",
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
@@ -90,7 +91,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
-    Web: "pages/Apple_M4_SoC/Apple_M4_index.html",
+    web: "pages/Apple_M4_SoC/Apple_M4_index.html",
     tech: ["UX", "UI", "Pixelmator Pro"],
     bio: "Hobbyist UX/UI designer"
   },
@@ -105,12 +106,12 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
-    name: "Tutur9",
+    name: "Artur, Tutur9",
     photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	Web: "pages/DS1307/DS1307.html",
+	web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -133,11 +134,12 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
-    name: "Valentin760",
+    name: "Valentin, Valentin760",
     photo: "img/Paris_Saint-Germain_Logo.svg.png",
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
+    web: "hacheur_electronique.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -156,8 +158,9 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
+    web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Master sur pokemon Unite",
+    bio: "Master sur pokemon Unite.",
     Web:"pages/transistor/transistor.html"
   },
 ];
@@ -194,7 +197,7 @@ function cardTemplate(p){
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 .5a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58l-.02-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.46 11.46 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.25 2.86.12 3.16.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.47 5.93.43.37.82 1.11.82 2.24l-.01 3.32c0 .32.21.7.82.58A12 12 0 0012 .5z"/>
     </svg> GitHub</a>` : '';
-  const web = p.Web ? `<a class="btn" href="${sanitize(p.Web)}" title="Page Web">
+  const web = p.web ? `<a class="btn" href="${sanitize(p.web)}" title="Page Web">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
       <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="currentColor" stroke-width="2"/>
@@ -211,7 +214,12 @@ function cardTemplate(p){
         </div>
       </div>
       <div class="tags">${tech || ''}</div>
-      <div class="card-footer">${email} ${gh} ${web}</div>
+      <div class="bio">${sanitize(p.bio || '')}</div>
+
+      <div class="card-footer">
+        <div class="btn-row space-between">${email} ${gh}</div>
+        <div class="btn-row center">${web}</div>
+      </div>
     </article>`;
 }
 

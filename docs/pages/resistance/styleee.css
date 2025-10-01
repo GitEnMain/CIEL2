@@ -50,7 +50,7 @@ img {
     display: block;
 
     margin: 10px auto;
-
+    
 }
 
 
@@ -114,7 +114,7 @@ th, td {
 
 .card {
 
-    flex: 1;                    /* chaque carte prend la même place */
+    flex: 1;                    
 
     background: white;
 
@@ -136,7 +136,7 @@ th, td {
 
 .card:hover {
 
-    transform: translateY(-5px); /* petit effet au survol */
+    transform: translateY(-20px);    /* curseur sur la carte, elle monte*/
 
 }
 
@@ -146,9 +146,9 @@ th, td {
 
     width: 100%;
 
-    height: 150px;              /* fixe la taille */
+    height: 150px;              /*fixe la taille*/ 
 
-    object-fit: cover;          /* garde les proportions */
+    object-fit: cover;         
 
     border-radius: 6px;
 
@@ -164,7 +164,7 @@ th, td {
 
     margin: 10px 0;
 
-    color: #c44;                /* un rouge foncé comme ton exemple */
+    color: #2da3bb;                
 
 }
 
@@ -177,3 +177,31 @@ th, td {
     color: #333;
 
 }
+
+.back-btn {
+
+    font-family: "Comic Sans MS", Arial, sans-serif;
+
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+  
+    color: white;
+  
+    border: none;
+  
+    padding: 10px 20px;
+  
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+    font-size: 16px;
+  
+  }
+  
+  
+  
+  .back-btn:hover {
+  
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+  
+  }
