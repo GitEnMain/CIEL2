@@ -61,13 +61,8 @@ const students = [
     role: "Ingénieur en informatqiue",
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
-<<<<<<< HEAD
     web: "pages/resistance/resistance.html",
-    tech: ["Maths Spé", "Porsche"],
-=======
     tech: ["Automobile", "Porsche", "Boxe Anglaise"],
-    Web: "pages/resistance/resistance.html",
->>>>>>> 6e0044d4494ebd0123570c374f7973de79d46b9a
     bio: "gt3rs."
   },
   {
