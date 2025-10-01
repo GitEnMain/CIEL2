@@ -4,20 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Présentation DS1307</title>
-<link rel="stylesheet" href="style.css.ds1307.css">
+    <link rel="stylesheet" href="style.css.ds1307.css">
 </head>
 <body>
     <div class="container">
-        <h1> Composant DS1307<img src="c:\Users\acatteau2\CIEL2\docs\pages\DS1307\img\Arduino_Logo.png" alt="Logo Arduino" class="arduino-logo" /></h1>
-        
+
+
+        <div class="header">
+            <h1>Composant DS1307</h1>
+            <img src="img/Arduino_Logo.png" 
+                 alt="Logo Arduino" class="arduino-logo" />
+        </div>
+
         <p>
-            Le DS1307 est un circuit intégré utilisé comme horloge temps réel (RTC). Il permet de garder la trace de l'heure, des minutes, des secondes ainsi que de la date (jour, mois, année), même lorsque l'alimentation principale est coupée, grâce à une petite pile.
+            Le <strong>DS1307</strong> est un circuit intégré utilisé comme horloge temps réel (RTC). 
+            Il garde l’heure (heures, minutes, secondes) ainsi que la date (jour, mois, année), 
+            même lorsque l’alimentation principale est coupée, grâce à une pile bouton de secours.
         </p>
         <p>
-            Ce composant est souvent utilisé dans les projets électroniques pour garder l'heure exacte, notamment avec des microcontrôleurs comme Arduino. Le protocole I2C est utilisé grace a 2 fils SDA et SCL pour les DATA et l'horloge.
+            Il est largement utilisé avec des microcontrôleurs comme <strong>Arduino</strong> 
+            pour des projets nécessitant une mesure précise du temps. 
+            La communication se fait via le protocole <strong>I²C</strong>, 
+            en utilisant deux lignes : <code>SDA</code> (données) et <code>SCL</code> (horloge).
         </p>
-        <img src="c:\Users\acatteau2\CIEL2\docs\pages\DS1307\img\DS1307.png" alt="Module DS1307" />
-        <p>DS1307 module arduino</p>
+
+
+        <div class="image-block">
+            <img src="img/DS1307.png" alt="Module DS1307" />
+            <div class="caption">Module DS1307 pour Arduino</div>
+        </div>
+
+
+        <div class="image-block">
+            <img src="img/ds1307_pin.png" alt="PIN DS1307" class="pin" />
+            <div class="caption">Brochage du composant DS1307</div>
+        </div>
+
+
+        <h2>Caractéristiques principales :</h2>
+        <ul>
+            <li>Horloge temps réel (RTC) avec comptage secondes, minutes, heures, jour, mois, année.</li>
+            <li>Communication via bus I²C (adresse 0x68).</li>
+            <li>Alimentation 5V avec support de pile bouton (CR2032).</li>
+            <li>Précision : environ ±2 minutes par mois.</li>
+            <li>Stockage interne : 56 octets de RAM non volatile.</li>
+        </ul>
+
+        <h2>Applications typiques :</h2>
+        <p>
+            Le DS1307 est utilisé dans :
+        </p>
+        <ul>
+            <li>Stations météo avec horodatage des données.</li>
+            <li>Enregistreurs de données (data loggers).</li>
+            <li>Horloges électroniques et calendriers.</li>
+            <li>Projets domotiques nécessitant la gestion du temps.</li>
+        </ul>
+
     </div>
 </body>
 </html>
