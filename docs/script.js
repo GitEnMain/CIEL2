@@ -27,11 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const students = [
-<<<<<<< HEAD
-{
-=======
   {
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     name: "Albert Einstein",
     photo: "img/einstein.png",
     role: "Physicien théoricien — Prix Nobel 1921 ",
@@ -103,12 +99,8 @@ const students = [
     photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
-<<<<<<< HEAD
-    github: "https://github.com/GitEnMain/CIEL2.git",
-=======
     github: "https://github.com/mams05",
     web: "pages/condensateur/condensateur.html",
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -128,8 +120,6 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
-<<<<<<< HEAD
-=======
     tech: "",
     bio: "",
   },
@@ -139,7 +129,6 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
     github: "",
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -163,36 +152,6 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
-<<<<<<< HEAD
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-    role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },
-  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-    role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },
-  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-    role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },  
-  {
-=======
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     name: "Lucas, zwakss1",
     photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
@@ -200,14 +159,9 @@ const students = [
     github: "",
     web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
-<<<<<<< HEAD
-    bio: "Master sur pokemon Unite"
-  }
-=======
     bio: "Master sur pokemon Unite.",
     Web:"pages/transistor/transistor.html"
   },
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
 ];
 
 
