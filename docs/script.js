@@ -76,6 +76,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
+    Web: "pages/Apple_M4_SoC/Apple_M4_index.html",
     tech: ["UX", "UI", "Pixelmator Pro"],
     bio: "Hobbyist UX/UI designer"
   },
@@ -93,7 +94,8 @@ const students = [
     photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
-    github: "https://github.com/GitEnMain/CIEL2.git",
+    github: "https://github.com/Tutur9",
+	pages : "C:\Users\acatteau2\CIEL2\docs\pages\DS1307\DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
