@@ -1,42 +1,3 @@
-// Menu déroulant pour les specs du processeur AMD Ryzen 9 9950X3D
-document.addEventListener('DOMContentLoaded', function() {
-	var acc = document.getElementsByClassName('accordion');
-	for (var i = 0; i < acc.length; i++) {
-		acc[i].addEventListener('click', function() {
-			this.classList.toggle('active');
-			var panel = this.nextElementSibling;
-			if (panel.style.maxHeight) {
-				panel.style.maxHeight = null;
-			} else {
-				panel.style.maxHeight = panel.scrollHeight + 'px';
-			}
-		});
-	}
-
-	// Bouton tout ouvrir/fermer
-	var toggleAllBtn = document.getElementById('toggleAll');
-	if (toggleAllBtn) {
-		toggleAllBtn.addEventListener('click', function() {
-			var allOpen = true;
-			for (var i = 0; i < acc.length; i++) {
-				var panel = acc[i].nextElementSibling;
-				if (!acc[i].classList.contains('active') || !panel.style.maxHeight) {
-					allOpen = false;
-					break;
-				}
-			}
-			for (var i = 0; i < acc.length; i++) {
-				var panel = acc[i].nextElementSibling;
-				if (allOpen) {
-					acc[i].classList.remove('active');
-					panel.style.maxHeight = null;
-				} else {
-					acc[i].classList.add('active');
-					panel.style.maxHeight = panel.scrollHeight + 'px';
-				}
-			}
-		});
-	}
 
 	// --- Ribbons animation: traînée lumineuse bleue suivant le curseur ---
 	(function() {
@@ -59,9 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		var points = [];
 		var maxPoints = 20; // longueur de la traînée
 
-		// Paramètres ajustables
-		var fadeAlpha = 0.12; // plus petit = la traînée persiste plus longtemps (0.02..0.12)
-
 		// Add mouse/touch listeners
 		function addPoint(x, y) {
 			points.push({x: x, y: y, t: Date.now()});
@@ -80,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Draw loop
 		function draw() {
 			// slight fade to create trailing effect (use low alpha to gradually fade)
-			ctx.fillStyle = 'rgba(0,0,0,' + fadeAlpha + ')';
+			ctx.fillStyle = 'rgba(0,0,0,0.12 + fadeAlpha +)';
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 			if (points.length > 1) {
@@ -124,4 +82,3 @@ document.addEventListener('DOMContentLoaded', function() {
 		ctx.clearRect(0,0,canvas.width,canvas.height);
 		draw();
 	})();
-});
