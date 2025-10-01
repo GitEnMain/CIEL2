@@ -157,6 +157,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
+    web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Master sur pokemon Unite",
     Web:"pages/transistor/transistor.html"
