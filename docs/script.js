@@ -124,12 +124,12 @@ const students = [
     bio: "",
   },
   {
-    name: "raizoFR",
+    name: "Bryan raizoFR",
     photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
     github: "",
-    tech: ["Python", "HTML", "Docker"],
+    tech: ["DBZ", "dormir", "manger"],
     bio: "Veut bosser en devops."
   },
   {
