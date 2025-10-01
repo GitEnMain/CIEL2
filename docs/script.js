@@ -66,7 +66,7 @@ const students = [
     bio: "gt3rs."
   },
   {
-    name: "THE-AGAG",
+    name: "THE-AGAG (Gaëtan)",
     photo: "img/Java_Logo_Gaetan.png",
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
@@ -105,12 +105,12 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
-    name: "Artur Tutur9",
+    name: "Artur, Tutur9",
     photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	  web: "pages/DS1307/DS1307.html",
+	web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
