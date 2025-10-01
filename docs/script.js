@@ -58,10 +58,10 @@ const students = [
   {
     name: "mhbvl6",
     photo: "img/kidbuu.png",
-    role: "Ingénieur",
+    role: "Ingénieur en informatqiue",
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
-    tech: ["Maths Spé", "Porsche"],
+    tech: ["Automobile", "Porsche", "Boxe Anglaise"],
     Web: "pages/resistance/resistance.html",
     bio: "gt3rs."
   },
