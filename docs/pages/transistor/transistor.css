@@ -146,15 +146,21 @@ body {
   margin-bottom: 200px;     /* espace en dessous*/
 }
 
-.transMOSFET{
+.transMOSFET{ /*image*/
   max-width: 350px;  /* largeur max de l'image */
   height: auto;/* conserve les proportions */
   margin-right: 40px;
 }
 
-.textMOSFET{
+.textMOSFET{/*text*/
   font-size: 2em;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   margin-bottom: 100px;
+}
+
+.retour{/*image retour*/
+  max-width: 200px;  /* largeur max de l'image */
+  height: auto;/* conserve les proportions */
+  
 }
