@@ -139,7 +139,8 @@ const students = [
     email: "",
     github: "",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Master sur pokemon Unite"
+    bio: "Master sur pokemon Unite",
+    Web:"pages/transistor/transistor.html"
   },
 ];
 
