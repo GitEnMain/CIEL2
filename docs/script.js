@@ -75,11 +75,12 @@ const students = [
     bio: "Créateur de plugins / Mods Minecraft."
   },
   {
-    name: "B2spirit66",
+    name: "Cyril|B2spirit66",
     photo: "img/cropped-bonnibel 2.jpg",
     role: "Étudiant BTS CIEL",
     email: "placeholder@placeholder.com",
     github: "https://github.com/B2spirit66",
+    Web: "pages/diode/index.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "want to do pentesting."
   },
