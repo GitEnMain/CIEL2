@@ -21,9 +21,9 @@ Ce dépôt a pour objectif de vous initier à l’utilisation de **Git** et **Gi
 ---
 
 ## 📘 Projets proposés
-- ✍️ **Livre d’Or de la classe** → chaque étudiant ajoute sa présentation.  
-- 📘 **Glossaire collaboratif** → construire ensemble un dictionnaire de termes réseaux & informatique.  
-- 👥 **Trombinoscope (bonus)** → créer une page web simple listant les étudiants de la promo.  
+- ✍️ **Prise en main de git/gitBash** → chaque étudiant fait un premier commit.  
+- 📘 **Page Web** → créer une page web par étudiant en rapport avec un composant electronique utilisant les différents langages du web `Html`, `css`, `javascript`.  
+- 👥 **Trombinoscope** → créer une page web simple listant les étudiants de la promo.  
 
 ---
 
@@ -32,7 +32,8 @@ Ce dépôt a pour objectif de vous initier à l’utilisation de **Git** et **Gi
 - Cloner un dépôt GitHub  
 - Modifier un fichier et enregistrer ses changements  
 - Partager son travail avec la classe  
-- Résoudre un conflit simple  
+- Résoudre un conflit simple
+- Utiliser GitHub via gitBash et/ou via Visual Studio Code  
 
 ---
 

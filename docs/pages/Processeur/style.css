@@ -1,0 +1,178 @@
+/* General style for the page body */
+body {
+  padding-left: 1em; /* Shift content to the right */
+  font-family: Georgia, "Arial", Times New Roman, Times, serif; /* Main font */
+  color: #FFFFFF;  /* Text color: white */
+  background: radial-gradient(circle, #000000, #360136); /* Radial gradient: pale orange to purple */
+}
+
+/* Style for headers */
+h1, h2, h3, h4, h5, h6{
+  font-family: "Comic Sans MS", Helvetica, sans-serif; /* Header font */
+  color: #FFFFFF; /* Header text color: white */
+}
+h1 {
+  font-size: 2.5em; /* Size for h1 headers */
+}
+p, li, a {
+  font-family: "Comic Sans MS", Helvetica, sans-serif; /* Font for paragraphs */
+  font-size: 1.2em; /* Size for paragraphs */
+  line-height: 1.6; /* Line spacing */
+  margin-bottom: 1em; /* Space below paragraphs */
+  text-align: justify; /* Justified text */
+  text-justify: inter-word; /* Justify by word spacing */
+  text-shadow: 1px 1px 2px #000000; /* Text shadow for better readability */
+  color: #ffffff; /* Paragraph text color: white */
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.accordion.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: rgb(255, 255, 255);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #FFFFFF; /* Footer text color: white */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+button.accordion, #toggleAll {
+  border: none;
+  background: #710171;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+button.accordion:focus, #toggleAll:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.panel {
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+#toggleAll {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#toggleAll:hover {
+  background: #fffb01;
+  color: #000;
+}
+
+button.accordion:hover {
+  background: #fffb01;
+  color: #000;
+}
+
+button.accordion.active {
+  background: #fffb01;
+  color: #000;
+}
+      
+.panel {
+  background: #fff;
+  color: #000;
+}
+      
+.panel p, .panel li {
+  color: #000;
+}
+      
+.panel a {
+  color: #710171;
+}
+      
+.panel a:hover {
+  color: #fffb01;
+};
+      /* Style for images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img:hover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.25);
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+/* Style for links */
+
+a {
+  color: #710171; /* Link color: purple */
+  text-decoration: none; /* No underline */
+}
+
+a:hover {
+  color: #fffb01; /* Link hover color: pale orange */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Canvas ribbons (traînée lumineuse) */
+#ribbons-canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Allow clicks through canvas */
+  z-index: 1000; /* On top */
+  mix-blend-mode: screen; /* Nice additive blending */
+}
+
+/* Petite classe pour les boutons si besoin */
+.ribbon-glow-btn {
+  position: relative;
+}

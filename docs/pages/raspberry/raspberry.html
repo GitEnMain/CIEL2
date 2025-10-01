@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Présentation moderne du Raspberry Pi : modèles, spécifications, GPIO, usages et ressources.">
+  
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+
+  <title>Raspberry Pi — Vue d’ensemble & GPIO</title>
+
+
+</head>
+<body>
+  
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <div class="hero__badge">Guide Matériel</div>
+      <h1 class="hero__title"><span class="emoji" aria-hidden="true">🍓</span> Raspberry&nbsp;Pi</h1>
+      <p class="hero__subtitle">
+        Nano-ordinateur polyvalent pour l’apprentissage, l’IoT et les projets embarqués.
+        Découvrez ses modèles, ses spécifications et ses connectiques GPIO.
+      </p>
+
+
+      <nav class="hero__cta">
+        <a href="../../index.html" class="btn btn--ghost">Home</a>
+        <a href="#models" class="btn btn--ghost">Modèles</a>
+        <a href="#gpio" class="btn btn--ghost">GPIO</a>
+        <a href="#specs" class="btn btn--ghost">Spécifications</a>
+      </nav>
+    </div>
+
+    <button id="themeToggle" aria-label="Changer de thème">🌙</button>
+
+  </header>
+
+
+
+  <main class="container">
+    <section class="intro card">
+      <h2>Pourquoi le Raspberry&nbsp;Pi&nbsp;?</h2>
+      <p>
+        Compact, économique, basse consommation et doté d’environ <strong>40 broches GPIO</strong>, le Raspberry&nbsp;Pi
+        s’intègre aussi bien en <em>maker projects</em> (LED, capteurs, robotique) qu’en <em>edge computing</em> (serveurs légers, passerelles réseau).
+      </p>
+
+      <ul class="pill-list">
+        <li>Apprentissage Linux</li>
+        <li>Automatisation & IoT</li>
+        <li>Réseaux & Sécurité</li>
+        <li>Multimédia & Retro-gaming</li>
+      </ul>
+    </section>
+
+
+    <section id="models">
+      <h2>Modèles courants</h2>
+      <div class="grid cards">
+        <article class="card">
+          <div class="card__img"><img src="img/raspi4.png" alt="Raspberry Pi 4"></div>
+          <h3>Raspberry Pi 4</h3>
+          <p>Quad-core, 2–8&nbsp;Go de RAM, 2× micro-HDMI, USB&nbsp;3, Ethernet&nbsp;Gb.</p>
+          <ul class="spec-tags">
+            <li>ARM Cortex-A72</li><li>Wi-Fi / BT</li><li>USB-C Power</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__img"><img src="img/raspi5.png" alt="Raspberry Pi 5"></div>
+          <h3>Raspberry Pi 5</h3>
+          <p>CPU/GPU plus rapides, PCIe, encodeur vidéo renforcé, meilleures IO.</p>
+          <ul class="spec-tags">
+            <li>PCIe 2.0</li><li>2× 4K</li><li>LPDDR4X</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__img"><img src="img/PiZero2w.png" alt="Raspberry Pi Zero 2 W"></div>
+          <h3>Pi Zero&nbsp;2&nbsp;W</h3>
+          <p>Format mini, Wi-Fi, parfait pour capteurs, intégrations et objets connectés.</p>
+          <ul class="spec-tags">
+            <li>Très basse conso</li><li>GPIO 40 broches</li><li>uSD stockage</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__img"><img src="img/pico.png" alt="Raspberry Pi Pico"></div>
+          <h3>Raspberry Pi Pico</h3>
+          <p>Microcontrôleur économique et efficace, idéal pour l’embarqué et l’apprentissage du C/C++ ou MicroPython.</p>
+          <ul class="spec-tags">
+            <li>RP2040 Dual-core M0+</li><li>264 Ko SRAM</li><li>2 Mo Flash</li><li>26 GPIO</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="gpio" class="card">
+      <h2>Schéma simplifié des GPIO (40 broches)</h2>
+      <p class="muted">Plan logique. Vérifiez toujours la datasheet de votre modèle avant tout branchement réel.</p>
+      <figure class="gpio-figure">
+        <img src="img/gpio-40pins.png" alt="Schéma simplifié des 40 broches GPIO du Raspberry Pi" class="gpio-img">
+      </figure>
+      <p class="note">⚠️ Les attributions exactes (SDA/SCL, MOSI/MISO/SCLK, TX/RX, etc.) varient selon la révision.</p>
+    
+
+
+      <figcaption class="legend" id="gpio-legend">
+        <button class="dot v5"   data-key="v5"   aria-label="5V"   title="5V"></button> 5V
+        <button class="dot v33"  data-key="v33"  aria-label="3.3V" title="3.3V"></button> 3.3V
+        <button class="dot gnd"  data-key="gnd"  aria-label="GND"  title="GND"></button> GND
+        <button class="dot i2c"  data-key="i2c"  aria-label="I²C"  title="I²C"></button> I²C
+        <button class="dot spi"  data-key="spi"  aria-label="SPI"  title="SPI"></button> SPI
+        <button class="dot uart" data-key="uart" aria-label="UART" title="UART"></button> UART
+        <button class="dot gpio" data-key="gpio" aria-label="GPIO" title="GPIO"></button> GPIO
+      </figcaption>
+      
+      <p id="gpio-help" class="note muted" aria-live="polite"></p>
+    </section>
+
+    <section id="specs">
+      <h2>Spécifications (aperçu)</h2>
+      <div class="table-scroll">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>Modèle</th><th>CPU</th><th>RAM</th><th>Vidéo</th><th>Ports</th><th>Réseau</th><th>Alim</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pi 4</td><td>Quad-core A72</td><td>2–8&nbsp;Go</td><td>2× micro-HDMI (4K)</td>
+              <td>2× USB3, 2× USB2</td><td>GbE, Wi-Fi, BT</td><td>USB-C 5V/3A</td>
+            </tr>
+            <tr>
+              <td>Pi 5</td><td>CPU/GPU next-gen</td><td>4–8&nbsp;Go</td><td>2× micro-HDMI (4K)</td>
+              <td>USB3, PCIe (ext.)</td><td>GbE, Wi-Fi, BT</td><td>USB-C 5V/5A</td>
+            </tr>
+            <tr>
+              <td>Zero&nbsp;2&nbsp;W</td><td>Quad-core A53</td><td>512&nbsp;Mo</td><td>Mini-HDMI</td>
+              <td>USB OTG</td><td>Wi-Fi, BT</td><td>5V (USB)</td>
+            </tr>
+            <tr>
+              <td>Pico</td><td>RP2040 (Dual-core M0+)</td><td>264 Ko SRAM + 2 Mo Flash</td><td>—</td>
+              <td>26 GPIO (I²C, SPI, UART, ADC)</td><td>—</td><td>Micro-USB 5 V / GPIO 3,3 V</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Exemples d’usages</h2>
+      <div class="grid gallery">
+        <figure class="card media">
+          <div class="media__ph"><img src="img/serveur-local.png" alt="Serveur local" class="media__overlay"></div>
+          <figcaption>Serveur local (web, DNS, Pi-hole)</figcaption>
+        </figure>
+        <figure class="card media">
+          <div class="media__ph"><img src="img/station-iot.png" alt="Station IoT" class="media__overlay"></div>
+          <figcaption>Station IoT (capteurs : DHT11, lumière, etc.)</figcaption>
+        </figure>
+        <figure class="card media">
+          <div class="media__ph"><img src="img/robotique.png" alt="Robotique" class="media__overlay"></div>
+          <figcaption>Robotique (PWM, moteurs, télémétrie)</figcaption>
+        </figure>
+        <figure class="card media">
+          <div class="media__ph"><img src="img/affichage-kiosk.png" alt="Affichage Kiosk" class="media__overlay"></div>
+          <figcaption>Affichage & Kiosk (HDMI)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="faq" class="card">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Quel OS utiliser&nbsp;?</summary>
+        <p>Raspberry Pi OS (Debian) est recommandé. On peut aussi utiliser Ubuntu Server, DietPi, etc.</p>
+      </details>
+      <details>
+        <summary>Quel stockage&nbsp;?</summary>
+        <p>Carte micro-SD (classe A1/A2 conseillée) ou SSD via USB (performances supérieures).</p>
+      </details>
+      <details>
+        <summary>Alimentation & protection</summary>
+        <p>Alim USB-C 5V adaptée au modèle, boîtier ventilé pour charges lourdes (Pi 4/5).</p>
+      </details>
+    </section>
+  </main>
+
+  <button id="backToTop" aria-label="Revenir en haut" title="Retour en haut">▲</button>
+
+
+
+  <footer class="site-footer">
+    <div class="container"><p>Made with ♥</p></div>
+  </footer>
+</body>
+</html>

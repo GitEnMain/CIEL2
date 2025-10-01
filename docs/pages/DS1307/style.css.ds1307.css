@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2em;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: #2a7ae2;
+    font-size: 28px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1em;
+    border-radius: 8px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.arduino-logo {
+    width: 80px;
+    height: auto;
+}
+
+
+.image-block {
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.image-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.caption {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+    margin-top: 5px;
+}
+
+
+ul {
+    margin-left: 1.5em;
+    line-height: 1.6;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+button {
+    background-color: #2a7ae2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+button:hover {
+    background-color: #1d5bbf;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+button:active {
+    transform: scale(0.95);
+}

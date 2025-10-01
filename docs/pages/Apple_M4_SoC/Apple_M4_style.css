@@ -1,0 +1,124 @@
+body {
+    color:#D3D3D3;
+    font-family: 'Inter', ui-rounded, 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #000000;
+    padding: 50px;
+}
+
+h1 {
+    color: #30598E;
+    text-align: center;
+}
+
+h2 {
+    color: #5F8BC0;
+    text-align: justify;
+    text-decoration: underline;
+}
+
+.media-image-title {
+    text-align: center;
+    width: 800px;
+}
+
+.media-image-tab {
+    text-align: center;
+    width: 200px;
+}
+
+.media-interface {
+    width: 30px;
+}
+
+li {
+    color: #86B3E6;
+}
+
+table {
+  background-color: white;
+  border-collapse: separate; /* Nécessaire pour que border-radius fonctionne */
+  border-spacing: 0; /* Élimine l'espacement par défaut entre les cellules */
+  border: 1px solid #ccc; /* Bordure légère autour du tableau */
+  
+  border-radius: 20px;
+  overflow: hidden; /* Assure que le contenu ne dépasse pas les coins arrondis */
+
+  /* Centrage */
+  margin: 20px auto; /* Centre le tableau horizontalement et ajoute un peu d'espace */
+}
+
+/* Styles pour les cellules (td et th) */
+th, td {
+  padding: 10px 15px; /* Espace interne pour le contenu des cellules */
+  text-align: center;
+  border-bottom: 1px solid #eee; /* Ligne de séparation légère entre les lignes */
+}
+
+/* Première colonne en noir */
+table td:nth-child(1),
+table th:nth-child(1) {
+  color: #000000;
+}
+
+/* Deuxième */
+table td:nth-child(2),
+table th:nth-child(2) {
+  color: #4eace8;
+}
+
+/* Troisième */
+table td:nth-child(3),
+table th:nth-child(3) {
+  color: #163cbf;
+}
+
+/* Quatrième */
+table td:nth-child(4),
+table th:nth-child(4) {
+  color: #6327be;
+}
+
+.slider {
+  position: relative;
+  width: 600px; /* largeur du slider */
+  overflow: hidden;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 600px; /* même largeur que le slider */
+  border-radius: 10px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+.svg-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red; /* Couleur de l'icône */
+}
+
+.svg-btn:hover {
+  color: blue; /* Changement de couleur au survol */
+}
