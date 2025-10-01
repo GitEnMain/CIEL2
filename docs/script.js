@@ -147,6 +147,8 @@ const students = [
     github: "https://github.com/aAdri1",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
+    Web: "file:///P:/apottier5/CIEL%20(2)/RMPE/potentiomettre.html",
+
   },
   {
     name: "Lucas, zwakss1",
