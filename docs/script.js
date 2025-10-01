@@ -100,6 +100,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
+    Web: "pages/condensateur/condensateur.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -109,7 +110,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	pages : "C:\Users\acatteau2\CIEL2\docs\pages\DS1307\DS1307.html",
+	Web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -135,8 +136,8 @@ const students = [
     name: "Valentin760",
     photo: "img/Paris_Saint-Germain_Logo.svg.png",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "valentin.banquet@sfr.fr",
+    github: "https://github.com/Valentin760",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -144,8 +145,8 @@ const students = [
     name: "aAdri1",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "a.pottier2006@gmail.com",
+    github: "https://github.com/aAdri1",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -253,3 +254,29 @@ document.addEventListener('error', (e)=>{
     }
   }
 }, true);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("themeToggle");
+  if (!btn) return;
+
+  // Lire le thème stocké
+  let theme = localStorage.getItem("theme") || "auto";
+  applyTheme(theme);
+
+  btn.addEventListener("click", () => {
+    if (theme === "dark") theme = "light";
+    else theme = "dark";
+    applyTheme(theme);
+    localStorage.setItem("theme", theme);
+  });
+
+  function applyTheme(mode) {
+    if (mode === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      btn.textContent = "🌙";
+    } else if (mode === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+      btn.textContent = "☀️";
+    }
+  }
+});
