@@ -80,8 +80,8 @@ const students = [
     name: "Mams05",
     photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
+    email: "mthiam@eduhdf.fr",
+    github: "https://github.com/mams05",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
