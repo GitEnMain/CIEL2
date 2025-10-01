@@ -62,6 +62,7 @@ const students = [
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
     tech: ["Maths Spé", "Porsche"],
+    Web: "pages/resistance/resistance.html",
     bio: "gt3rs."
   },
   {
