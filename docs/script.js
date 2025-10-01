@@ -108,7 +108,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	Web : "pages\DS1307\DS1307.html",
+	Web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
