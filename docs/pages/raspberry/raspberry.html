@@ -109,68 +109,6 @@
       <h2>Schéma simplifié des GPIO (40 broches)</h2>
       <p class="muted">Plan logique : repères <strong>3.3V</strong>, <strong>5V</strong>, <strong>GND</strong>, <strong>I²C</strong>, <strong>SPI</strong>, <strong>UART</strong>. (Vérifiez toujours la datasheet de votre modèle.)</p>
 
-      <!-- Grille GPIO 2×20, CSS-only -->
-      <div class="gpio">
-        <!-- Légende -->
-        <div class="legend">
-          <span class="dot v5"></span> 5V
-          <span class="dot v33"></span> 3.3V
-          <span class="dot gnd"></span> GND
-          <span class="dot i2c"></span> I²C
-          <span class="dot spi"></span> SPI
-          <span class="dot uart"></span> UART
-          <span class="dot gpio"></span> GPIO
-        </div>
-
-        <!-- Colonne gauche (impaires) -->
-        <ol class="pins">
-          <li class="v33">1</li>
-          <li class="gpio">3</li>
-          <li class="gpio">5</li>
-          <li class="gnd">7</li>
-          <li class="gpio">9</li>
-          <li class="gnd">11</li>
-          <li class="gpio">13</li>
-          <li class="gpio">15</li>
-          <li class="gnd">17</li>
-          <li class="gpio">19</li>
-          <li class="gpio">21</li>
-          <li class="gnd">23</li>
-          <li class="gpio">25</li>
-          <li class="gpio">27</li>
-          <li class="gnd">29</li>
-          <li class="gpio">31</li>
-          <li class="gpio">33</li>
-          <li class="gnd">35</li>
-          <li class="gpio">37</li>
-          <li class="gnd">39</li>
-        </ol>
-
-        <!-- Colonne droite (paires) -->
-        <ol class="pins">
-          <li class="v5">2</li>
-          <li class="i2c">4</li>
-          <li class="i2c">6</li>
-          <li class="gpio">8</li>
-          <li class="gnd">10</li>
-          <li class="gpio">12</li>
-          <li class="gnd">14</li>
-          <li class="spi">16</li>
-          <li class="spi">18</li>
-          <li class="gnd">20</li>
-          <li class="spi">22</li>
-          <li class="uart">24</li>
-          <li class="gnd">26</li>
-          <li class="gpio">28</li>
-          <li class="gpio">30</li>
-          <li class="gnd">32</li>
-          <li class="gpio">34</li>
-          <li class="gpio">36</li>
-          <li class="gnd">38</li>
-          <li class="gpio">40</li>
-        </ol>
-      </div>
-
       <p class="note">
         ⚠️ Les attributions exactes (SDA/SCL, MOSI/MISO/SCLK, TX/RX, etc.) varient selon la révision.  
         Pour des branchements réels, reportez-vous à la documentation officielle de votre modèle.
