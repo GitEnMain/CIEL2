@@ -1,0 +1,138 @@
+body {
+  font-family: Arial black;
+  margin: 0;
+  padding-top: 50px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background-color: rgb(80, 65, 79);
+  
+}
+
+
+.Titre {
+  font-size: 2em;
+  margin-bottom: 100px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /*relief */
+}
+
+.defi {
+
+  font-size: 150%;
+  max-width: 600px;        
+  text-align: left; 
+  
+}
+
+.deuxf {
+  font-size: 2em;
+  margin-bottom: 100px; /*marge en dessous*/
+  margin-top: 22%;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /*relief */
+}
+
+.fon1 {
+  display: inline-block;
+  font-size: 2em;
+  margin: 50px auto; /* centré horizontalement*/
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /*relief */
+}
+
+.fon2 {
+  display: inline-block;
+  font-size: 2em;
+  margin: 50px auto; /* centré horizontalement*/
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /*relief */
+}
+
+.mostUse {
+  display: inline-block;
+  font-size: 2em;
+  margin-bottom: 190px; /* réduit l’espace en bas*/
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /*relief */
+}
+
+.textBipo{
+  display: inline-block;
+  font-size: 2em;
+  margin-bottom: 50px; /* réduit l’espace en bas*/
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /*relief */
+}
+
+
+.Allfonction { /*bulle des foctions*/
+  display: flex;             /* met les bulles sur la même ligne */
+  justify-content: center;   /* centre horizontalement */
+  gap: 20px;                 /* espace entre les bulles */
+  margin: 20px 0;            /* marge verticale */
+}
+
+.fonctions, .fonctions2 { 
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;     /* arrondi les bords */
+  padding: 5px;           /* espace autour du texte */
+  max-width: 300px;        /* largeur de la bulle */
+  width: fit-content;
+  box-shadow: 0px 8px 20px rgba(0, 10, 10, 1); /*relief */
+  color: rgb(0, 0, 0);
+  text-align: center;        /* texte aligné au centre */
+  font-size: 1em;          /* taille du texte */
+  opacity: 0;                /* invisible au départ */
+  transform: translateY(50px); /* légèrement décalé vers le bas */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* transition */
+ 
+}
+
+.fonctions.show, .fonctions2.show {
+  opacity: 1;               /* devient visible */
+  transform: translateY(0); /* revient à sa position normale */
+}
+
+
+.def {
+  display: flex;           /* mettre en ligne l'image et le texte */ 
+  align-items: center;     /* centrer verticalement */
+  justify-content: center; /* centrer horizontalement*/
+  gap: 20px;                /* espace entre l'image et le texte */
+
+  background-color: rgb(255, 255, 255); 
+  border: 0px solid rgba(0, 0, 0, 0.2); 
+  border-radius: 20px;  /*arrondi les bords */
+  padding: 20px;        /* espace autour du texte */
+  max-width: 900px;     /*largeur*/
+  margin: auto;         /*deplacement de la bulle*/
+  box-shadow: 0px 8px 20px rgba(0, 10, 10, 1); /*relief */
+}
+
+.transIMG { /*image de la def*/
+  max-width: 200px;  
+  height: auto; /* conserve les proportions */
+  border-radius: 20px;  /*arrondi les bords */
+  box-shadow: 2px 2px 50px rgba(104, 104, 104, 3); /*relief */
+}
+
+.bipo { /* image + texte */
+  display: flex;           /* mettre en ligne l'image et le texte */ 
+  align-items: center;     /* centre verticalement */
+  justify-content: center; /* centre horizontalement */
+  gap: 100px;               /* espace entre image et texte */
+  margin-bottom: 100px;     /* espace sous le conteneur */
+}
+
+.transBi { /* image du transistor */
+  max-width: 350px;  /* largeur max de l'image */
+  height: auto;/* conserve les proportions */
+  margin-right: 40px;
+}
+
+.transBipo { /* texte à côté de l'image */
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  margin-bottom: 100px;
+}
