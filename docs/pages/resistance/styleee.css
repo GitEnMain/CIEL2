@@ -50,7 +50,7 @@ img {
     display: block;
 
     margin: 10px auto;
-    transform: translateY(-20px);
+    
 }
 
 
@@ -177,3 +177,31 @@ th, td {
     color: #333;
 
 }
+
+.back-btn {
+
+    font-family: "Comic Sans MS", Arial, sans-serif;
+
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+  
+    color: white;
+  
+    border: none;
+  
+    padding: 10px 20px;
+  
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+    font-size: 16px;
+  
+  }
+  
+  
+  
+  .back-btn:hover {
+  
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+  
+  }

@@ -56,7 +56,7 @@ const students = [
     bio: "Smashing !"
   },
   {
-    name: "mhbvl6",
+    name: "Mohamed mhbvl6",
     photo: "img/kidbuu.png",
     role: "Ingénieur en informatqiue",
     email: "cars60@gmail.com",
