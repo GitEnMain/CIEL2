@@ -212,7 +212,12 @@ function cardTemplate(p){
         </div>
       </div>
       <div class="tags">${tech || ''}</div>
-      <div class="card-footer">${email} ${gh} ${web}</div>
+      <div class="bio">${sanitize(p.bio || '')}</div>
+
+      <div class="card-footer">
+        <div class="btn-row space-between">${email} ${gh}</div>
+        <div class="btn-row center">${web}</div>
+      </div>
     </article>`;
 }
 

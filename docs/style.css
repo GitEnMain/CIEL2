@@ -3,6 +3,7 @@
   --brand:#5dd3ff; --accent:#7cf3c6;
   --panel:#121725; --panel-2:#1a2031; --line:#2a334a;
   --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.25);
+  --ring: rgba(128,255,234,.35);
 }
 
 :root[data-theme="light"]{
@@ -10,8 +11,8 @@
   --brand:#2563eb; --accent:#22c55e;
   --panel:#ffffff; --panel-2:#f3f5f9; --line:#e5e7eb;
   --shadow:0 12px 24px rgba(0,0,0,.08);
+  --ring: rgba(37,99,235,.18);
 }
-
 
 /* Bouton de bascule thème */
 #themeToggle{
@@ -32,11 +33,7 @@
   transition: transform .2s ease;
   z-index: 10000;
 }
-#themeToggle:hover{
-  transform: scale(1.1);
-}
-
-
+#themeToggle:hover{ transform: scale(1.1); }
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -77,12 +74,25 @@ header.hero { display: grid; gap: 10px; align-items: center; margin: 8px 0 20px;
 }
 .hint { color: var(--muted); font-size: 13px; text-align: right; }
 
-.grid { display: grid; grid-template-columns: repeat( auto-fill, minmax(240px, 1fr) ); gap: 14px; margin-top: 16px; }
+/* ===== Grille : même hauteur et items étirés ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(240px, 1fr) );
+  gap: 14px;
+  margin-top: 16px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
 
+/* ===== Card en colonne flex + footer collé bas ===== */
 .card {
   position: relative; overflow: hidden; border-radius: 16px; background: var(--panel);
   border: 1px solid rgba(255,255,255,.06); box-shadow: var(--shadow);
   transition: transform .15s ease, border-color .2s ease;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .card:hover { transform: translateY(-2px); border-color: var(--ring); }
 
@@ -111,12 +121,26 @@ header.hero { display: grid; gap: 10px; align-items: center; margin: 8px 0 20px;
   color: var(--muted);
 }
 
-.card-footer{
+.bio {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 8px 14px;
+  line-height: 1.4;
+}
+
+.card-footer {
+  margin-top: auto;
   display: flex;
+  flex-direction: column;
   gap: 8px;
   padding: 12px 14px 14px;
-  flex-wrap: wrap;        /* <-- autorise la 2e ligne si besoin */
 }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn-row.space-between { justify-content: space-between; }
+.btn-row.center { justify-content: center; }
+
+/* Boutons */
 .btn{
   display: inline-flex;
   align-items: center;
@@ -128,8 +152,8 @@ header.hero { display: grid; gap: 10px; align-items: center; margin: 8px 0 20px;
   border: 1px solid rgba(255,255,255,.08);
   background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.01));
   color: var(--text);
-  flex-shrink: 0;         /* <-- ne pas rétrécir */
-  white-space: nowrap;    /* <-- garder le texte sur 1 ligne */
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 .btn:hover { outline: 2px solid var(--ring); }
 
