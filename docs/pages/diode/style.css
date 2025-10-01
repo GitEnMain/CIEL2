@@ -1,6 +1,17 @@
-body{ background-color: #000000;}
+body{ background-color: #000000;
+font-family: Arial, sans-serif ,white;}
 
 h1{color: #ffffff;}
 h2{color: #ffffff;}
 h3{color: #ffffff;}
 h4{color: #ffffff;}
+
+html, body {
+    cursor: url("img/diode_2.png"), auto;
+  }
+  .ribbons-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  

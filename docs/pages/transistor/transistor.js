@@ -2,7 +2,7 @@ const images = document.querySelectorAll(".zoomImg"); // toutes les images avec 
 
 images.forEach(img => {
   img.style.transition = "transform 0.3s ease-in-out"; // transition pour le zoom
-  img.addEventListener("mouseover", () => img.style.transform = "scale(2)"); // zoom
+  img.addEventListener("mouseover", () => img.style.transform = "scale(3)"); // zoom
   img.addEventListener("mouseout", () => img.style.transform = "scale(1)");    // retour
 });
 
@@ -27,5 +27,6 @@ const observer = new IntersectionObserver((entries) => { // observe si l'éléme
 fonctionDivs.forEach(fonctionDiv => {//observer chaque bulle
   observer.observe(fonctionDiv); // observe la bulle
 });
+
 
 

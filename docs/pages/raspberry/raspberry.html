@@ -3,67 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Raspberry Pi — Vue d’ensemble & GPIO</title>
   <meta name="description" content="Présentation moderne du Raspberry Pi : modèles, spécifications, GPIO, usages et ressources.">
+  
+  
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+
+  <title>Raspberry Pi — Vue d’ensemble & GPIO</title>
+
+
 </head>
 <body>
-    <a href="pages/raspberry/index.html" class="btn">Découvrir le Raspberry Pi</a>
-
-
+  
   <header class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="container hero__content">
       <div class="hero__badge">Guide Matériel</div>
-      <h1 class="hero__title">
-        <span class="emoji" aria-hidden="true">🍓</span> Raspberry&nbsp;Pi
-      </h1>
+      <h1 class="hero__title"><span class="emoji" aria-hidden="true">🍓</span> Raspberry&nbsp;Pi</h1>
       <p class="hero__subtitle">
-        Nano-ordinateur polyvalent pour l’apprentissage, l’IoT et les projets embarqués.  
+        Nano-ordinateur polyvalent pour l’apprentissage, l’IoT et les projets embarqués.
         Découvrez ses modèles, ses spécifications et ses connectiques GPIO.
       </p>
+
+
       <nav class="hero__cta">
-        <a href="#models" class="btn">Modèles</a>
+        <a href="../../index.html" class="btn btn--ghost">Home</a>
+        <a href="#models" class="btn btn--ghost">Modèles</a>
         <a href="#gpio" class="btn btn--ghost">GPIO</a>
         <a href="#specs" class="btn btn--ghost">Spécifications</a>
       </nav>
     </div>
 
-    <!-- Illustration SVG (sans images externes) -->
-    <div class="hero__illustration" aria-hidden="true">
-      <svg viewBox="0 0 640 360" role="img">
-        <defs>
-          <linearGradient id="g1" x1="0" x2="1">
-            <stop offset="0" stop-color="var(--brand)"/>
-            <stop offset="1" stop-color="var(--accent)"/>
-          </linearGradient>
-        </defs>
-        <!-- Carte -->
-        <rect x="110" y="40" width="420" height="280" rx="18" fill="var(--panel)" stroke="var(--line)" stroke-width="2"/>
-        <!-- GPIO header -->
-        <rect x="430" y="60" width="60" height="140" rx="6" fill="var(--panel-2)" stroke="var(--line)" />
-        <g fill="url(#g1)">
-          <!-- broches (5x4) -->
-          <circle cx="440" cy="75" r="4"/><circle cx="455" cy="75" r="4"/><circle cx="470" cy="75" r="4"/><circle cx="485" cy="75" r="4"/><circle cx="500" cy="75" r="4"/>
-          <circle cx="440" cy="90" r="4"/><circle cx="455" cy="90" r="4"/><circle cx="470" cy="90" r="4"/><circle cx="485" cy="90" r="4"/><circle cx="500" cy="90" r="4"/>
-          <circle cx="440" cy="105" r="4"/><circle cx="455" cy="105" r="4"/><circle cx="470" cy="105" r="4"/><circle cx="485" cy="105" r="4"/><circle cx="500" cy="105" r="4"/>
-          <circle cx="440" cy="120" r="4"/><circle cx="455" cy="120" r="4"/><circle cx="470" cy="120" r="4"/><circle cx="485" cy="120" r="4"/><circle cx="500" cy="120" r="4"/>
-          <circle cx="440" cy="135" r="4"/><circle cx="455" cy="135" r="4"/><circle cx="470" cy="135" r="4"/><circle cx="485" cy="135" r="4"/><circle cx="500" cy="135" r="4"/>
-          <circle cx="440" cy="150" r="4"/><circle cx="455" cy="150" r="4"/><circle cx="470" cy="150" r="4"/><circle cx="485" cy="150" r="4"/><circle cx="500" cy="150" r="4"/>
-          <circle cx="440" cy="165" r="4"/><circle cx="455" cy="165" r="4"/><circle cx="470" cy="165" r="4"/><circle cx="485" cy="165" r="4"/><circle cx="500" cy="165" r="4"/>
-        </g>
-        <!-- CPU -->
-        <rect x="160" y="80" width="120" height="120" rx="10" fill="var(--chip)" />
-        <rect x="175" y="95" width="90" height="90" rx="6" fill="var(--panel-2)" />
-        <!-- Ports -->
-        <rect x="300" y="220" width="150" height="30" rx="6" fill="var(--panel-2)"/>
-        <rect x="130" y="220" width="100" height="30" rx="6" fill="var(--panel-2)"/>
-        <!-- Décor -->
-        <circle cx="100" cy="300" r="80" fill="var(--blob-a)" />
-        <circle cx="560" cy="300" r="60" fill="var(--blob-b)" />
-      </svg>
-    </div>
+    <button id="themeToggle" aria-label="Changer de thème">🌙</button>
+
   </header>
+
+
 
   <main class="container">
     <section class="intro card">
@@ -72,6 +48,7 @@
         Compact, économique, basse consommation et doté d’environ <strong>40 broches GPIO</strong>, le Raspberry&nbsp;Pi
         s’intègre aussi bien en <em>maker projects</em> (LED, capteurs, robotique) qu’en <em>edge computing</em> (serveurs légers, passerelles réseau).
       </p>
+
       <ul class="pill-list">
         <li>Apprentissage Linux</li>
         <li>Automatisation & IoT</li>
@@ -80,136 +57,69 @@
       </ul>
     </section>
 
+
     <section id="models">
       <h2>Modèles courants</h2>
       <div class="grid cards">
         <article class="card">
-            <div class="card__img">
-              <img src="img/raspi4.png" alt="Raspberry Pi 4" />
-            </div>
-            <h3>Raspberry Pi 4</h3>
-            <p>Quad-core, 2–8&nbsp;Go de RAM, 2× micro-HDMI, USB&nbsp;3, Ethernet&nbsp;Gb.</p>
-            <ul class="spec-tags">
-              <li>ARM Cortex-A72</li>
-              <li>Wi-Fi / BT</li>
-              <li>USB-C Power</li>
-            </ul>
-          </article>
-          
-          <article class="card">
-            <div class="card__img">
-              <img src="img/raspi5.png" alt="Raspberry Pi 5" />
-            </div>
+          <div class="card__img"><img src="img/raspi4.png" alt="Raspberry Pi 4"></div>
+          <h3>Raspberry Pi 4</h3>
+          <p>Quad-core, 2–8&nbsp;Go de RAM, 2× micro-HDMI, USB&nbsp;3, Ethernet&nbsp;Gb.</p>
+          <ul class="spec-tags">
+            <li>ARM Cortex-A72</li><li>Wi-Fi / BT</li><li>USB-C Power</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__img"><img src="img/raspi5.png" alt="Raspberry Pi 5"></div>
           <h3>Raspberry Pi 5</h3>
           <p>CPU/GPU plus rapides, PCIe, encodeur vidéo renforcé, meilleures IO.</p>
           <ul class="spec-tags">
-            <li>PCIe 2.0</li>
-            <li>2× 4K</li>
-            <li>LPDDR4X</li>
+            <li>PCIe 2.0</li><li>2× 4K</li><li>LPDDR4X</li>
           </ul>
         </article>
+
         <article class="card">
-            <div class="card__img">
-              <img src="img/PiZero2w.png" alt="Raspberry Pi Zero 2w" />
-            </div>
+          <div class="card__img"><img src="img/PiZero2w.png" alt="Raspberry Pi Zero 2 W"></div>
           <h3>Pi Zero&nbsp;2&nbsp;W</h3>
           <p>Format mini, Wi-Fi, parfait pour capteurs, intégrations et objets connectés.</p>
           <ul class="spec-tags">
-            <li>Très basse conso</li>
-            <li>GPIO 40 broches</li>
-            <li>uSD stockage</li>
+            <li>Très basse conso</li><li>GPIO 40 broches</li><li>uSD stockage</li>
           </ul>
         </article>
+
         <article class="card">
-            <div class="card__img">
-              <img src="img/pico.png" alt="Raspberry Pi Pico" />
-            </div>
-            <h3>Raspberry Pi Pico</h3>
-            <p>
-              Microcontrôleur économique et efficace, idéal pour l’embarqué et
-              l’apprentissage du C/C++ ou MicroPython.
-            </p>
-            <ul class="spec-tags">
-              <li>RP2040 Dual-core ARM Cortex-M0+</li>
-              <li>264 Ko SRAM</li>
-              <li>2 Mo Flash</li>
-              <li>26 GPIO</li>
-              <li>Support C / MicroPython</li>
-            </ul>
-          </article>
+          <div class="card__img"><img src="img/pico.png" alt="Raspberry Pi Pico"></div>
+          <h3>Raspberry Pi Pico</h3>
+          <p>Microcontrôleur économique et efficace, idéal pour l’embarqué et l’apprentissage du C/C++ ou MicroPython.</p>
+          <ul class="spec-tags">
+            <li>RP2040 Dual-core M0+</li><li>264 Ko SRAM</li><li>2 Mo Flash</li><li>26 GPIO</li>
+          </ul>
+        </article>
       </div>
     </section>
 
     <section id="gpio" class="card">
       <h2>Schéma simplifié des GPIO (40 broches)</h2>
-      <p class="muted">Plan logique : repères <strong>3.3V</strong>, <strong>5V</strong>, <strong>GND</strong>, <strong>I²C</strong>, <strong>SPI</strong>, <strong>UART</strong>. (Vérifiez toujours la datasheet de votre modèle.)</p>
+      <p class="muted">Plan logique. Vérifiez toujours la datasheet de votre modèle avant tout branchement réel.</p>
+      <figure class="gpio-figure">
+        <img src="img/gpio-40pins.png" alt="Schéma simplifié des 40 broches GPIO du Raspberry Pi" class="gpio-img">
+      </figure>
+      <p class="note">⚠️ Les attributions exactes (SDA/SCL, MOSI/MISO/SCLK, TX/RX, etc.) varient selon la révision.</p>
+    
 
-      <!-- Grille GPIO 2×20, CSS-only -->
-      <div class="gpio">
-        <!-- Légende -->
-        <div class="legend">
-          <span class="dot v5"></span> 5V
-          <span class="dot v33"></span> 3.3V
-          <span class="dot gnd"></span> GND
-          <span class="dot i2c"></span> I²C
-          <span class="dot spi"></span> SPI
-          <span class="dot uart"></span> UART
-          <span class="dot gpio"></span> GPIO
-        </div>
 
-        <!-- Colonne gauche (impaires) -->
-        <ol class="pins">
-          <li class="v33">1</li>
-          <li class="gpio">3</li>
-          <li class="gpio">5</li>
-          <li class="gnd">7</li>
-          <li class="gpio">9</li>
-          <li class="gnd">11</li>
-          <li class="gpio">13</li>
-          <li class="gpio">15</li>
-          <li class="gnd">17</li>
-          <li class="gpio">19</li>
-          <li class="gpio">21</li>
-          <li class="gnd">23</li>
-          <li class="gpio">25</li>
-          <li class="gpio">27</li>
-          <li class="gnd">29</li>
-          <li class="gpio">31</li>
-          <li class="gpio">33</li>
-          <li class="gnd">35</li>
-          <li class="gpio">37</li>
-          <li class="gnd">39</li>
-        </ol>
-
-        <!-- Colonne droite (paires) -->
-        <ol class="pins">
-          <li class="v5">2</li>
-          <li class="i2c">4</li>
-          <li class="i2c">6</li>
-          <li class="gpio">8</li>
-          <li class="gnd">10</li>
-          <li class="gpio">12</li>
-          <li class="gnd">14</li>
-          <li class="spi">16</li>
-          <li class="spi">18</li>
-          <li class="gnd">20</li>
-          <li class="spi">22</li>
-          <li class="uart">24</li>
-          <li class="gnd">26</li>
-          <li class="gpio">28</li>
-          <li class="gpio">30</li>
-          <li class="gnd">32</li>
-          <li class="gpio">34</li>
-          <li class="gpio">36</li>
-          <li class="gnd">38</li>
-          <li class="gpio">40</li>
-        </ol>
-      </div>
-
-      <p class="note">
-        ⚠️ Les attributions exactes (SDA/SCL, MOSI/MISO/SCLK, TX/RX, etc.) varient selon la révision.  
-        Pour des branchements réels, reportez-vous à la documentation officielle de votre modèle.
-      </p>
+      <figcaption class="legend" id="gpio-legend">
+        <button class="dot v5"   data-key="v5"   aria-label="5V"   title="5V"></button> 5V
+        <button class="dot v33"  data-key="v33"  aria-label="3.3V" title="3.3V"></button> 3.3V
+        <button class="dot gnd"  data-key="gnd"  aria-label="GND"  title="GND"></button> GND
+        <button class="dot i2c"  data-key="i2c"  aria-label="I²C"  title="I²C"></button> I²C
+        <button class="dot spi"  data-key="spi"  aria-label="SPI"  title="SPI"></button> SPI
+        <button class="dot uart" data-key="uart" aria-label="UART" title="UART"></button> UART
+        <button class="dot gpio" data-key="gpio" aria-label="GPIO" title="GPIO"></button> GPIO
+      </figcaption>
+      
+      <p id="gpio-help" class="note muted" aria-live="polite"></p>
     </section>
 
     <section id="specs">
@@ -218,52 +128,26 @@
         <table class="spec-table">
           <thead>
             <tr>
-              <th>Modèle</th>
-              <th>CPU</th>
-              <th>RAM</th>
-              <th>Vidéo</th>
-              <th>Ports</th>
-              <th>Réseau</th>
-              <th>Alim</th>
+              <th>Modèle</th><th>CPU</th><th>RAM</th><th>Vidéo</th><th>Ports</th><th>Réseau</th><th>Alim</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Pi 4</td>
-              <td>Quad-core A72</td>
-              <td>2–8&nbsp;Go</td>
-              <td>2× micro-HDMI (4K)</td>
-              <td>2× USB3, 2× USB2</td>
-              <td>GbE, Wi-Fi, BT</td>
-              <td>USB-C 5V/3A</td>
+              <td>Pi 4</td><td>Quad-core A72</td><td>2–8&nbsp;Go</td><td>2× micro-HDMI (4K)</td>
+              <td>2× USB3, 2× USB2</td><td>GbE, Wi-Fi, BT</td><td>USB-C 5V/3A</td>
             </tr>
             <tr>
-              <td>Pi 5</td>
-              <td>CPU/GPU next-gen</td>
-              <td>4–8&nbsp;Go</td>
-              <td>2× micro-HDMI (4K)</td>
-              <td>USB3, PCIe (ext.)</td>
-              <td>GbE, Wi-Fi, BT</td>
-              <td>USB-C 5V/5A</td>
+              <td>Pi 5</td><td>CPU/GPU next-gen</td><td>4–8&nbsp;Go</td><td>2× micro-HDMI (4K)</td>
+              <td>USB3, PCIe (ext.)</td><td>GbE, Wi-Fi, BT</td><td>USB-C 5V/5A</td>
             </tr>
             <tr>
-              <td>Zero 2 W</td>
-              <td>Quad-core A53</td>
-              <td>512&nbsp;Mo</td>
-              <td>Mini-HDMI</td>
-              <td>USB OTG</td>
-              <td>Wi-Fi, BT</td>
-              <td>5V (USB)</td>
+              <td>Zero&nbsp;2&nbsp;W</td><td>Quad-core A53</td><td>512&nbsp;Mo</td><td>Mini-HDMI</td>
+              <td>USB OTG</td><td>Wi-Fi, BT</td><td>5V (USB)</td>
             </tr>
             <tr>
-                <td>Pico</td>
-                <td>RP2040<br>Dual-core ARM Cortex-M0+</td>
-                <td>264 Ko SRAM<br>+ 2 Mo Flash</td>
-                <td>—</td>
-                <td>26 GPIO<br>I²C, SPI, UART, ADC</td>
-                <td>—</td>
-                <td>Micro-USB 5 V<br>ou GPIO 3,3 V</td>
-              </tr>
+              <td>Pico</td><td>RP2040 (Dual-core M0+)</td><td>264 Ko SRAM + 2 Mo Flash</td><td>—</td>
+              <td>26 GPIO (I²C, SPI, UART, ADC)</td><td>—</td><td>Micro-USB 5 V / GPIO 3,3 V</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -272,35 +156,22 @@
     <section id="gallery">
       <h2>Exemples d’usages</h2>
       <div class="grid gallery">
-        
         <figure class="card media">
-            <div class="media__ph">
-              <img src="img/serveur-local.png" alt="Serveur local" class="media__overlay">
-            </div>
-            <figcaption>Serveur local (web, DNS, Pi-hole)</figcaption>
-          </figure>
-
+          <div class="media__ph"><img src="img/serveur-local.png" alt="Serveur local" class="media__overlay"></div>
+          <figcaption>Serveur local (web, DNS, Pi-hole)</figcaption>
+        </figure>
         <figure class="card media">
-            <div class="media__ph">
-                <img src="img/station-iot.png" alt="Serveur local" class="media__overlay">
-            </div>
+          <div class="media__ph"><img src="img/station-iot.png" alt="Station IoT" class="media__overlay"></div>
           <figcaption>Station IoT (capteurs : DHT11, lumière, etc.)</figcaption>
         </figure>
-
         <figure class="card media">
-            <div class="media__ph">
-                <img src="img/robotique.png" alt="Serveur local" class="media__overlay">
-            </div>
+          <div class="media__ph"><img src="img/robotique.png" alt="Robotique" class="media__overlay"></div>
           <figcaption>Robotique (PWM, moteurs, télémétrie)</figcaption>
         </figure>
-
         <figure class="card media">
-            <div class="media__ph">
-                <img src="img/affichage-kiosk.png" alt="Serveur local" class="media__overlay">
-            </div>
+          <div class="media__ph"><img src="img/affichage-kiosk.png" alt="Affichage Kiosk" class="media__overlay"></div>
           <figcaption>Affichage & Kiosk (HDMI)</figcaption>
         </figure>
-
       </div>
     </section>
 
@@ -321,10 +192,12 @@
     </section>
   </main>
 
+  <button id="backToTop" aria-label="Revenir en haut" title="Retour en haut">▲</button>
+
+
+
   <footer class="site-footer">
-    <div class="container">
-      <p>Made with ♥</p>
-    </div>
+    <div class="container"><p>Made with ♥</p></div>
   </footer>
 </body>
 </html>
