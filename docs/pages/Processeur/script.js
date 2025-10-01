@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		var points = [];
 		var maxPoints = 20; // longueur de la traînée
 
+		// Paramètres ajustables
+		var fadeAlpha = 0.12; // plus petit = la traînée persiste plus longtemps (0.02..0.12)
+
 		// Add mouse/touch listeners
 		function addPoint(x, y) {
 			points.push({x: x, y: y, t: Date.now()});
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Draw loop
 		function draw() {
 			// slight fade to create trailing effect (use low alpha to gradually fade)
-			ctx.fillStyle = 'rgba(0,0,0,255.255)';
+			ctx.fillStyle = 'rgba(0,0,0,' + fadeAlpha + ')';
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 			if (points.length > 1) {
