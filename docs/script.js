@@ -92,7 +92,8 @@ const students = [
     photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
-    github: "https://github.com/GitEnMain/CIEL2.git",
+    github: "https://github.com/Tutur9",
+	pages : "C:\Users\acatteau2\CIEL2\docs\pages\DS1307\DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
