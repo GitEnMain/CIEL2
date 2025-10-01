@@ -51,7 +51,7 @@ const students = [
     role: "Explorateur, naturaliste et présentateur de documentaires animaliers",
     email: "nigel.delajungle@cocotier.com",
     github: "https://github.com/GitEnMain",
-    Web: "pages/raspberry/raspberry.html",
+    web: "pages/raspberry/raspberry.html",
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
@@ -61,8 +61,8 @@ const students = [
     role: "Ingénieur",
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
+    web: "pages/resistance/resistance.html",
     tech: ["Maths Spé", "Porsche"],
-    Web: "pages/resistance/resistance.html",
     bio: "gt3rs."
   },
   {
@@ -71,7 +71,7 @@ const students = [
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
     github: "https://github.com/THE-AGAG",
-    Web: "pages/Processeur/processeur.html",
+    web: "pages/Processeur/processeur.html",
     tech: ["Java", "Spigot", "Bukkit", "Maven", "Git"],
     bio: "Créateur de plugins / Mods Minecraft."
   },
@@ -90,7 +90,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
-    Web: "pages/Apple_M4_SoC/Apple_M4_index.html",
+    web: "pages/Apple_M4_SoC/Apple_M4_index.html",
     tech: ["UX", "UI", "Pixelmator Pro"],
     bio: "Hobbyist UX/UI designer"
   },
@@ -100,7 +100,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
-    Web: "pages/condensateur/condensateur.html",
+    web: "pages/condensateur/condensateur.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -110,7 +110,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	Web: "pages/DS1307/DS1307.html",
+	  web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -194,7 +194,7 @@ function cardTemplate(p){
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 .5a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58l-.02-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.46 11.46 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.25 2.86.12 3.16.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.47 5.93.43.37.82 1.11.82 2.24l-.01 3.32c0 .32.21.7.82.58A12 12 0 0012 .5z"/>
     </svg> GitHub</a>` : '';
-  const web = p.Web ? `<a class="btn" href="${sanitize(p.Web)}" title="Page Web">
+  const web = p.web ? `<a class="btn" href="${sanitize(p.web)}" title="Page Web">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
       <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="currentColor" stroke-width="2"/>
