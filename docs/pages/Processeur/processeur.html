@@ -8,7 +8,6 @@
     <script src="script.js"></script>
 </head>
 <body>
-<center>
     <h1>Processeur</h1>
     <h2>Cette page Web sert de documentation pour le processeur AMD Ryzen 9 9950X3D</h2>
     <div style="display: flex; align-items: center;">
@@ -16,7 +15,10 @@
               <img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/3021650-ryzen-9-9900x3d-product.jpg" alt="Image du processeur AMD Ryzen 9 9950X3D" width="550" height="550"><br>
         </div>
         <div style="margin-top: 20px;">
+        <center>
             <button id="toggleAll" style="margin-bottom: 15px; background: #710171; color: #fff; font-weight: bold;">Tout ouvrir/fermer</button>
+            <!-- Canvas pour l'animation ribbons (traînée lumineuse) -->
+            <canvas id="ribbons-canvas" aria-hidden="true"></canvas>
             <button class="accordion">Spécifications Générales</button>
             <div class="panel">
                 <ul>
@@ -104,13 +106,17 @@
                 </ul>
             </div>
         </div>
+        </center>
     </div>
+    <center>
+    <img src="compaserie9.png" alt="Logo de la série Ryzen 9" width="900" height="550" style="margin-top: 20px;">
+    </center>
 <footer>
-    <img src="compaserie9.png" alt="Logo de la série Ryzen 9" width="850" height="550" style="margin-top: 20px;">
+    <center>
     <br><a href="https://www.amd.com/fr/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x3d.html" target="_blank">Voir la page officielle du produit</a>
     <br><a href="https://www.amd.com/fr/products/processors/desktops/ryzen.html" target="_blank">Site du Fabricant</a>
     <p>Projet CIEL2 - 2025-2026</p>
     <button onclick="window.location.href='https://gitenmain.github.io/CIEL2'" style="background: #710171; color: #fff; font-weight: bold;">Retour au Trombinoscope</button>
+    </center>
 </footer>
-</center>
 </body>

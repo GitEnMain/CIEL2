@@ -16,3 +16,20 @@ prev.addEventListener('click', () => showSlide(index - 1));
 next.addEventListener('click', () => showSlide(index + 1));
 
 setInterval(() => showSlide(index + 1), 3000);
+
+
+
+
+
+
+
+const img = document.querySelector('.media-image-title');
+
+img.addEventListener('mouseenter', () => {
+  img.style.transform = 'scale(1.1)'; // Grossit de 10%
+  img.style.transition = 'transform 0.3s ease'; // Animation douce
+});
+
+img.addEventListener('mouseleave', () => {
+  img.style.transform = 'scale(1)'; // Retour à la taille normale
+});
