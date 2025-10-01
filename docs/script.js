@@ -1,17 +1,30 @@
-// =============================================================
-//  👇👇👇 ÉLÈVES : COMPLÉTEZ / AJOUTEZ VOTRE FICHE ICI 👇👇👇
-//  Modèle d'objet :
-//  {
-//    name: "Prénom NOM",
-//    photo: "img/prenom.jpg" // facultatif, sinon avatar à initiales
-//    role: "Étudiant(e) BTS CIEL",
-//    email: "prenom.nom@exemple.com", // facultatif
-//    github: "https://github.com/votre-pseudo", // facultatif
-//    pages : "chemin d'accès"
-//    tech: ["Python", "Réseaux", "Linux"], // 1–5 éléments
-//    bio: "Centres d’intérêt / mot-clé (optionnel)"
-//  }
-// =============================================================
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("themeToggle");
+  if (!btn) return;
+
+  // Lire le thème stocké
+  let theme = localStorage.getItem("theme") || "auto";
+  applyTheme(theme);
+
+  btn.addEventListener("click", () => {
+    if (theme === "dark") theme = "light";
+    else theme = "dark";
+    applyTheme(theme);
+    localStorage.setItem("theme", theme);
+  });
+
+  function applyTheme(mode) {
+    if (mode === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      btn.textContent = "🌙";
+    } else if (mode === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+      btn.textContent = "☀️";
+    }
+  }
+});
+
+
 
 const students = [
   {
@@ -236,30 +249,3 @@ document.addEventListener('error', (e)=>{
     }
   }
 }, true);
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("themeToggle");
-  if (!btn) return;
-
-  // Lire le thème stocké
-  let theme = localStorage.getItem("theme") || "auto";
-  applyTheme(theme);
-
-  btn.addEventListener("click", () => {
-    if (theme === "dark") theme = "light";
-    else theme = "dark";
-    applyTheme(theme);
-    localStorage.setItem("theme", theme);
-  });
-
-  function applyTheme(mode) {
-    if (mode === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-      btn.textContent = "🌙";
-    } else if (mode === "light") {
-      document.documentElement.setAttribute("data-theme", "light");
-      btn.textContent = "☀️";
-    }
-  }
-});
