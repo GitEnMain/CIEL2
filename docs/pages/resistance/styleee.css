@@ -1,26 +1,33 @@
 body {
 
-    font-family: Arial, sans-serif;
+    font-family: "Comic Sans MS", Arial, sans-serif;
 
-    background: #f4f4f4;
+    background: linear-gradient(to right,#ffffff, #65bcce);
 
-    margin: 20px;
+    margin: 0px;
+
+    height: 100%;
 
 }
 
-
+p{
+    color: #000000;
+    font-size: 20px;
+}
 
 .contenu {
 
-    background: white;
+    
 
-    padding: 20px;
+    padding: 50px;
 
     border-radius: 8px;
 
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
-    max-width: 800px;
+    max-width: 1800px;
+
+    width: 100%;
 
     margin: auto;
 
@@ -30,7 +37,7 @@ body {
 
 h1, h2 {
 
-    color: #2c3e50;
+    color: #0080ff;
 
 }
 
@@ -62,7 +69,7 @@ table {
 
 table, th, td {
 
-    border: 1px solid #333;
+    border: 1px solid #000000;
 
 }
 
@@ -87,4 +94,86 @@ th, td {
     margin: auto;
 
     border: 1px solid #000;
+}
+
+.cards {
+
+    display: flex;              /* met les cartes côte à côte */
+
+    justify-content: space-between;
+
+    gap: 20px;                  /* espace entre les cartes */
+
+    margin: 40px auto;
+
+    width: 90%;
+
+}
+
+
+
+.card {
+
+    flex: 1;                    /* chaque carte prend la même place */
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    transition: transform 0.2s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-5px); /* petit effet au survol */
+
+}
+
+
+
+.card img {
+
+    width: 100%;
+
+    height: 150px;              /* fixe la taille */
+
+    object-fit: cover;          /* garde les proportions */
+
+    border-radius: 6px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.card h3 {
+
+    font-size: 18px;
+
+    margin: 10px 0;
+
+    color: #c44;                /* un rouge foncé comme ton exemple */
+
+}
+
+
+
+.card p {
+
+    font-size: 14px;
+
+    color: #333;
+
 }
