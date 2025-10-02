@@ -169,7 +169,9 @@ a:hover {
   height: 100vh;
   pointer-events: none; /* Allow clicks through canvas */
   z-index: 1000; /* On top */
-  mix-blend-mode: screen; /* Nice additive blending */
+  /* Retiré: mix-blend-mode: screen; provoquait une altération des couleurs du fond.
+    Nous dessinons en mode composite dans le canvas pour éviter la décoloration. */
+  mix-blend-mode: normal;
 }
 
 /* Petite classe pour les boutons si besoin */

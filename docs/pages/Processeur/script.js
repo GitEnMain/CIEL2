@@ -57,10 +57,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.addEventListener('resize', resize);
 
 		var points = [];
-		var maxPoints = 20; // longueur de la traînée
+		var maxPoints = 15; // longueur de la traînée
 
 		// Paramètres ajustables
-		var fadeAlpha = 0.12; // plus petit = la traînée persiste plus longtemps (0.02..0.12)
+		var fadeAlpha = 0.25; // plus petit = la traînée persiste plus longtemps (0.02..0.12)
+
+		// Mouse stop detection & convergence
+		var mouseX = null, mouseY = null;
+		var lastMoveTime = 0;
+		var stopThreshold = 150; // ms sans bouger avant qu'on considère le curseur "arrêté"
+		var convergeStrengthBase = 0.06; // base LERP
+		var convergeStrengthMax = 0.35; // max LERP pour les points les plus proches
 
 		// Add mouse/touch listeners
 		function addPoint(x, y) {
@@ -69,19 +76,40 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 
 		window.addEventListener('mousemove', function(e) {
-			addPoint(e.clientX, e.clientY);
+			mouseX = e.clientX; mouseY = e.clientY; lastMoveTime = Date.now();
+			addPoint(mouseX, mouseY);
 		});
 		window.addEventListener('touchmove', function(e) {
 			if (e.touches && e.touches[0]) {
-				addPoint(e.touches[0].clientX, e.touches[0].clientY);
+				mouseX = e.touches[0].clientX; mouseY = e.touches[0].clientY; lastMoveTime = Date.now();
+				addPoint(mouseX, mouseY);
 			}
 		}, {passive: true});
 
 		// Draw loop
 		function draw() {
-			// slight fade to create trailing effect (use low alpha to gradually fade)
+			// slight fade to create trailing effect WITHOUT altering background colors.
+			// We use 'destination-out' to reduce the alpha of existing drawing only.
+			ctx.save();
+			ctx.globalCompositeOperation = 'destination-out';
 			ctx.fillStyle = 'rgba(0,0,0,' + fadeAlpha + ')';
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			ctx.restore();
+
+			// If the cursor has stopped, converge points toward (mouseX, mouseY)
+			var now = Date.now();
+			var stopped = mouseX !== null && (now - lastMoveTime) > stopThreshold;
+
+			if (stopped && points.length > 0) {
+				for (var k = 0; k < points.length; k++) {
+					var p = points[k];
+					// normalized position along the trail (0 oldest -> 1 newest)
+					var t = points.length > 1 ? (k / (points.length - 1)) : 1;
+					var lerp = convergeStrengthBase + (convergeStrengthMax - convergeStrengthBase) * t;
+					p.x += (mouseX - p.x) * lerp;
+					p.y += (mouseY - p.y) * lerp;
+				}
+			}
 
 			if (points.length > 1) {
 				for (var i = 0; i < points.length - 1; i++) {
@@ -96,14 +124,19 @@ document.addEventListener('DOMContentLoaded', function() {
 					ctx.beginPath();
 					ctx.moveTo(p0.x, p0.y);
 					ctx.lineTo(p1.x, p1.y);
-					// glow using shadow
+					// glow using shadow; draw additively
+					ctx.save();
+					ctx.globalCompositeOperation = 'lighter';
 					ctx.lineWidth = lineWidth;
-						// glow color (blue)
-						ctx.strokeStyle = 'rgba(40,160,255,' + (alpha * 0.7) + ')';
-						ctx.shadowColor = 'rgba(40,160,255,' + (alpha * 0.95) + ')';
-					ctx.shadowBlur = 20 * (1 - age) + 2;
+					// glow color (blue)
+					ctx.strokeStyle = 'rgba(40,160,255,' + (alpha * 2) + ')'; // modifié pour plus de visibilité
+						// ctx.strokeStyle = 'rgba(40,160,255,' + (alpha * 1) + ')'; // original
+					ctx.shadowColor = 'rgba(40,160,255,' + (alpha * 0.9) + ')'; // modifié pour plus de d'ombre
+						// ctx.shadowColor = 'rgba(40,160,255,' + (alpha * 0.6) + ')'; // original
+					ctx.shadowBlur = 18 * (1 - age) + 6;
 					ctx.lineCap = 'round';
 					ctx.stroke();
+					ctx.restore();
 
 					// thin bright core
 					ctx.beginPath();
