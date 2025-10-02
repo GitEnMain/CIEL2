@@ -209,3 +209,100 @@ a:hover {
 .ribbon-glow-btn {
   position: relative;
 }
+
+/* Bouton de bascule thème */
+#themeToggle{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+  transition: transform .2s ease;
+  z-index: 10000;
+}
+#themeToggle:hover{ 
+  transform: scale(1.1); 
+}
+
+
+/* Responsive tweaks for the site and comparison table */
+.responsive-img{max-width:100%;height:auto;display:block}
+
+.comparison{width:100%;padding:6px}
+.compare-table{width:100%;max-width:100%;border-collapse:collapse;table-layout:auto}
+.compare-table th,.compare-table td{padding:12px;vertical-align:middle;word-break:break-word;white-space:normal}
+.compare-table thead th{background:transparent}
+
+/* Reduce paddings and font sizes on smaller screens */
+@media (max-width:900px){
+  .container{padding:16px}
+  .compare-table th,.compare-table td{padding:10px;font-size:14px}
+  .title{font-size:clamp(18px,5vw,26px)}
+}
+
+@media (max-width:600px){
+  body{padding:10px}
+  .compare-table th,.compare-table td{padding:8px;font-size:13px}
+  /* allow horizontal scroll as a fallback but try to make cells wrap */
+  .comparison > div{overflow-x:auto}
+}
+
+/* Optional: make the main container fluid on very small screens */
+@media (max-width:420px){
+  .container{padding:8px}
+  #themeToggle{top:10px; right:10px; width:36px; height:36px}
+}
+
+/* Keep image at declared original width but allow it to scale down on small screens
+   Usage: <img class="responsive-img" style="--orig-width:900px;" src="..."> */
+.responsive-img{
+  display:block;
+  width:var(--orig-width, 100%);
+  max-width:100%;
+  height:auto;
+}
+
+@media (max-width:900px){
+  .responsive-img{ width:calc(100% - 40px); }
+}
+
+@media (max-width:420px){
+  .responsive-img{ width:calc(100% - 20px); }
+}
+
+@media (max-width:320px){
+  .responsive-img{ width:calc(100% - 10px); }
+}
+
+/* ---------- AVATAR : image circulaire ---------- */
+.avatar {
+  width: 48px; 
+  height: 48px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  flex-shrink: 0; 
+  background: var(--panel-2);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--line);
+  display: grid;
+  place-items: center;
+}
+.avatar img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+.card h3 { 
+  margin: 0; 
+  font-size: 18px; 
+}
