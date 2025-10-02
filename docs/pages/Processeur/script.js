@@ -69,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		var convergeStrengthBase = 0.06; // base LERP
 		var convergeStrengthMax = 0.35; // max LERP pour les points les plus proches
 
+		// Paramètres ajustables
+		var fadeAlpha = 0.12; // plus petit = la traînée persiste plus longtemps (0.02..0.12)
+
 		// Add mouse/touch listeners
 		function addPoint(x, y) {
 			points.push({x: x, y: y, t: Date.now()});
@@ -88,10 +91,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		// Draw loop
 		function draw() {
+<<<<<<< HEAD
 			// slight fade to create trailing effect WITHOUT altering background colors.
 			// We use 'destination-out' to reduce the alpha of existing drawing only.
 			ctx.save();
 			ctx.globalCompositeOperation = 'destination-out';
+=======
+			// slight fade to create trailing effect (use low alpha to gradually fade)
+>>>>>>> 92d601970e4e08cc0c4537be84f2e3fb6246ed95
 			ctx.fillStyle = 'rgba(0,0,0,' + fadeAlpha + ')';
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
 			ctx.restore();
