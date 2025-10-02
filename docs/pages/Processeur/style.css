@@ -138,6 +138,35 @@ img.center {
   margin-right: auto;
 }
 
+/* Images responsive */
+.responsive-img {
+  width: 100%;              /* permet à l'image de réduire avec son conteneur */
+  height: auto;
+  display: block;
+  max-width: var(--orig-width, 100%); /* garde la taille d'origine indiquée via --orig-width */
+  object-fit: contain;
+}
+
+/* Conteneur flexible pour l'image principale + texte */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.hero .hero-image {
+  flex: 0 0 auto; /* ne force pas l'image à remplir le conteneur */
+  max-width: none; /* la taille maximale est contrôlée par l'image elle-même via --orig-width */
+}
+.hero .hero-content {
+  flex: 1 1 280px;
+  max-width: 40%;
+}
+
+@media (max-width: 800px) {
+  .hero .hero-image, .hero .hero-content { max-width: 100%; }
+}
+
 img:hover {
   display: block;
   margin-left: auto;
