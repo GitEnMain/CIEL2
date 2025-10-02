@@ -57,20 +57,23 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.addEventListener('resize', resize);
 
 		var points = [];
-		var maxPoints = 15; // longueur de la traînée
+		var maxPoints = 15; // longueur de la traînée peux modif pour le nombre de point voulue
 
 		// Paramètres ajustables
 		var fadeAlpha = 0.25; // plus petit = la traînée persiste plus longtemps (0.02..0.12)
 
 		// Mouse stop detection & convergence
-		var mouseX = null, mouseY = null;
-		var lastMoveTime = 0;
-		var stopThreshold = 150; // ms sans bouger avant qu'on considère le curseur "arrêté"
-		var convergeStrengthBase = 0.06; // base LERP
-		var convergeStrengthMax = 0.35; // max LERP pour les points les plus proches
-
-		// Paramètres ajustables
-		var fadeAlpha = 0.12; // plus petit = la traînée persiste plus longtemps (0.02..0.12)
+		var mouseX = null, mouseY = null; // position actuelle du curseur (ne pas forcer)
+		var lastMoveTime = 0; // timestamp du dernier mouvement (interne)
+		var stopThreshold = 300; // ms sans bouger avant qu'on considère le curseur "arrêté"
+			// -> Modifier: augmenter pour attendre plus longtemps avant convergence (ex: 300)
+			// -> Réduire (ex: 50) pour déclencher la convergence plus vite
+		var convergeStrengthBase = 0.02; // base LERP
+			// -> Modifier: force minimale de rapprochement par frame (0..1). Plus grand = convergence plus rapide
+			// -> Exemples: 0.02 (très doux), 0.06 (doux), 0.12 (rapide)
+		var convergeStrengthMax = 0.2; // max LERP pour les points les plus proches
+			// -> Modifier: force maximale appliquée aux points récents (0..1). Augmente pour une attraction plus forte
+			// -> Exemples: 0.2 (douce), 0.35 (rapide), 0.6 (très rapide)
 
 		// Add mouse/touch listeners
 		function addPoint(x, y) {
@@ -91,14 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		// Draw loop
 		function draw() {
-			// slight fade to create trailing effect WITHOUT altering background colors.
-			// We use 'destination-out' to reduce the alpha of existing drawing only.
-			ctx.save();
-			ctx.globalCompositeOperation = 'destination-out';
-			// slight fade to create trailing effect (use low alpha to gradually fade)
-			ctx.fillStyle = 'rgba(0,0,0,' + fadeAlpha + ')';
-			ctx.fillRect(0, 0, canvas.width, canvas.height);
-			ctx.restore();
+			// Clear full canvas and redraw the trail each frame.
+			// This avoids complex compositing that can alter the page background.
+			ctx.setTransform(1,0,0,1,0,0); // reset transform to clear correctly
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			// restore devicePixelRatio transform for drawing
+			var dpr = window.devicePixelRatio || 1;
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
 			// If the cursor has stopped, converge points toward (mouseX, mouseY)
 			var now = Date.now();
@@ -116,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 
 			if (points.length > 1) {
+				// redraw all segments (older -> newer)
 				for (var i = 0; i < points.length - 1; i++) {
 					var p0 = points[i];
 					var p1 = points[i+1];
@@ -123,23 +126,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 					// line width and alpha based on age (younger = brighter)
 					var lineWidth = 12 * (1 - age) + 1;
+					// augmenter l'épaisseur globale
+					var lineWidth = (12 * (1 - age) + 1) * 1.6;
 					var alpha = 0.9 * (1 - age);
 
 					ctx.beginPath();
 					ctx.moveTo(p0.x, p0.y);
 					ctx.lineTo(p1.x, p1.y);
 					// glow using shadow; draw additively
+					// glow using shadow; draw additively within the canvas
+					// glow: trait épais
 					ctx.save();
 					ctx.globalCompositeOperation = 'lighter';
 					ctx.lineWidth = lineWidth;
-					// glow color (blue)
-					ctx.strokeStyle = 'rgba(40,160,255,' + (alpha * 2) + ')'; // modifié pour plus de visibilité
-						// ctx.strokeStyle = 'rgba(40,160,255,' + (alpha * 1) + ')'; // original
-					ctx.shadowColor = 'rgba(40,160,255,' + (alpha * 0.9) + ')'; // modifié pour plus de d'ombre
-						// ctx.shadowColor = 'rgba(40,160,255,' + (alpha * 0.6) + ')'; // original
-					ctx.shadowBlur = 18 * (1 - age) + 6;
+					ctx.strokeStyle = 'rgba(40,160,255,' + (alpha * 1.0) + ')'; // modif opacité glow remplace le 1 & le rgba)
+					ctx.shadowColor = 'rgba(40,160,255,' + (alpha * 0.9) + ')'; // modif ombre remplace le 0.9 & le rgba)
+					ctx.shadowBlur = 20 * (1 - age) + 6;
 					ctx.lineCap = 'round';
 					ctx.stroke();
+					// draw arrow head (glow)
+					// compute direction
+					var dx = p1.x - p0.x;
+					var dy = p1.y - p0.y;
+					var len = Math.sqrt(dx*dx + dy*dy) || 1;
+					var ux = dx / len, uy = dy / len;
+					var px = -uy, py = ux; // perp
+					var arrowLen = Math.max(10, lineWidth * 1.6);
+					var halfBase = Math.max(6, lineWidth * 0.6);
+					var baseX = p1.x - ux * arrowLen;
+					var baseY = p1.y - uy * arrowLen;
+					ctx.beginPath();
+					ctx.moveTo(p1.x, p1.y);
+					ctx.lineTo(baseX + px * halfBase, baseY + py * halfBase);
+					ctx.lineTo(baseX - px * halfBase, baseY - py * halfBase);
+					ctx.closePath();
+					ctx.fillStyle = 'rgba(40,160,255,' + (alpha * 0.9) + ')'; // modif le 0.9 & le rgba)
+					ctx.fill();
 					ctx.restore();
 
 					// thin bright core
@@ -149,8 +171,18 @@ document.addEventListener('DOMContentLoaded', function() {
 					ctx.lineWidth = Math.max(1, lineWidth * 0.25);
 					ctx.shadowBlur = 0;
 						// bright core (pale blue)
-						ctx.strokeStyle = 'rgba(180,220,255,' + alpha + ')';
+						ctx.strokeStyle = 'rgba(180,220,255,' + alpha + ')'; // modif le 0.9 & le rgba)
 					ctx.stroke();
+					// draw arrow head core (solid)
+					var baseX2 = p1.x - ux * (Math.max(10, lineWidth * 1.6));
+					var baseY2 = p1.y - uy * (Math.max(10, lineWidth * 1.6));
+					ctx.beginPath();
+					ctx.moveTo(p1.x, p1.y);
+					ctx.lineTo(baseX2 + px * halfBase, baseY2 + py * halfBase);
+					ctx.lineTo(baseX2 - px * halfBase, baseY2 - py * halfBase);
+					ctx.closePath();
+					ctx.fillStyle = 'rgba(200,230,255,' + (alpha * 1.0) + ')'; // modif le 0.9 & le rgba)
+					ctx.fill();
 				}
 			}
 

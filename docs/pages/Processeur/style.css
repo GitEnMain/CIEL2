@@ -172,6 +172,8 @@ a:hover {
   /* Retiré: mix-blend-mode: screen; provoquait une altération des couleurs du fond.
     Nous dessinons en mode composite dans le canvas pour éviter la décoloration. */
   mix-blend-mode: normal;
+  background: transparent; /* explicitly transparent */
+  isolation: isolate; /* isolate canvas to avoid blending with the page */
 }
 
 /* Petite classe pour les boutons si besoin */
