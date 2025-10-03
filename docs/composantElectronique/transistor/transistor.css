@@ -121,13 +121,14 @@ body {
   align-items: center;     /* centre verticalement */
   justify-content: center; /* centre horizontalement */
   gap: 200px;               /* espace entre image et texte */
-  margin-bottom: 200px;     /* espace en dessous*/
+  margin-bottom: 100px;     /* espace en dessous*/
 }
 
 .transBi { /* image du transistor */
   max-width: 350px;  /* largeur max de l'image */
   height: auto;/* conserve les proportions */
   margin-right: 40px;
+  
 }
 
 .transBipo { /* texte*/
@@ -172,9 +173,9 @@ body {
   margin-bottom: 100px;
 }
 
-.acroMOSTFET{
+.acroMOSTFET{/*acronyme MOSTFET*/
   font-size: 2em;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   margin-bottom: 100px;
-} /*acronyme MOSTFET*/
+} 
