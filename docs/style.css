@@ -129,6 +129,21 @@
   box-shadow: 0 0 12px #ef4444;
 }
 
+/* Image Equipe 3 */
+.ad-link2 {
+  display: block;
+}
+
+.ad-link2 img {
+  transition: transform 0.2s ease, box-shadow 0.2 ease;
+  cursor: pointer;
+}
+
+.ad-link2 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #34ec0f;
+}
+
 /* Responsive : masque l'encart sur petits écrans pour ne pas gêner */
 @media (max-width: 1024px){
   .ad-float{ display: none; }
