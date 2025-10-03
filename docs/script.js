@@ -125,28 +125,14 @@ const students = [
     bio: "",
   },
   {
-<<<<<<< HEAD
-    name: "Bryan raizoFR",
-=======
     name: "Bryan RaizoFR",
->>>>>>> 966240a1e732fa03d19a5d727a62ba27a9a386c8
     photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
-    github: "",
-<<<<<<< HEAD
-<<<<<<< HEAD
+    github: "https://github.com/raizoFR",
     tech: ["DBZ", "dormir", "manger"],
-=======
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
-    tech: ["Python", "HTML", "Docker"],
->>>>>>> 57f9a7f6fb450eb5dbc0cb52211b8082204c98cf
     bio: "Veut bosser en devops."
-=======
-	web: "",
-    tech: [""],
-    bio: ""
->>>>>>> 966240a1e732fa03d19a5d727a62ba27a9a386c8
+	  web: "capteur.html",
   },
   {
     name: "Valentin Valentin760",
