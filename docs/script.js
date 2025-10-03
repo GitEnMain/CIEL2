@@ -140,19 +140,29 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
-    web: "hacheur_electronique.html",
+    web: "pages/Hacheur/hacheur_electronique.html",
     tech: [""],
     bio: ""
   },
   {
+<<<<<<< HEAD
+    name: "Adrien (aAdri1)",
+=======
     name: "Adrien aAdri1",
+>>>>>>> 966240a1e732fa03d19a5d727a62ba27a9a386c8
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
+<<<<<<< HEAD
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+
+=======
 	  web: "",
     tech: [""],
     bio: ""
+>>>>>>> 966240a1e732fa03d19a5d727a62ba27a9a386c8
   },
   {
     name: "Lucas zwakss1",
