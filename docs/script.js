@@ -53,7 +53,7 @@ const students = [
     role: "Explorateur, naturaliste et présentateur de documentaires animaliers",
     email: "nigel.delajungle@cocotier.com",
     github: "https://github.com/GitEnMain",
-    web: "pages/raspberry/raspberry.html",
+    web: "composantElectronique/raspberry/raspberry.html",
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
@@ -63,7 +63,7 @@ const students = [
     role: "Ingénieur en informatqiue",
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
-    web: "pages/resistance/resistance.html",
+    web: "composantElectronique/resistance/resistance.html",
     tech: ["Automobile", "Porsche", "Boxe Anglaise"],
     bio: "gt3rs."
   },
@@ -73,7 +73,7 @@ const students = [
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
     github: "https://github.com/THE-AGAG",
-    web: "pages/Processeur/processeur.html",
+    web: "composantElectronique/Processeur/processeur.html",
     tech: ["Java", "Spigot", "Bukkit", "Maven", "Git"],
     bio: "Créateur de plugins / Mods Minecraft."
   },
@@ -82,7 +82,7 @@ const students = [
     photo: "img/cropped-bonnibel 2.jpg",
     role: "Étudiant BTS CIEL",
     github: "https://github.com/B2spirit66",
-    web: "pages/diode/index.html",
+    web: "composantElectronique/diode/index.html",
     tech: ["pentesting", "modder", "Docker"],
     bio: "want to do pentesting."
   },
@@ -92,7 +92,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
-    web: "pages/Apple_M4_SoC/Apple_M4_index.html",
+    web: "composantElectronique/Apple_M4_SoC/Apple_M4_index.html",
     tech: ["🧀", "🥖", "🍷", "🍇"],
     bio: "Tout le monde peut cuisiner. Gusteau"
   },
@@ -102,7 +102,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
-    web: "pages/condensateur/condensateur.html",
+    web: "composantElectronique/condensateur/condensateur.html",
     tech: ["sport", "manga", "serie"],
     bio: "Visca Barca"
   },
@@ -112,7 +112,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	  web: "pages/DS1307/DS1307.html",
+	  web: "composantElectronique/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -122,7 +122,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
-	  web: "pages/Buzzer/buzzer.html",
+	  web: "composantElectronique/Buzzer/buzzer.html",
     tech: "",
     bio: "j'aime DBZ"
   },
@@ -134,7 +134,7 @@ const students = [
     github: "https://github.com/raizoFR",
     tech: ["DBZ", "dormir", "manger"],
     bio: "Veut bosser en devops.",
-	  web: "pages/capteur_de_distance/capteur.html",
+	  web: "composantElectronique/capteur_de_distance/capteur.html",
   },
   {
     name: "Valentin Valentin760",
@@ -142,7 +142,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
-    web: "pages/Hacheur/hacheur_electronique.html",
+    web: "composantElectronique/Hacheur/hacheur_electronique.html",
     tech: [""],
     bio: ""
   },
@@ -154,7 +154,7 @@ const students = [
     github: "https://github.com/aAdri1",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops.",
-    web: "pages/Potentiometre/potentiomettre.html",
+    web: "composantElectronique/Potentiometre/potentiomettre.html",
   },
   {
     name: "Lucas zwakss1",
@@ -162,7 +162,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/zwakss1",
-    web:"pages/transistor/transistor.html",
+    web:"composantElectronique/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Master sur pokemon Unite."
   },
