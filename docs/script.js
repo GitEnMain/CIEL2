@@ -150,7 +150,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
-	web: "",
+	  web: "",
     tech: [""],
     bio: ""
   },
@@ -162,7 +162,7 @@ const students = [
     github: "",
     web: "pages/transistor/transistor.html",
     tech: [""],
-    bio: "Master sur pokemon Unite.",
+    bio: "Master sur pokemon Unite."
   },
 ];
 
