@@ -33,6 +33,7 @@ const students = [
     role: "Physicien théoricien — Prix Nobel 1921 ",
     email: "albert.einstein@groscerveau.com",
     github: "https://github.com/albert-einstein",
+    web: "https://fr.wikipedia.org/wiki/Albert_Einstein",
     tech: ["Physique quantique", "Relativité générale"],
     bio: "L’imagination est plus importante que le savoir."
   },
@@ -42,6 +43,7 @@ const students = [
     role: "Adaptation aux environnements étranges",
     email: "alice.liddell@jolienana.com",
     github: "https://github.com/alice-liddell",
+    web: "https://fr.wikipedia.org/wiki/Alice_Liddell",
     tech: ["Rabbit Hole", "Wonderland", "Clock Searcher"],
     bio: "Curiouser and curiouser !"
   },
