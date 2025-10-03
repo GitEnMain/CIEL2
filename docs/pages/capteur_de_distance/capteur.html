@@ -5,13 +5,13 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Capteur</title>
             <link rel="stylesheet" href="style.css">
-            <script src="composant.js"></script>
+            <link rel="stylesheet" href="composant.js">
         </head>
         <body> 
             <h1>Capteur</h1>
             
             <center>
-            <h3><img src="img/capteur_ultrason.jpg"></h3>
+            <h3><img src="img/capteur_ultrason.jpg" class="zoom-effect"></h3>
             <h1>capteur de distance à ultrasons - grove</h1>
             </center>
 
@@ -46,12 +46,12 @@
 
             <p>Voici un bout de programme pour coder le capteur: </p>
             <center>
-            <h4><img src="img/Capture..JPG"></h4>
+            <h4><img src="img/Capture..JPG" class="zoom-effect"></h4>
             </center>
 
             <script>
                 // Effet 1 : Changer la couleur du texte quand la souris passe dessus
-                document.querySelectorAll("p, h1, h2, h3, li").forEach(el => {
+                document.querySelectorAll("p, h2, h3, li").forEach(el => {
                   el.addEventListener("mouseover", () => {
                     el.style.color = "cyan";
                     el.style.transition = "0.3s";
@@ -80,7 +80,24 @@
                     }
                   });
                 });
+
+                 // Sélectionne toutes les images avec la classe "zoom-effect"
+                 document.querySelectorAll(".zoom-effect").forEach(img => {
+                // Quand la souris entre sur l'image
+                img.addEventListener("mouseover", () => {
+                    img.style.transform = "scale(1.2)";   // zoom x1.2
+                    img.style.transition = "transform 0.4s ease"; // animation douce
+                });
+                
+                // Quand la souris sort de l'image
+                img.addEventListener("mouseout", () => {
+                    img.style.transform = "scale(1)"; // retour à la taille normale
+                });
+                });
+
+
                 </script>
+                
                 
                 
         </body>
