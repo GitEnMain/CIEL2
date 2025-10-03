@@ -27,11 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const students = [
-<<<<<<< HEAD
-{
-=======
   {
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     name: "Albert Einstein",
     photo: "img/einstein.png",
     role: "Physicien théoricien — Prix Nobel 1921 ",
@@ -70,7 +66,7 @@ const students = [
     bio: "gt3rs."
   },
   {
-    name: "THE-AGAG (Gaëtan)",
+    name: "Gaëtan THE-AGAG",
     photo: "img/Java_Logo_Gaetan.png",
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
@@ -80,16 +76,16 @@ const students = [
     bio: "Créateur de plugins / Mods Minecraft."
   },
   {
-    name: "B2spirit66",
+    name: "Cyril | B2spirit66",
     photo: "img/cropped-bonnibel 2.jpg",
     role: "Étudiant BTS CIEL",
-    email: "placeholder@placeholder.com",
     github: "https://github.com/B2spirit66",
-    tech: ["Python", "HTML", "Docker"],
+    web: "pages/diode/index.html",
+    tech: ["pentesting", "modder", "Docker"],
     bio: "want to do pentesting."
   },
   {
-    name: "anto",
+    name: "Anto",
     photo: "img/antonin-upjv_pic.PNG",
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
@@ -99,21 +95,17 @@ const students = [
     bio: "Hobbyist UX/UI designer"
   },
   {
-    name: "Mams05",
+    name: "Mamadou Mams05",
     photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
-<<<<<<< HEAD
-    github: "https://github.com/GitEnMain/CIEL2.git",
-=======
     github: "https://github.com/mams05",
     web: "pages/condensateur/condensateur.html",
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    tech: [""],
+    bio: ""
   },
   {
-    name: "Artur, Tutur9",
+    name: "Artur Tutur9",
     photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
@@ -123,22 +115,26 @@ const students = [
     bio: "Recherche d'argent."
   },
   {
-    name: "Orzo12",
+    name: "Krys Orzo12",
     photo: "img/Dragon Ball Z.png",
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
-<<<<<<< HEAD
-=======
+	web: "",
     tech: "",
     bio: "",
   },
   {
+<<<<<<< HEAD
     name: "Bryan raizoFR",
+=======
+    name: "Bryan RaizoFR",
+>>>>>>> 966240a1e732fa03d19a5d727a62ba27a9a386c8
     photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
     github: "",
+<<<<<<< HEAD
 <<<<<<< HEAD
     tech: ["DBZ", "dormir", "manger"],
 =======
@@ -146,72 +142,49 @@ const students = [
     tech: ["Python", "HTML", "Docker"],
 >>>>>>> 57f9a7f6fb450eb5dbc0cb52211b8082204c98cf
     bio: "Veut bosser en devops."
+=======
+	web: "",
+    tech: [""],
+    bio: ""
+>>>>>>> 966240a1e732fa03d19a5d727a62ba27a9a386c8
   },
   {
-    name: "Valentin, Valentin760",
+    name: "Valentin Valentin760",
     photo: "img/Paris_Saint-Germain_Logo.svg.png",
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
     web: "hacheur_electronique.html",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    tech: [""],
+    bio: ""
   },
   {
-    name: "aAdri1",
+    name: "Adrien aAdri1",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+	  web: "",
+    tech: [""],
+    bio: ""
   },
   {
-<<<<<<< HEAD
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-    role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },
-  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-    role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },
-  {
-    name: "Yanis Dupont",
-    photo: "img/lapin.png",
-    role: "Étudiant BTS CIEL",
-    email: "",
-    github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
-  },  
-  {
-=======
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
-    name: "Lucas, zwakss1",
+    name: "Lucas zwakss1",
     photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
     email: "",
-    github: "",
+    github: "https://github.com/zwakss1",
     web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
-<<<<<<< HEAD
-    bio: "Master sur pokemon Unite"
-  }
-=======
+    github: "",
+    web: "pages/transistor/transistor.html",
+    tech: [""],
     bio: "Master sur pokemon Unite.",
-    Web:"pages/transistor/transistor.html"
+    github: "",
+    web: "pages/transistor/transistor.html",
+    tech: [""],
+    bio: "Master sur pokemon Unite."
   },
->>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
 ];
 
 

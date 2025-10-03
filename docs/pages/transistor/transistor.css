@@ -160,7 +160,7 @@ body {
 }
 
 .retour{/*image retour*/
-  max-width: 200px;  /* largeur max de l'image */
+  max-width: 100px;  /* largeur max de l'image */
   height: auto;/* conserve les proportions */
   
 }
