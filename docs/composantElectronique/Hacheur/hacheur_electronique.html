@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Hacheur ou Convertisseur continu</title>
+    <link rel="stylesheet" href="hacheur_electronique.css">
+</head>
+ <body>
+    <h1> Le hacheur électronique </h1>
+    <div class="warning"></div>
+    <img src="Images/MLI_Principe.jpg" style="display:block; margin:auto;">
+    <h2> Définition </h2>
+    <p> Un <strong> hacheur électronique </strong>est un convertisseur permettant de modifier la valeur de la tension continue en la hachant à une fréquence donnée.
+    Cela est très utilisé dans l'électronique de puissance, par exemple pour le contrôle des moteurs électriques (dans les voitures électriques).<br>Ainsi Lorsque le hacheur est fermé, la diode de roue libre est bloquée. A ses bornes se trouve la tension Ve mais en inverse. Aucun courant ne traverse la diode. Lorsque le hacheur est ouvert, la continuité du courant dans l'inductance est assurée par la diode.</p>
+    <p>De plus son principe de fonctionnement repose sur uninterrupteur électronique (transistor, IGBT, MOSFET...) qui ouvre et ferme le circuit rapidement, modulant ainsi la tension moyenne appliquée à la charge.<br>Il existe <strong>différents types de hacheurs</strong> :
+        <br><br>-si la tension délivrée en sortie est inférieure à la tension appliquée en entrée, le hacheur est dit dévolteur, abaisseur ou Buck ;
+        <br>-dans le cas contraire, il est dit survolteur (ou élévateur ou Boost).
+        <br><br>Il existe aussi des hacheurs capables de travailler des deux manières (Boost-Buck).
+        <br>Le découpage se fait à une fréquence élevée afin de pouvoir filtrer facilement le signal de sortie. C'est l'analogue, pour les sources de tensions continues, du gradateur utilisé en régime alternatif.
+        On définit le rapport cyclique (α) comme le rapport du temps t1 où l'interrupteur est passant sur la période T :
+          <br><br>α = t1/T
+        <br><br>Pour un hacheur dévolteur, le rapport de la tension moyenne de sortie sur la tension d'entrée est égal au rapport cyclique.
+    </p>
+    <h3> Utilisation </h3>
+    <p>Certains hacheurs sont réversibles : ils peuvent alors fournir de l'énergie à la charge, généralement une machine à courant continu dans ce type d'application, ou bien en prélever, ce qui permet de freiner la machine. <br>Les hacheurs de puissance sont utilisés, par exemple, pour la variation de vitesse des moteurs à courant continu. Ils sont aussi un élément essentiel des alimentations à découpage.</p>
+    <h4> Amplificateur-hacheur </h4>
+    <p>Une application classique du circuit hacheur, et où le terme est encore en usage, est l'amplificateur-hacheur, un amplificateur c.c. (courant continu). Certains signaux peuvent être si faibles qu'un amplificateur à gain extrêmement élevé est nécessaire. <br>Mais un amplificateur c.c. à gain très élevé ayant un décalage faible, un faible bruit et une bonne stabilité est très difficile à réaliser. Par contre, un amplificateur équivalent en courant alternatif est bien moins difficile à fabriquer. <br>Il est alors préférable d'utiliser un circuit hacheur pour découper le signal, de façon qu'il puisse être amplifié au moyen d'un amplificateur c.a. (courant alternatif) plus simple. Puis une fois amplifié le signal est réintégré en un signal c.c. Ce type d'amplificateur est aussi nommé amplificateur en «classe D».</p>
+    <h5> Stabilisation par hachage </h5>
+    <p>Une autre application des hacheurs dans le domaine de l'amplification c.c. est la «stabilisation par hachage». Elle consiste en un second amplificateur à haut gain et à couplage c.a. que l'on ajoute en parallèle à l'amplificateur principal (AOP). <br>L'entrée du hacheur est couplée en c.a. sur l'entrée inverseuse de l'amplificateur principal c.c., tandis qu'un commutateur bascule périodiquement l'entrée du hacheur sur la masse selon une fréquence de 60 Hz à 400 Hz. L'action de la commutation hache le signal c.c. en un signal c.a. qui est grandement amplifié (1000 fois et plus). <br>La sortie du hacheur est redressée et filtrée, puis appliquée à la seconde entrée de l'amplificateur principal. Il en résulte que la dérive est réduite d'un facteur comparable au gain du hacheur. Ce mécanisme a été mis au point par Edwin A. Goldberg en 1949 pour améliorer la stabilité des amplificateurs opérationnels à tubes.</p>
+    <button onclick="window.history.back()">Retour</button>
+</body>
+</html>

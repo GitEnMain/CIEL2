@@ -45,6 +45,101 @@
   transition: transform .2s ease;
   z-index: 10000;
 }
+
+
+
+
+/* === Encart flottant superposé === */
+.ad-float{
+  position: fixed;
+  left: 90px;
+  top: 110px;
+  width: 240px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 12px;
+  z-index: 10000;
+  display: grid;
+  gap: 12px;
+}
+
+.ad-banner{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  animation: adPulse 1.5s infinite;
+}
+
+/* ligne horizontale : Équipe 1 | VS | Équipe 2 */
+.ad-line{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.ad-team{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.ad-vs{
+  width: 80px;
+  height: auto;
+  display: block;
+}
+@keyframes adPulse{
+  0%{ transform: scale(1); opacity: 1; }
+  50%{ transform: scale(1.08); opacity: .85; }
+  100%{ transform: scale(1); opacity: 1; }
+}
+/* Image Equipe 1 */
+.ad-link1 {
+  display: block;
+}
+
+.ad-link1 img {
+  transition: transform 0.2s ease, box-shadow 0.2 ease;
+  cursor: pointer;
+}
+
+.ad-link1 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #2563eb;
+}
+/* Image Equipe 2 */
+.ad-link2 {
+  display: block;
+}
+
+.ad-link2 img {
+  transition: transform 0.2s ease, box-shadow 0.2 ease;
+  cursor: pointer;
+}
+
+.ad-link2 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #ef4444;
+}
+
+/* Responsive : masque l'encart sur petits écrans pour ne pas gêner */
+@media (max-width: 1024px){
+  .ad-float{ display: none; }
+}
+
+
+
+
+
+
+
 #themeToggle:hover{ 
   transform: scale(1.1); 
 }
