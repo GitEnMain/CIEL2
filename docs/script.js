@@ -150,7 +150,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
-    Web: "pages/Potentiometre/potentiomettre.html"
+    Web: "pages/Potentiometre/potentiomettre.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
 
