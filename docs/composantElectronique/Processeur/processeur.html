@@ -10,108 +10,67 @@
     <source media="(min-width: 800px)" srcset="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/3021650-ryzen-9-9900x3d-product.jpg" />
 </head>
 <body>
-    <h1>Projet Processeur CIEL2 2025-2026</h1>
-    <h2>Voici la page Web de documentation pour le processeur AMD Ryzen 9 9950X3D.</h2>
+    <!--<h1>Projet Processeur CIEL2 2025-2026</h1>
+    <h2>Voici la page Web de documentation pour le processeur AMD Ryzen 9 9950X3D.</h2>-->
     <div class="hero">
-        <div class="hero-image">
-              <img class="responsive-img" style="--orig-width:550px;" src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/3021650-ryzen-9-9900x3d-product.jpg" alt="Image du processeur AMD Ryzen 9 9950X3D"><br>
-        </div>
-        <div class="hero-content" style="margin-top: 20px;">
-        <center>
-            <button id="toggleAll" style="margin-bottom: 15px; background: #710171; color: #fff; font-weight: bold;">Tout ouvrir/fermer</button>
-            <!-- Canvas pour l'animation ribbons (traînée lumineuse) -->
-            <canvas id="ribbons-canvas" aria-hidden="true"></canvas>
-            <button class="accordion">Spécifications Générales</button>
-            <div class="panel">
-                <ul>
-                    <li><b>Nom</b> : AMD Ryzen™ 9 9950X3D</li>
-                    <li><b>Famille</b> : Ryzen</li>
-                    <li><b>Série</b> : Ryzen 9000 Series</li>
-                    <li><b>Format</b> : PC de bureau, Processeur emballé</li>
-                    <li><b>Market Segment</b> : Enthusiast Desktop</li>
-                    <li><b>AMD PRO Technologies</b> : Non</li>
-                    <li><b>Disponibilité régionale</b> : Global</li>
-                    <li><b>Ancien nom de code</b> : Granite Ridge AM5</li>
-                    <li><b>Architecture du processeur</b> : Zen 5</li>
-                    <li><b>Nombre de cœurs de CPU</b> : 16</li>
-                    <li><b>Multithreading (SMT)</b> : Oui</li>
-                    <li><b>Nombre de threads</b> : 32</li>
-                    <li><b>Boost d'horloge maximal</b> : Jusqu'à 5.7 GHz</li>
-                    <li><b>Horloge de base</b> : 4.3 GHz</li>
-                    <li><b>Cache L1</b> : 1280 KB</li>
-                    <li><b>Cache L2</b> : 16 MB</li>
-                    <li><b>Cache L3</b> : 128 MB</li>
-                    <li><b>TDP par défaut</b> : 170W</li>
-                    <li><b>Technologie de processeur pour cœurs de CPU</b> : TSMC 4nm FinFET</li>
-                    <li><b>Technologie de processeur pour circuit imprimé E/S</b> : TSMC 6nm FinFET</li>
-                    <li><b>Nombre de circuits imprimés du package</b> : 3</li>
-                    <li><b>Débridé pour l'overclocking</b> : Oui</li>
-                    <li><b>AMD EXPO™ Memory Overclocking Technology</b> : Oui</li>
-                    <li><b>Precision Boost Overdrive</b> : Oui</li>
-                    <li><b>Décalages de tension de Curve Optimizer</b> : Oui</li>
-                    <li><b>AMD Ryzen™ Master Support</b> : Oui</li>
-                    <li><b>Socket de CPU</b> : AM5</li>
-                    <li><b>Supporting Chipsets</b> : A620 , X670E , X670 , B650E , B650 , X870E , X870 , B840 , B850</li>
-                    <li><b>CPU Boost Technology</b> : Precision Boost 2</li>
-                    <li><b>Jeu d'instructions</b> : x86-64</li>
-                    <li><b>Extensions prises en charge</b> : AES , AVX512 , AVX2 , AVX , FMA3 , MMX-plus , SSE2 , SSE4.2 , SSE4A , SSE4.1 , SSE3 , SSSE3 , SSE , x86-64</li>
-                    <li><b>Solution de refroidissement (PIB)</b> : Non inclus</li>
-                    <li><b>Recommended Cooler</b> : Liquid cooler recommended for optimal performance</li>
-                    <li><b>Température de fonctionnement maximale (Tjmax)</b> : 95°C</li>
-                    <li><b>Date de lancement</b> : 03/12/2025</li>
-                    <li><b>*Systèmes d'exploitation compatibles</b> : Windows 11 - 64-Bit Edition , Windows 10 - 64-Bit Edition , RHEL x86 64-Bit , Ubuntu x86 64-Bit</li>
-                </ul>
+        <div class="hero-row" style="display:flex; align-items:flex-start; gap:28px; flex-wrap:wrap;">
+            <div class="hero-image" style="flex:0 0 auto;">
+                <img id="product-image" class="responsive-img" style="--orig-width:550px; max-width:900px; border-radius:10px;" src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/3021650-ryzen-9-9900x3d-product.jpg" alt="Image du processeur AMD Ryzen 9 9950X3D">
             </div>
-        <br>
-            <button class="accordion">Connectique</button>
-            <div class="panel">
-                <ul>
-                    <li>Native USB 3.2 Gen 2 (10Gbps) : 4</li>
-                    <li>Native USB 2.0 (480Mbps) : 1</li>
-                    <li>PCI Express® Version : PCIe® 5.0</li>
-                    <li>Native PCIe® Lanes (Total/Usable) : 28 , 24</li>
-                    <li>Prise en charge NVMe : Boot , RAID0 , RAID1 , RAID5 , RAID10</li>
-                    <li>Type de mémoire système : DDR5</li>
-                    <li>Memory Channels : 2</li>
-                    <li>Mémoire max. : 192 GB</li>
-                    <li>Sous-type de mémoire système : UDIMM</li>
-                    <li>Vitesse de mémoire max. :</li>
-                    <ul>
-                        <li>2x1R DDR5-5600</li>
-                        <li>2x2R DDR5-5600</li>
-                        <li>4x1R DDR5-3600</li>
-                        <li>4x2R DDR5-3600</li>
-                    </ul>
-                    <li>Prise en charge ECC : Yes (Requires mobo support)</li>
-                </ul>
-            </div>
-            <button class="accordion">Capacités Graphiques</button>
-            <div class="panel">
-                <ul>
-                    <li>Modèle de cœur graphique : AMD Radeon™ Graphics</li>
-                    <li>Nombre de cœurs graphiques : 2</li>
-                    <li>Fréquence des cœurs graphiques : 2200 MHz</li>
-                    <li>USB Type-C® DisplayPort™ Alternate Mode : Oui</li>
-                </ul>
-            </div>
-            <button class="accordion">Id du produit</button>
-            <div class="panel">
-                <ul>
-                    <li>ID du produit emballé : 100-100000719WOF</li>
-                    <li>ID du produit en plateau : 100-000000719</li>
-                </ul>
-            </div>
-            <button class="accordion">Fonctionnalités clés</button>
-            <div class="panel">
-                <ul>
-                    <li>Technologies prises en charge : AMD EXPO™ Technology , AMD Ryzen™ Technologies</li>
-                </ul>
+            <div class="hero-controls" style="flex:1 1 420px; min-width:260px; display:flex; flex-direction:column; gap:12px;">
+                <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+                    <button onclick="window.open('https://www.amd.com/fr/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x3d.html', '_blank')">Voir la page officielle</button>
+                    <button onclick="window.open('https://www.amd.com/fr/products/processors/desktops/ryzen.html', '_blank')">Site du fabricant</button>
+                    <button onclick="window.location.href='https://gitenmain.github.io/CIEL2'" style="background: #710171; color: #fff; font-weight: bold;">Retour</button>
+                </div>
+                <nav class="anchor-bar-menu" id="amd-marketing-header-menu" aria-label="Navigation processeur">
+                    <div data-component="spy-nav">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#specifications" class="nav-link anchor-bar-link">Spécifications</a></li>
+                            <li><a href="#connectique" class="nav-link anchor-bar-link">Connectique</a></li>
+                            <li><a href="#graphique" class="nav-link anchor-bar-link">Graphiques</a></li>
+                            <li><a href="#id-produit" class="nav-link anchor-bar-link">ID produit</a></li>
+                            <li><a href="#fonctionnalites" class="nav-link anchor-bar-link">Fonctionnalités</a></li>
+                            <li><a href="#comparaison" class="nav-link anchor-bar-link">Comparaison</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <p style="margin-top:6px; text-align:left;">Le AMD Ryzen™ 9 9950X3D est un processeur haut de gamme pour les ordinateurs de bureau, offrant 16 cœurs, 32 threads et des fréquences allant jusqu'à 5.7 GHz. Ci-dessous, des blocs d'information distincts reprennent les caractéristiques détaillées.</p>
             </div>
         </div>
-        </center>
+
+        <!-- Grille de cartes (quinconce) -->
+        <div class="card-grid" style="margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+            <article class="card panel" id="specifications" style="background:#fff; color:#000; border-radius:8px;">
+                <h3>Spécifications générales</h3>
+                <p>Le processeur AMD Ryzen™ 9 9950X3D fait partie de la famille Ryzen, série Ryzen 9000, destiné aux ordinateurs de bureau (socket AM5). Conçu sur l'architecture Zen 5, il embarque 16 cœurs et 32 threads grâce au SMT. Fréquences : base 4.3 GHz, boost jusqu'à 5.7 GHz. Cache : L1 1280 KB, L2 16 MB, L3 128 MB. TDP : 170 W.</p>
+                <p>Fabriqué en TSMC 4nm (cœurs) et 6nm (E/S). Débloqué pour overclocking, support AMD EXPO™, Precision Boost Overdrive et AMD Ryzen™ Master.</p>
+            </article>
+
+            <article class="card panel" id="connectique" style="background:#fff; color:#000; border-radius:8px;">
+                <h3>Connectique et mémoire</h3>
+                <p>Prise en charge native : USB 3.2 Gen 2 (4 ports), USB 2.0, PCIe® 5.0. Jusqu'à 28 lignes PCIe natives (24 utilisables selon carte mère). Support NVMe et RAID (0,1,5,10).</p>
+                <p>Mémoire : DDR5 en dual-channel, support jusqu'à 192 Go selon la carte mère. Profils certifiés comme DDR5-5600 selon la topologie. ECC supporté si la carte mère le permet.</p>
+            </article>
+
+            <article class="card panel" id="graphique" style="background:#fff; color:#000; border-radius:8px;">
+                <h3>Capacités graphiques</h3>
+                <p>Inclut un sous-système AMD Radeon™ intégré, avec 2 cœurs graphiques cadencés jusqu'à 2200 MHz. Supporte l'affichage via USB Type-C (DisplayPort Alternate Mode) pour les tâches multimédia et bureautique.</p>
+            </article>
+
+            <article class="card panel" id="id-produit" style="background:#fff; color:#000; border-radius:8px;">
+                <h3>Identifiants produit</h3>
+                <p>ID produit (emballé) : 100-100000719WOF. ID produit (tray) : 100-000000719. Utiles pour retrouver la référence commerciale.</p>
+            </article>
+
+            <article class="card panel" id="fonctionnalites" style="background:#fff; color:#000; border-radius:8px;">
+                <h3>Fonctionnalités clés</h3>
+                <p>Technologies : AMD EXPO™ (overclocking mémoire), Precision Boost, Precision Boost Overdrive, Curve Optimizer et AMD Ryzen™ Master pour le tuning et l'optimisation des performances.</p>
+            </article>
+        </div>
     </div>
     <center>
-        <section class="comparison" style="margin-top:20px; width:100%; max-width:1100px;">
+    <section id="comparaison" class="comparison" style="margin-top:20px; width:100%; max-width:1100px;">
             <h3>Tableau de comparaison</h3>
             <div style="overflow-x:auto;">
                 <table class="compare-table" style="width:100%; border-collapse:collapse;">
@@ -149,8 +108,6 @@
                             <td style="padding:10px; border-bottom:1px solid var(--border-color);">Intel Core Ultra 9 285K (100)</td>
                             <td style="padding:10px; border-bottom:1px solid var(--border-color);">AMD ~2.14× plus rapide</td>
                         </tr>
-
-                        <!-- Gaming -->
                         <tr>
                             <td style="padding:10px; border-bottom:1px solid var(--border-color); font-weight:600;">Gaming — Cyberpunk 2077</td>
                             <td style="padding:10px; border-bottom:1px solid var(--border-color);">AMD Ryzen +59 %</td>
@@ -189,9 +146,7 @@
     </center>
 <footer>
     <center>
-    <br><button onclick="window.open('https://www.amd.com/fr/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x3d.html', '_blank')">Voir la page officielle du produit</button>
-    <br><button onclick="window.open('https://www.amd.com/fr/products/processors/desktops/ryzen.html', '_blank')">Site du Fabricant</button>
-    <br><button onclick="window.location.href='https://gitenmain.github.io/CIEL2'" style="background: #710171; color: #fff; font-weight: bold;">Retour au Trombinoscope</button>
+        <p><strong>Pages Web Made By Agag</strong></p>
     </center>
 </footer>
 </body>
