@@ -38,6 +38,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 
+/*
+	Adaptation du tableau celon le thème du navigateur (clair/sombre)
+*/
+	function applyThemeToTable() {
+		var table = document.querySelector('.compare-table');
+		if (!table) return;
+		var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+		if (isDark) {
+			table.classList.add('dark-theme');
+			table.classList.remove('light-theme');
+		} else {
+			table.classList.add('light-theme');
+			table.classList.remove('dark-theme');
+		}
+	}
+	applyThemeToTable();
+	if (window.matchMedia) {
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyThemeToTable);
+	}
+
 		// Zoom overlay for comparison table (hover & click)
 		(function(){
 			// Inject styles once
@@ -59,6 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
 				overlay.innerHTML = '<div class="zoom-container"><div class="zoom-inner"></div></div>';
 				document.body.appendChild(overlay);
 				var inner = overlay.querySelector('.zoom-inner');
+				// detect current theme and apply text color for overlay only
+				var isDark = false;
+				try { isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; } catch(e) {}
+				if (isDark) {
+					inner.style.color = '#fff';
+					inner.style.setProperty('--bg', '#0f1720');
+				} else {
+					inner.style.color = '#000';
+					inner.style.setProperty('--bg', '#ffffff');
+				}
 				var clone = table.cloneNode(true);
 				clone.removeAttribute('id');
 				clone.style.width = 'auto';
