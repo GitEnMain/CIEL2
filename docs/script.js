@@ -27,7 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const students = [
+<<<<<<< HEAD
+{
+=======
   {
+>>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     name: "Albert Einstein",
     photo: "img/einstein.png",
     role: "Physicien théoricien — Prix Nobel 1921 ",
@@ -66,7 +70,7 @@ const students = [
     bio: "gt3rs."
   },
   {
-    name: "THE-AGAG",
+    name: "THE-AGAG (Gaëtan)",
     photo: "img/Java_Logo_Gaetan.png",
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
@@ -99,18 +103,22 @@ const students = [
     photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
+<<<<<<< HEAD
+    github: "https://github.com/GitEnMain/CIEL2.git",
+=======
     github: "https://github.com/mams05",
     web: "pages/condensateur/condensateur.html",
+>>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
   {
-    name: "Artur Tutur9",
+    name: "Artur, Tutur9",
     photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	  web: "pages/DS1307/DS1307.html",
+	web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -120,6 +128,8 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
+<<<<<<< HEAD
+=======
     tech: "",
     bio: "",
   },
@@ -129,7 +139,12 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
     github: "",
+<<<<<<< HEAD
     tech: ["DBZ", "dormir", "manger"],
+=======
+>>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
+    tech: ["Python", "HTML", "Docker"],
+>>>>>>> 57f9a7f6fb450eb5dbc0cb52211b8082204c98cf
     bio: "Veut bosser en devops."
   },
   {
@@ -138,7 +153,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
-    web: "Hacheur_electronique.html",
+    web: "hacheur_electronique.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -152,15 +167,51 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
+<<<<<<< HEAD
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },
+  {
+    name: "Yanis Dupont",
+    photo: "img/lapin.png",
+    role: "Étudiant BTS CIEL",
+    email: "",
+    github: "",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+  },  
+  {
+=======
+>>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
     name: "Lucas, zwakss1",
     photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
     email: "",
     github: "",
+    web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Master sur pokemon Unite",
+<<<<<<< HEAD
+    bio: "Master sur pokemon Unite"
+  }
+=======
+    bio: "Master sur pokemon Unite.",
     Web:"pages/transistor/transistor.html"
   },
+>>>>>>> 38b93f4767a8bc457dc08330d831d6097ee99406
 ];
 
 
@@ -212,7 +263,12 @@ function cardTemplate(p){
         </div>
       </div>
       <div class="tags">${tech || ''}</div>
-      <div class="card-footer">${email} ${gh} ${web}</div>
+      <div class="bio">${sanitize(p.bio || '')}</div>
+
+      <div class="card-footer">
+        <div class="btn-row space-between">${email} ${gh}</div>
+        <div class="btn-row center">${web}</div>
+      </div>
     </article>`;
 }
 

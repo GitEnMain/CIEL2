@@ -16,3 +16,21 @@ prev.addEventListener('click', () => showSlide(index - 1));
 next.addEventListener('click', () => showSlide(index + 1));
 
 setInterval(() => showSlide(index + 1), 3000);
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll('.media-image-title');
+
+  images.forEach(img => {
+    img.style.transition = "transform 0.3s ease"; // on met la transition une seule fois
+
+    img.addEventListener('mouseenter', () => {
+      img.style.transform = 'scale(1.1)';
+    });
+
+    img.addEventListener('mouseleave', () => {
+      img.style.transform = 'scale(1)';
+    });
+  });
+});
