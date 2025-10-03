@@ -145,14 +145,26 @@ const students = [
     bio: ""
   },
   {
+<<<<<<< HEAD
+=======
+
+    name: "Adrien (aAdri1)",
+>>>>>>> 83c8c3608df0a30e30865937982e7f4fe399fb61
     name: "Adrien aAdri1",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
+<<<<<<< HEAD
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops.",
     web: "pages/Potentiometre/potentiomettre.html",
+=======
+    Web: "pages/Potentiometre/potentiomettre.html",
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
+
+>>>>>>> 83c8c3608df0a30e30865937982e7f4fe399fb61
   },
   {
     name: "Lucas zwakss1",
