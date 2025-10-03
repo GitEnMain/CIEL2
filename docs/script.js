@@ -92,7 +92,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
-    web: "composantElectronique/Apple_M4_SoC/Apple_M4_index.html",
+    web: "composantElectronique/SoC_Apple_M4/Apple_M4_index.html",
     tech: ["🧀", "🥖", "🍷", "🍇"],
     bio: "Tout le monde peut cuisiner. Gusteau"
   },
