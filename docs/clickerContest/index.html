@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Décompte — 2 semaines</title>
+  
   <style>
     :root{
       --bg:#0b0d12; --text:#e7edf6; --muted:#9aa6b2; --ring:#5dd3ff;
@@ -60,6 +61,7 @@
     .actions{
       margin-top:18px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
     }
+    
     .btn{
       padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.12);
       background: transparent; color: var(--text); cursor:pointer; font-weight:700;
@@ -67,7 +69,10 @@
     .btn:hover{ outline: 2px solid rgba(93,211,255,.25); }
     .muted{ color: var(--muted); font-size: 13px; }
   </style>
+
+
 </head>
+
 <body>
   <div class="wrap" role="group" aria-label="Décompte deux semaines">
     <h1>Décompte — 2 semaines</h1>
@@ -81,12 +86,12 @@
     </div>
 
     <p id="done" class="done" hidden>✅ Terminé !</p>
-
+<!--
     <div class="actions">
       <button id="reset" class="btn" aria-label="Réinitialiser le décompte">Réinitialiser</button>
       <span class="muted" id="eta"></span>
     </div>
-  </div>
+  </div> -->
 
   <script>
     (function(){
