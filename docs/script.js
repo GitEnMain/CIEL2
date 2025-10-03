@@ -140,7 +140,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
-    web: "hacheur_electronique.html",
+    web: "pages/Hacheur/hacheur_electronique.html",
     tech: [""],
     bio: ""
   },
