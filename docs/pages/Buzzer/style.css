@@ -1,5 +1,5 @@
 body {
-    background-color: crimson;
+    background-color: rgb(50, 7, 66);
 }
 
 h1 {
@@ -11,4 +11,12 @@ p {
 }
 strong {
     color:gold
+}
+
+li {
+    color:white
+}
+
+li strong {
+    color:rgb(255, 187, 0)
 }
