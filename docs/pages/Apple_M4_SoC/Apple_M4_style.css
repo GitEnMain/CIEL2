@@ -21,9 +21,14 @@ h2 {
     width: 800px;
 }
 
-.media-image-tab {
+.media-image-tab-comparaison {
     text-align: center;
     width: 200px;
+}
+
+.media-image-tab-devices {
+    text-align: center;
+    width: 190px;
 }
 
 .media-interface {
