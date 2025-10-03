@@ -275,4 +275,40 @@ document.addEventListener('DOMContentLoaded', function() {
 		ctx.clearRect(0,0,canvas.width,canvas.height);
 		draw();
 	})();
+
+	// Ajuste dynamiquement l'espacement vertical entre les cartes
+	function updateCardGap() {
+		try {
+			var paras = document.querySelectorAll('.card p');
+			if (!paras || paras.length === 0) return;
+			var maxH = 0;
+			paras.forEach(function(p) {
+				// mesurer la hauteur réelle rendue
+				var r = p.getBoundingClientRect();
+				if (r.height > maxH) maxH = r.height;
+			});
+			// espace = 3x la hauteur du plus grand paragraphe
+			var gap = Math.round(maxH * 3);
+			var grid = document.querySelector('.card-grid');
+			if (grid) {
+				// appliquer en tant que row-gap inline (priorité sur les styles externes)
+				grid.style.rowGap = gap + 'px';
+				// exposer aussi en variable CSS pour éventuels usages
+				grid.style.setProperty('--card-vertical-gap', gap + 'px');
+			}
+		} catch (e) {
+			// ne pas casser si erreur
+			console && console.warn && console.warn('updateCardGap failed', e);
+		}
+	}
+
+	// recalculer au redimensionnement (debounce)
+	var __gapResizeTimer = null;
+	window.addEventListener('resize', function() {
+		clearTimeout(__gapResizeTimer);
+		__gapResizeTimer = setTimeout(updateCardGap, 120);
+	});
+
+	// exécution initiale après chargement
+	updateCardGap();
 });
