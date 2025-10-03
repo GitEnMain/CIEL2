@@ -17,6 +17,9 @@ body {
     to{opacity: 1;}
 }
 
+
+
+
 p{
     color: #000000;
     font-size: 20px;
@@ -137,6 +140,8 @@ th, td {
 
     transition: transform 0.2s;
 
+    
+
 }
 
 .cardfrml {
@@ -161,6 +166,8 @@ th, td {
     max-width: 800px;
 
     justify-content: center;
+
+    
 }
 
 
@@ -182,6 +189,14 @@ th, td {
 
     transition: transform 0.2s;
 
+    
+
+}
+.cardee:hover {
+
+    transform: translateY(-1px);    /* curseur sur la carte, elle monte*/
+    border-color: var(--ring); 
+
 }
 
 
@@ -189,6 +204,13 @@ th, td {
 .card:hover {
 
     transform: translateY(-20px);    /* curseur sur la carte, elle monte*/
+    border-color: var(--ring); 
+
+}
+.cardfrml:hover {
+
+    transform: translateY(-1px);    /* curseur sur la carte, elle monte*/
+    border-color: var(--ring); 
 
 }
 
