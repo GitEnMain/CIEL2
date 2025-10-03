@@ -1,7 +1,10 @@
 body {
-        background-color:aquamarine;
+        background-color:rgb(124, 250, 206);
         font-family: Arial, Helvetica, sans-serif;
-        margin: 20px;
+        margin-left: 450px;
+        margin-right: 450px;
+        text-align: center;
+
       } 
 
 h1   {
@@ -35,6 +38,33 @@ h4   {
 h5   {
         color: rgb(58, 30, 163);
         text-align:left;
-        font-size:30px;
+       font-size:30px;
 
     }
+
+p  {
+    text-align: left;
+    line-height: 1.6
+}
+
+img {
+    transition: transform 0.3s ease;
+    border-radius: 8px
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+button {
+    padding: 15 px 30 px;
+    font-size: 18px;
+    background-color: blue;
+    max-width: 600px;
+    margin: 50px auto;
+    color: white;
+    border: none;
+    border-radius: 8px
+    cursor
+    transition: all 0.3 ease;
+}

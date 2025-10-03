@@ -141,8 +141,8 @@ const students = [
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
     web: "pages/Hacheur/hacheur_electronique.html",
-    tech: [""],
-    bio: ""
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops."
   },
   {
 <<<<<<< HEAD
