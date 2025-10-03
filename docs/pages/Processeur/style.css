@@ -210,6 +210,29 @@ a:hover {
   position: relative;
 }
 
+/* Styles pour le tableau de comparaison, adaptatifs au thème */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--table-bg);
+  color: var(--table-text);
+  border: 1px solid var(--table-border);
+}
+.compare-table th, .compare-table td {
+  border: 1px solid var(--table-border);
+  padding: 8px 10px;
+  text-align: left;
+}
+.compare-table th {
+  background: color-mix(in srgb, var(--table-accent) 10%, var(--table-bg));
+  color: var(--table-text);
+}
+.compare-table.dark {
+  /* garde compatibilité si script ajoute la classe dark */
+  background: var(--table-bg);
+  color: var(--table-text);
+}
+
 /* Bouton de bascule thème */
 #themeToggle{
   position: absolute;
