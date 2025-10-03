@@ -88,7 +88,7 @@ const students = [
   },
   {
     name: "Anto",
-    photo: "img/antonin-upjv_pic.PNG",
+    photo: "img/antonin-upjv_pic.gif",
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
