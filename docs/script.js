@@ -152,7 +152,7 @@ const students = [
     github: "https://github.com/aAdri1",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops.",
-    web: "pages/Potentiomètre/potentiometre.html",
+    web: "pages/Potentiometre/potentiomettre.html",
   },
   {
     name: "Lucas zwakss1",
