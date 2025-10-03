@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				setTimeout(function(){ if(ol && ol.parentNode) ol.parentNode.removeChild(ol); if(cleanup) cleanup(); overlay = null; }, 280);
 			}
 
-			table.addEventListener('mouseenter', showZoom);
+			table.addEventListener('click', showZoom);
 			table.addEventListener('click', showZoom);
 		})();
 
