@@ -130,11 +130,11 @@ body {
   margin-right: 40px;
 }
 
-.transBipo { /* texte à côté de l'image */
+.transBipo { /* texte*/
   font-size: 2em;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 
@@ -147,7 +147,7 @@ body {
 }
 
 .transMOSFET{ /*image*/
-  max-width: 350px;  /* largeur max de l'image */
+  max-width: 250px;  /* largeur max de l'image */
   height: auto;/* conserve les proportions */
   margin-right: 40px;
 }
@@ -164,3 +164,17 @@ body {
   height: auto;/* conserve les proportions */
   
 }
+
+.paraMOSTFET{ /*texte/paragraphe*/
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  margin-bottom: 100px;
+}
+
+.acroMOSTFET{
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  margin-bottom: 100px;
+} /*acronyme MOSTFET*/
