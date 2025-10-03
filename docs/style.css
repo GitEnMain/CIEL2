@@ -227,6 +227,23 @@ header.hero {
   overflow: hidden;
 }
 
+/* Keep image at declared original width but allow it to scale down on small screens
+   Usage: <img class="responsive-img" style="--orig-width:900px;" src="..."> */
+.responsive-img{
+  display:block;
+  width:var(--orig-width, 100%);
+  max-width:100%;
+  height:auto;
+}
+
+@media (max-width:900px){
+  .responsive-img{ width:calc(100% - 40px); }
+}
+
+@media (max-width:420px){
+  .responsive-img{ width:calc(100% - 20px); }
+}
+
 .tag {
   font-size: 12px; 
   line-height: 1;
