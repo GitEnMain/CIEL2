@@ -2,7 +2,7 @@ const images = document.querySelectorAll(".zoomImg"); // toutes les images avec 
 
 images.forEach(img => {
   img.style.transition = "transform 0.3s ease-in-out"; // transition pour le zoom
-  img.addEventListener("mouseover", () => img.style.transform = "scale(2.5)"); // zoom
+  img.addEventListener("mouseover", () => img.style.transform = "scale(2.2)"); // zoom
   img.addEventListener("mouseout", () => img.style.transform = "scale(1)");    // retour
 });
 

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Décompte — 2 semaines</title>
+  <style>
+    :root{
+      --bg:#0b0d12; --text:#e7edf6; --muted:#9aa6b2; --ring:#5dd3ff;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f7fb; --text:#0f172a; --muted:#5b6676; --ring:#2563eb; }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; display:grid; place-items:center;
+      background: radial-gradient(70% 60% at 50% -10%, rgba(93,211,255,.15), transparent 60%), var(--bg);
+      color:var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+    }
+    .wrap{
+      text-align:center;
+      padding:24px 28px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+      max-width: 760px;
+      width: min(92vw, 760px);
+    }
+    h1{margin:0 0 10px; font-weight:900; letter-spacing:.5px}
+    .subtitle{margin:0 0 22px; color:var(--muted)}
+    .timer{
+      display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+    }
+    .bloc{
+      min-width: 130px;
+      padding: 14px 16px;
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0));
+    }
+    .val{
+      font-size: clamp(34px, 7vw, 72px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 1px;
+      text-shadow: 0 0 22px rgba(93,211,255,.25);
+    }
+    .lab{
+      margin-top: 6px; font-size: 14px; color: var(--muted); letter-spacing:.2px;
+    }
+    .done{
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 800;
+      margin-top: 8px;
+      color: var(--ring);
+      text-shadow: 0 0 20px rgba(93,211,255,.25);
+    }
+    .actions{
+      margin-top:18px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
+    }
+    .btn{
+      padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.12);
+      background: transparent; color: var(--text); cursor:pointer; font-weight:700;
+    }
+    .btn:hover{ outline: 2px solid rgba(93,211,255,.25); }
+    .muted{ color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="group" aria-label="Décompte deux semaines">
+    <h1>Décompte — 2 semaines</h1>
+    <p class="subtitle">Le compte à rebours démarre à la première ouverture et reprend là où vous l’avez laissé.</p>
+
+    <div id="timer" class="timer" aria-live="polite">
+      <div class="bloc"><div id="d" class="val">14</div><div class="lab">jours</div></div>
+      <div class="bloc"><div id="h" class="val">00</div><div class="lab">heures</div></div>
+      <div class="bloc"><div id="m" class="val">00</div><div class="lab">minutes</div></div>
+      <div class="bloc"><div id="s" class="val">00</div><div class="lab">secondes</div></div>
+    </div>
+
+    <p id="done" class="done" hidden>✅ Terminé !</p>
+
+    <div class="actions">
+      <button id="reset" class="btn" aria-label="Réinitialiser le décompte">Réinitialiser</button>
+      <span class="muted" id="eta"></span>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const STORAGE_KEY = "countdown_2weeks_start";
+      const DURATION_MS = 14 * 24 * 60 * 60 * 1000; // 2 semaines
+
+      const $d = document.getElementById('d');
+      const $h = document.getElementById('h');
+      const $m = document.getElementById('m');
+      const $s = document.getElementById('s');
+      const $done = document.getElementById('done');
+      const $eta = document.getElementById('eta');
+      const $reset = document.getElementById('reset');
+
+      // Récupère le point de départ ou l'initialise
+      let start = Number(localStorage.getItem(STORAGE_KEY));
+      if (!Number.isFinite(start) || start <= 0) {
+        start = Date.now();
+        localStorage.setItem(STORAGE_KEY, String(start));
+      }
+      const target = start + DURATION_MS;
+
+      function pad(n){ return String(Math.floor(n)).padStart(2,'0'); }
+
+      function formatDate(ts){
+        const d = new Date(ts);
+        return d.toLocaleString('fr-FR', {
+          weekday:'short', year:'numeric', month:'short', day:'2-digit',
+          hour:'2-digit', minute:'2-digit'
+        });
+      }
+
+      function tick(){
+        const now = Date.now();
+        let diff = target - now;
+
+        if (diff <= 0){
+          $d.textContent = '00';
+          $h.textContent = '00';
+          $m.textContent = '00';
+          $s.textContent = '00';
+          $done.hidden = false;
+          $eta.textContent = `Échéance atteinte le ${formatDate(target)}.`;
+          return; // stop next frames
+        }
+
+        const days  = Math.floor(diff / (24*60*60*1000)); diff -= days * 24*60*60*1000;
+        const hours = Math.floor(diff / (60*60*1000));    diff -= hours * 60*60*1000;
+        const mins  = Math.floor(diff / (60*1000));       diff -= mins * 60*1000;
+        const secs  = Math.floor(diff / 1000);
+
+        $d.textContent = String(days).padStart(2,'0');
+        $h.textContent = pad(hours);
+        $m.textContent = pad(mins);
+        $s.textContent = pad(secs);
+
+        $done.hidden = true;
+        $eta.textContent = `Fin prévue le ${formatDate(target)}.`;
+
+        // cadence ~4 fois/s pour une impression fluide
+        requestAnimationFrame(() => setTimeout(tick, 250));
+      }
+
+      $reset.addEventListener('click', () => {
+        if (!confirm('Réinitialiser le décompte de 2 semaines ?')) return;
+        const now = Date.now();
+        localStorage.setItem(STORAGE_KEY, String(now));
+        location.reload();
+      });
+
+      tick();
+    })();
+  </script>
+</body>
+</html>

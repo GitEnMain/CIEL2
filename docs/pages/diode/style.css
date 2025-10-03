@@ -1,5 +1,13 @@
-body{ background-color: #000000;
-font-family: Arial, sans-serif ,white;}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #000000;
+}
 
 h1{color: #ffffff;}
 h2{color: #ffffff;}
@@ -18,5 +26,67 @@ html, body {
   height: 100vh;
   pointer-events: none; /* Allow clicks through canvas */
   z-index: 1000; /* On top */
-  mix-blend-mode: screen; /* Nice additive blending */
+  /* Retiré: mix-blend-mode: screen; provoquait une altération des couleurs du fond.
+    Nous dessinons en mode composite dans le canvas pour éviter la décoloration. */
+  mix-blend-mode: normal;
+  background: transparent; /* explicitly transparent */
+  isolation: isolate; /* isolate canvas to avoid blending with the page */
+}
+
+/* Petite classe pour les boutons si besoin */
+.ribbon-glow-btn {
+  position: relative;
+}
+
+.slideshow {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: rgb(35, 31, 34);
+  text-align: center;
+  padding: 10px;
+}
+
+/* 🔑 The fix: only the active slide is visible */
+.slide {
+  display: none;
+}
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.caption {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 0 8px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
 }
