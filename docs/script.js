@@ -121,8 +121,8 @@ const students = [
     email: "",
     github: "https://github.com/orzo12",
 	web: "",
-    tech: "",
-    bio: "",
+    tech: ["dessiner", "manga"],
+    bio: "je suis ici",
   },
   {
     name: "Bryan RaizoFR",
