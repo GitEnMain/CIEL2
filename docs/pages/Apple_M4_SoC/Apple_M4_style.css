@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     color:#D3D3D3;
     font-family: 'Inter', ui-rounded, 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
