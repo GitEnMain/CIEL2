@@ -162,13 +162,6 @@ const students = [
     github: "https://github.com/zwakss1",
     web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
-    github: "",
-    web: "pages/transistor/transistor.html",
-    tech: [""],
-    bio: "Master sur pokemon Unite.",
-    github: "",
-    web: "pages/transistor/transistor.html",
-    tech: [""],
     bio: "Master sur pokemon Unite."
   },
 ];
