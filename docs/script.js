@@ -101,8 +101,8 @@ const students = [
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
     web: "pages/condensateur/condensateur.html",
-    tech: [""],
-    bio: ""
+    tech: ["sport", "manga", "serie"],
+    bio: "Visca Barca"
   },
   {
     name: "Artur Tutur9",
@@ -172,13 +172,6 @@ const students = [
     github: "https://github.com/zwakss1",
     web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
-    github: "",
-    web: "pages/transistor/transistor.html",
-    tech: [""],
-    bio: "Master sur pokemon Unite.",
-    github: "",
-    web: "pages/transistor/transistor.html",
-    tech: [""],
     bio: "Master sur pokemon Unite."
   },
 ];
