@@ -81,8 +81,8 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "placeholder@placeholder.com",
     github: "https://github.com/B2spirit66",
-    Web: "pages/diode/index.html",
-    tech: ["Python", "HTML", "Docker"],
+    web: "pages/diode/index.html",
+    tech: ["pentesting", "modder", "Docker"],
     bio: "want to do pentesting."
   },
   {
