@@ -122,9 +122,9 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
-	  web: "",
+	  web: "pages/Buzzer/buzzer.html",
     tech: "",
-    bio: ""
+    bio: "j'aime DBZ"
   },
   {
     name: "Bryan RaizoFR",
