@@ -129,10 +129,17 @@ const students = [
     photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
+<<<<<<< HEAD
+    github: "https://github.com/raizoFR",
+    tech: ["DBZ", "dormir", "manger"],
+    bio: "Veut bosser en devops."
+	  web: "capteur.html",
+=======
     github: "",
 	  web: "",
     tech: [""],
     bio: ""
+>>>>>>> 7007a9dc99a50cb87d9167567375f4cc5468c79e
   },
   {
     name: "Valentin Valentin760",
