@@ -93,8 +93,8 @@ const students = [
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
     web: "pages/Apple_M4_SoC/Apple_M4_index.html",
-    tech: ["UX", "UI", "Pixelmator Pro"],
-    bio: "Hobbyist UX/UI designer"
+    tech: ["🧀", "🥖", "🍷", "🍇"],
+    bio: "Tout le monde peut cuisiner. Gusteau"
   },
   {
     name: "Mamadou Mams05",
