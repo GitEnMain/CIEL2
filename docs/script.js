@@ -101,8 +101,8 @@ const students = [
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
     web: "pages/condensateur/condensateur.html",
-    tech: [""],
-    bio: ""
+    tech: ["sport", "manga", "serie"],
+    bio: "Visca Barca"
   },
   {
     name: "Artur Tutur9",
