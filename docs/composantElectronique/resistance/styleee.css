@@ -2,7 +2,7 @@ body {
 
     font-family: "Comic Sans MS", Arial, sans-serif;
 
-    background: linear-gradient(to right,#ffffff,#9e9c9c );
+    background: linear-gradient(to right,#ffffff,#115ccc );
 
     margin: 0px;
 
@@ -16,6 +16,9 @@ body {
     from {opacity:0 ;}
     to{opacity: 1;}
 }
+
+
+
 
 p{
     color: #000000;
@@ -137,6 +140,8 @@ th, td {
 
     transition: transform 0.2s;
 
+    
+
 }
 
 .cardfrml {
@@ -161,6 +166,8 @@ th, td {
     max-width: 800px;
 
     justify-content: center;
+
+    
 }
 
 
@@ -182,6 +189,14 @@ th, td {
 
     transition: transform 0.2s;
 
+    
+
+}
+.cardee:hover {
+
+    transform: translateY(-1px);    /* curseur sur la carte, elle monte*/
+    border-color: var(--ring); 
+
 }
 
 
@@ -189,6 +204,13 @@ th, td {
 .card:hover {
 
     transform: translateY(-20px);    /* curseur sur la carte, elle monte*/
+    border-color: var(--ring); 
+
+}
+.cardfrml:hover {
+
+    transform: translateY(-1px);    /* curseur sur la carte, elle monte*/
+    border-color: var(--ring); 
 
 }
 

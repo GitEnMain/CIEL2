@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(50, 7, 66);
+}
+
+h1 {
+    color:lightskyblue
+}
+
+p {
+    color:aliceblue
+}
+strong {
+    color:gold
+}
+
+li {
+    color:white
+}
+
+li strong {
+    color:rgb(255, 187, 0)
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+@media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+    .centrer-liste {
+      padding: 10px;
+    }
+  }
+
+  /* Style normal du texte */
+p, li {
+    color: rgb(255, 255, 255);  /* Couleur par défaut */
+    transition: color 0.3s ease; /* Pour une transition douce */
+  }
+  
+  /* Couleur du texte quand on passe la souris dessus */
+  p:hover, li:hover {
+    color: #ff002b;  /* Couleur bleue au survol */
+    cursor: pointer; /* En plus, on change le curseur en main */
+  }
+
+  .separator {
+    width: 400px;
+    height: 50px;
+    background-color: #3700ff;
+    margin: 20px auto;  /* Centrer horizontalement et espace vertical */
+    border-radius: 600px; /* Bord arrondi pour un style doux */
+  }
+
+  .icon-separator {
+    background-color: gold;
+  }
