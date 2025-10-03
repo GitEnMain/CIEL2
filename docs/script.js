@@ -101,8 +101,8 @@ const students = [
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
     web: "pages/condensateur/condensateur.html",
-    tech: [""],
-    bio: ""
+    tech: ["sport", "manga", "serie"],
+    bio: "Visca Barca"
   },
   {
     name: "Artur Tutur9",
@@ -110,7 +110,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	web: "pages/DS1307/DS1307.html",
+	  web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -120,19 +120,26 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
-	web: "",
+	  web: "",
     tech: "",
-    bio: "",
+    bio: ""
   },
   {
     name: "Bryan RaizoFR",
     photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
+<<<<<<< HEAD
     github: "https://github.com/raizoFR",
     tech: ["DBZ", "dormir", "manger"],
     bio: "Veut bosser en devops."
 	  web: "capteur.html",
+=======
+    github: "",
+	  web: "",
+    tech: [""],
+    bio: ""
+>>>>>>> 7007a9dc99a50cb87d9167567375f4cc5468c79e
   },
   {
     name: "Valentin Valentin760",
@@ -140,19 +147,19 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
-    web: "hacheur_electronique.html",
+    web: "pages/Hacheur/hacheur_electronique.html",
     tech: [""],
     bio: ""
   },
   {
-    name: "Adrien aAdri1",
+    name: "Adrien (aAdri1)",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
-	  web: "",
-    tech: [""],
-    bio: ""
+    tech: ["Python", "HTML", "Docker"],
+    bio: "Veut bosser en devops.",
+    web: "pages/Potentiometre/potentiomettre.html",
   },
   {
     name: "Lucas zwakss1",
