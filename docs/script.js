@@ -110,7 +110,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	web: "pages/DS1307/DS1307.html",
+	  web: "pages/DS1307/DS1307.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -120,9 +120,9 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
-	web: "",
+	  web: "",
     tech: "",
-    bio: "",
+    bio: ""
   },
   {
     name: "Bryan RaizoFR",
@@ -130,7 +130,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
     github: "",
-	web: "",
+	  web: "",
     tech: [""],
     bio: ""
   },
@@ -145,7 +145,9 @@ const students = [
     bio: ""
   },
   {
+
     name: "Adrien (aAdri1)",
+    name: "Adrien aAdri1",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
