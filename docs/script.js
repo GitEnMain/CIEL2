@@ -156,7 +156,7 @@ const students = [
     photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
     email: "",
-    github: "",
+    github: "https://github.com/zwakss1",
     web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Master sur pokemon Unite.",
