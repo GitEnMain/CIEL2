@@ -66,7 +66,7 @@ const students = [
     bio: "gt3rs."
   },
   {
-    name: "THE-AGAG (Gaëtan)",
+    name: "Gaëtan THE-AGAG",
     photo: "img/Java_Logo_Gaetan.png",
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
@@ -76,16 +76,16 @@ const students = [
     bio: "Créateur de plugins / Mods Minecraft."
   },
   {
-    name: "B2spirit66",
+    name: "Cyril | B2spirit66",
     photo: "img/cropped-bonnibel 2.jpg",
     role: "Étudiant BTS CIEL",
-    email: "placeholder@placeholder.com",
     github: "https://github.com/B2spirit66",
-    tech: ["Python", "HTML", "Docker"],
+    web: "pages/diode/index.html",
+    tech: ["pentesting", "modder", "Docker"],
     bio: "want to do pentesting."
   },
   {
-    name: "anto",
+    name: "Anto",
     photo: "img/antonin-upjv_pic.PNG",
     role: "Étudiant BTS CIEL",
     email: "antonin.lespagnol@etud.u-picardie.fr",
@@ -95,17 +95,17 @@ const students = [
     bio: "Hobbyist UX/UI designer"
   },
   {
-    name: "Mams05",
+    name: "Mamadou Mams05",
     photo: "img/fcb.jpg",
     role: "Étudiant BTS CIEL",
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
     web: "pages/condensateur/condensateur.html",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    tech: [""],
+    bio: ""
   },
   {
-    name: "Artur, Tutur9",
+    name: "Artur Tutur9",
     photo: "img/logopdp.png",
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
@@ -115,52 +115,60 @@ const students = [
     bio: "Recherche d'argent."
   },
   {
-    name: "Orzo12",
+    name: "Krys Orzo12",
     photo: "img/Dragon Ball Z.png",
     role: "Étudiant BTS CIEL",
     email: "",
     github: "https://github.com/orzo12",
+	web: "",
     tech: "",
     bio: "",
   },
   {
-    name: "raizoFR",
+    name: "Bryan RaizoFR",
     photo: "img/minecraft-zombie-w1LVvw1-600.jpg",
     role: "Étudiant BTS CIEL",
     email: "bryancramer51@gmail.com",
     github: "",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+	web: "",
+    tech: [""],
+    bio: ""
   },
   {
-    name: "Valentin, Valentin760",
+    name: "Valentin Valentin760",
     photo: "img/Paris_Saint-Germain_Logo.svg.png",
     role: "Étudiant BTS CIEL",
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
     web: "hacheur_electronique.html",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+    tech: [""],
+    bio: ""
   },
   {
-    name: "aAdri1",
+    name: "Adrien aAdri1",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
-    tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops."
+	web: "",
+    tech: [""],
+    bio: ""
   },
   {
-    name: "Lucas, zwakss1",
+    name: "Lucas zwakss1",
     photo: "img/fish.jpg",
     role: "Étudiant BTS CIEL",
     email: "",
+<<<<<<< HEAD
     github: "https://github.com/zwakss1",
     web:"pages/transistor/transistor.html",
     tech: ["Python", "HTML", "Docker"],
+=======
+    github: "",
+    web: "pages/transistor/transistor.html",
+    tech: [""],
+>>>>>>> 59d01fcb1850acfe26bb4632f8222ca75c2b99ee
     bio: "Master sur pokemon Unite.",
-    Web:"pages/transistor/transistor.html"
   },
 ];
 
