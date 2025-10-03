@@ -94,7 +94,7 @@ const students = [
     github: "https://github.com/antonin-upjv",
     web: "pages/Apple_M4_SoC/Apple_M4_index.html",
     tech: ["UX", "UI", "Pixelmator Pro"],
-    bio: "Hobbyist UX/UI designer"
+    bio: "Ce n’est pas n’importe qui qui peut devenir un grand artiste, mais un grand artiste peut venir de n’importe où."
   },
   {
     name: "Mamadou Mams05",
