@@ -49,22 +49,22 @@
     transform: scale(1.1); 
   }
 
-
-
-
-
-
-
-
-
-
-  
-body {
+  body {
     font-family: Arial, sans-serif;
     margin: 2em;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--bg);
+    color: var(--text);
 }
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: var(--panel);
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 
 h1 {
     color: #2a7ae2;
@@ -72,14 +72,7 @@ h1 {
     margin: 0;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 1.5em;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+
 
 img {
     max-width: 100%;
@@ -156,15 +149,6 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
-
-
-
-
-
-
-
-
-
 
 
 .btn{

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Décompte — 2 semaines</title>
+  <title>Décompte</title>
   
   <style>
     :root{
@@ -61,13 +61,7 @@
     .actions{
       margin-top:18px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
     }
-    
-    .btn{
-      padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.12);
-      background: transparent; color: var(--text); cursor:pointer; font-weight:700;
-    }
-    .btn:hover{ outline: 2px solid rgba(93,211,255,.25); }
-    .muted{ color: var(--muted); font-size: 13px; }
+
   </style>
 
 
@@ -75,8 +69,7 @@
 
 <body>
   <div class="wrap" role="group" aria-label="Décompte deux semaines">
-    <h1>Décompte — 2 semaines</h1>
-    <p class="subtitle">Le compte à rebours démarre à la première ouverture et reprend là où vous l’avez laissé.</p>
+    <h1>Décompte</h1>
 
     <div id="timer" class="timer" aria-live="polite">
       <div class="bloc"><div id="d" class="val">14</div><div class="lab">jours</div></div>
@@ -85,19 +78,17 @@
       <div class="bloc"><div id="s" class="val">00</div><div class="lab">secondes</div></div>
     </div>
 
-    <p id="done" class="done" hidden>✅ Terminé !</p>
-<!--
+    <p id="done" class="done" hidden>Terminé !</p>
+
     <div class="actions">
-      <button id="reset" class="btn" aria-label="Réinitialiser le décompte">Réinitialiser</button>
       <span class="muted" id="eta"></span>
     </div>
-  </div> -->
+  </div>
 
   <script>
     (function(){
-      const STORAGE_KEY = "countdown_2weeks_start";
-      const DURATION_MS = 14 * 24 * 60 * 60 * 1000; // 2 semaines
-
+      const END_DATE = new Date("2025-10-15T17:30:00"); // Fin prévue le 15 octobre 2025 à minuit
+    
       const $d = document.getElementById('d');
       const $h = document.getElementById('h');
       const $m = document.getElementById('m');
@@ -105,65 +96,59 @@
       const $done = document.getElementById('done');
       const $eta = document.getElementById('eta');
       const $reset = document.getElementById('reset');
-
-      // Récupère le point de départ ou l'initialise
-      let start = Number(localStorage.getItem(STORAGE_KEY));
-      if (!Number.isFinite(start) || start <= 0) {
-        start = Date.now();
-        localStorage.setItem(STORAGE_KEY, String(start));
-      }
-      const target = start + DURATION_MS;
-
-      function pad(n){ return String(Math.floor(n)).padStart(2,'0'); }
-
-      function formatDate(ts){
+    
+      const pad = n => String(Math.floor(n)).padStart(2, '0');
+    
+      function formatDate(ts) {
         const d = new Date(ts);
         return d.toLocaleString('fr-FR', {
-          weekday:'short', year:'numeric', month:'short', day:'2-digit',
-          hour:'2-digit', minute:'2-digit'
+          weekday: 'long', year: 'numeric', month: 'long', day: '2-digit',
+          hour: '2-digit', minute: '2-digit'
         });
       }
-
-      function tick(){
-        const now = Date.now();
-        let diff = target - now;
-
-        if (diff <= 0){
+    
+      function render() {
+        const now = new Date();
+        let diff = END_DATE - now;
+    
+        if (diff <= 0) {
           $d.textContent = '00';
           $h.textContent = '00';
           $m.textContent = '00';
           $s.textContent = '00';
           $done.hidden = false;
-          $eta.textContent = `Échéance atteinte le ${formatDate(target)}.`;
-          return; // stop next frames
+          $eta.textContent = `⏰ Temps écoulé — Fin prévue le ${formatDate(END_DATE)}.`;
+          return;
         }
-
-        const days  = Math.floor(diff / (24*60*60*1000)); diff -= days * 24*60*60*1000;
-        const hours = Math.floor(diff / (60*60*1000));    diff -= hours * 60*60*1000;
-        const mins  = Math.floor(diff / (60*1000));       diff -= mins * 60*1000;
-        const secs  = Math.floor(diff / 1000);
-
-        $d.textContent = String(days).padStart(2,'0');
+    
+        const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+        diff -= days * 24 * 60 * 60 * 1000;
+        const hours = Math.floor(diff / (60 * 60 * 1000));
+        diff -= hours * 60 * 60 * 1000;
+        const mins = Math.floor(diff / (60 * 1000));
+        diff -= mins * 60 * 1000;
+        const secs = Math.floor(diff / 1000);
+    
+        $d.textContent = pad(days);
         $h.textContent = pad(hours);
         $m.textContent = pad(mins);
         $s.textContent = pad(secs);
-
+    
         $done.hidden = true;
-        $eta.textContent = `Fin prévue le ${formatDate(target)}.`;
-
-        // cadence ~4 fois/s pour une impression fluide
-        requestAnimationFrame(() => setTimeout(tick, 250));
+        $eta.textContent = `Fin prévue le ${formatDate(END_DATE)}.`;
       }
+    
+      render();
+      setInterval(render, 1000);
+    
 
       $reset.addEventListener('click', () => {
-        if (!confirm('Réinitialiser le décompte de 2 semaines ?')) return;
-        const now = Date.now();
-        localStorage.setItem(STORAGE_KEY, String(now));
-        location.reload();
+        alert("Ce décompte est fixe : il se termine le 15 octobre.");
       });
-
-      tick();
     })();
-  </script>
+    </script>
+    
+    
+    
 </body>
 </html>
