@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Décompte</title>
+  
+  <style>
+    :root{
+      --bg:#0b0d12; --text:#e7edf6; --muted:#9aa6b2; --ring:#5dd3ff;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f7fb; --text:#0f172a; --muted:#5b6676; --ring:#2563eb; }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; display:grid; place-items:center;
+      background: radial-gradient(70% 60% at 50% -10%, rgba(93,211,255,.15), transparent 60%), var(--bg);
+      color:var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+    }
+    .wrap{
+      text-align:center;
+      padding:24px 28px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+      max-width: 760px;
+      width: min(92vw, 760px);
+    }
+    h1{margin:0 0 10px; font-weight:900; letter-spacing:.5px}
+    .subtitle{margin:0 0 22px; color:var(--muted)}
+    .timer{
+      display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+    }
+    .bloc{
+      min-width: 130px;
+      padding: 14px 16px;
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0));
+    }
+    .val{
+      font-size: clamp(34px, 7vw, 72px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 1px;
+      text-shadow: 0 0 22px rgba(93,211,255,.25);
+    }
+    .lab{
+      margin-top: 6px; font-size: 14px; color: var(--muted); letter-spacing:.2px;
+    }
+    .done{
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 800;
+      margin-top: 8px;
+      color: var(--ring);
+      text-shadow: 0 0 20px rgba(93,211,255,.25);
+    }
+    .actions{
+      margin-top:18px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+  <div class="wrap" role="group" aria-label="Décompte deux semaines">
+    <h1>Décompte</h1>
+
+    <div id="timer" class="timer" aria-live="polite">
+      <div class="bloc"><div id="d" class="val">14</div><div class="lab">jours</div></div>
+      <div class="bloc"><div id="h" class="val">00</div><div class="lab">heures</div></div>
+      <div class="bloc"><div id="m" class="val">00</div><div class="lab">minutes</div></div>
+      <div class="bloc"><div id="s" class="val">00</div><div class="lab">secondes</div></div>
+    </div>
+
+    <p id="done" class="done" hidden>Terminé !</p>
+
+    <div class="actions">
+      <span class="muted" id="eta"></span>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const END_DATE = new Date("2025-10-15T17:30:00"); // Fin prévue le 15 octobre 2025 à minuit
+    
+      const $d = document.getElementById('d');
+      const $h = document.getElementById('h');
+      const $m = document.getElementById('m');
+      const $s = document.getElementById('s');
+      const $done = document.getElementById('done');
+      const $eta = document.getElementById('eta');
+      const $reset = document.getElementById('reset');
+    
+      const pad = n => String(Math.floor(n)).padStart(2, '0');
+    
+      function formatDate(ts) {
+        const d = new Date(ts);
+        return d.toLocaleString('fr-FR', {
+          weekday: 'long', year: 'numeric', month: 'long', day: '2-digit',
+          hour: '2-digit', minute: '2-digit'
+        });
+      }
+    
+      function render() {
+        const now = new Date();
+        let diff = END_DATE - now;
+    
+        if (diff <= 0) {
+          $d.textContent = '00';
+          $h.textContent = '00';
+          $m.textContent = '00';
+          $s.textContent = '00';
+          $done.hidden = false;
+          $eta.textContent = `⏰ Temps écoulé — Fin prévue le ${formatDate(END_DATE)}.`;
+          return;
+        }
+    
+        const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+        diff -= days * 24 * 60 * 60 * 1000;
+        const hours = Math.floor(diff / (60 * 60 * 1000));
+        diff -= hours * 60 * 60 * 1000;
+        const mins = Math.floor(diff / (60 * 1000));
+        diff -= mins * 60 * 1000;
+        const secs = Math.floor(diff / 1000);
+    
+        $d.textContent = pad(days);
+        $h.textContent = pad(hours);
+        $m.textContent = pad(mins);
+        $s.textContent = pad(secs);
+    
+        $done.hidden = true;
+        $eta.textContent = `Fin prévue le ${formatDate(END_DATE)}.`;
+      }
+    
+      render();
+      setInterval(render, 1000);
+    
+
+      $reset.addEventListener('click', () => {
+        alert("Ce décompte est fixe : il se termine le 15 octobre.");
+      });
+    })();
+    </script>
+    
+    
+    
+</body>
+</html>
