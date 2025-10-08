@@ -1,40 +1,83 @@
-body{
-    background: linear-gradient(rgb(38, 114, 255),0.5%, rgb(255, 255, 255));
-    margin-left: 100px;
-    margin-right: 100px;
-    border-left: 20px solid lightblue;
-    padding-left: 20px;
-    
-    }
-
-td {
-        border: 1px solid black;
-        
-    }
-
-.scroll-float {
-  overflow: hidden;
-}
-
-.scroll-float-text {
-  display: inline-block;
-  font-size: clamp(1.6rem, 8vw, 10rem);
-  font-weight: 900;
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
   text-align: center;
-  line-height: 1.5;
+  background: linear-gradient(135deg, rgba(55, 0, 253, 0.5) 50%, rgba(255, 255, 255, 0.9));
+  margin: 0;
+  padding: 0 20px;
+  color: #222;
 }
 
-.char {
-  display: inline-block;
+h1 {
+  color: #000000;
+  font-size: 2.2rem;
+  margin-top: 30px;
 }
-.btn-retour {
-    margin: 10px;
-    padding: 8 px 16px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    background-color: blue;
-    color: white;
-    cursor: pointer;
+
+h2 {
+  color: #1e3a8a;
+  margin-top: 40px;
+  font-size: 1.6rem;
 }
+
+h3 {
+  color: #2563eb;
+  font-size: 1.2rem;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(62, 62, 172);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: rgb(40, 40, 140);
+  transform: scale(1.05);
+}
+
+section {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.symboles-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 8px;
+}
+
 
