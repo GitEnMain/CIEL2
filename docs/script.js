@@ -147,7 +147,7 @@ const students = [
     bio: "Veut bosser en devops."
   },
   {
-    name: "Adrien (aAdri1)",
+    name: "Adrien aAdri1",
     photo: "img/Shrek.jpg",
     role: "Étudiant BTS CIEL",
     email: "a.pottier2006@gmail.com",
