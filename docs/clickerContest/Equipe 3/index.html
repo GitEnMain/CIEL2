@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clicker simple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" id="app">
+    <h1>Clicker</h1>
+
+    <div class="counter-panel" aria-live="polite">
+      <div id="count" class="count" role="status">0</div>
+      <div class="info">Clics</div>
+    </div>
+
+    <div class="controls">
+      <button id="clickBtn" class="btn primary" aria-label="Cliquer">Cliquer</button>
+      <button id="resetBtn" class="btn danger" aria-label="Réinitialiser">Réinitialiser</button>
+    </div>
+
+    <div class="extras">
+      <label>
+        <input type="checkbox" id="persist"> Sauvegarder
+      </label>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
