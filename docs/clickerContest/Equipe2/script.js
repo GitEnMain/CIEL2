@@ -8,7 +8,7 @@ items: {
 // id: {name, basePrice, count, type, effect}
 cursor: { name: "Cursor", desc: "+1 power par achat", basePrice: 15, count: 0, type: "power", effect: 1 },
 autoclicker: { name: "Autoclicker", desc: "+0.5 CPS par achat", basePrice: 100, count: 0, type: "cps", effect: 0.5 },
-multiplier: { name: "Multiplicateur", desc: "x2 power (cumulatif)", basePrice: 500, count: 0, type: "mult", effect: 2 }
+multiplier: { name: "Multiplicateur", desc: "x1.2 power (cumulatif)", basePrice: 500, count: 0, type: "mult", effect: 1.2 }
 },
 lastSaved: null
 };
