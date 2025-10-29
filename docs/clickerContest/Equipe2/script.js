@@ -63,6 +63,7 @@
   const toastEl = document.getElementById('toast');
   const achievementsEl = document.getElementById('achievements-container');
   const themeSwitcherBtn = document.getElementById('theme-switcher');
+  const victoryPopupEl = document.getElementById('victory-popup');
 
   // --- sauvegarde clé ---
   const STORAGE_KEY = 'simple_clicker_v1';
@@ -72,6 +73,9 @@
   let toastTimer = null;
   
   let audioCtx = null;
+
+  // Cache pour les éléments de la boutique
+  let shopButtonElements = {};
 
   // --- utilitaires ---
   function formatNumber(n) {
@@ -180,6 +184,10 @@
 
     // Fade out long pour un effet majestueux
     gainNode.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
+    
+    if (victoryPopupEl) {
+      victoryPopupEl.classList.remove('hidden');
+    }
   }
 
 
@@ -288,7 +296,7 @@
       // On vérifie si on vient de débloquer le DERNIER succès
       // (Le compte après est total, mais le compte avant ne l'était pas)
       if (unlockedCountAfter === totalAchievements && unlockedCountBefore !== totalAchievements) {
-        playAllAchievementsSound(); // Son épique
+        playAllAchievementsSound(); // Son épique et affichage du pop-up
       } else {
         playAchievementSound(); // Son normal pour un succès
       }
@@ -302,6 +310,9 @@
   // --- rebuild shop UI ---
   function renderShop() {
     shopEl.innerHTML = '';
+    // On vide le cache des boutons
+    shopButtonElements = {};
+    
     for (const id of Object.keys(state.items)) {
       const it = state.items[id];
       const price = priceFor(it);
@@ -321,6 +332,9 @@
         </div>
       `;
       shopEl.appendChild(itemDiv);
+      
+      // On stocke la référence du bouton dans le cache
+      shopButtonElements[id] = itemDiv.querySelector('.buy');
     }
   }
 
@@ -368,7 +382,7 @@
     
     checkAchievements(); // On vérifie les succès après un achat
     
-    showToast(`Acheté: ${item.name}`);
+    showToast(`Acheté : ${item.name}`);
     playBuySound(); // Joue le son d'achat
   }
 
@@ -390,13 +404,13 @@
     scoreEl.textContent = formatNumber(state.score);
     totalEarnedEl.textContent = formatNumber(state.totalEarned);
     
-    // On met aussi à jour la boutique, mais juste pour l'état disabled
-    shopEl.querySelectorAll('.buy').forEach(b => {
-      const item = state.items[b.dataset.id];
+    // On met à jour l'état disabled en utilisant le cache (plus rapide)
+    for (const id in shopButtonElements) {
+      const item = state.items[id];
       if (item) {
-        b.disabled = state.score < priceFor(item);
+        shopButtonElements[id].disabled = state.score < priceFor(item);
       }
-    });
+    }
   }
 
   function renderFullUI() {
@@ -557,6 +571,13 @@
   
   themeSwitcherBtn.addEventListener('click', toggleTheme);
 
+  // Cacher le pop-up de victoire au clic
+  if (victoryPopupEl) {
+    victoryPopupEl.addEventListener('click', () => {
+      victoryPopupEl.classList.add('hidden');
+    });
+  }
+
   shopEl.addEventListener('click', (e) => {
     // On cherche si le clic vient d'un bouton '.buy'
     const buyButton = e.target.closest('.buy');
@@ -566,21 +587,34 @@
     }
   });
 
-  // small animation pulse on click
-  cookie.addEventListener('mousedown', () => cookie.style.transform = 'scale(.96)');
-  cookie.addEventListener('mouseup', () => cookie.style.transform = 'scale(1)');
+  // Animation + accessibilité au clic
+  cookie.addEventListener('mousedown', () => {
+    cookie.style.transform = 'scale(.96)';
+    cookie.setAttribute('aria-pressed', 'true');
+  });
+  cookie.addEventListener('mouseup', () => {
+    cookie.style.transform = 'scale(1)';
+    cookie.setAttribute('aria-pressed', 'false');
+  });
+  // Ajout du mouseleave pour corriger le bug
+  cookie.addEventListener('mouseleave', () => {
+    cookie.style.transform = 'scale(1)';
+    cookie.setAttribute('aria-pressed', 'false');
+  });
 
-  // keyboard support: space or enter to click
+  // Support clavier + accessibilité
   window.addEventListener('keydown', (e) => {
     if (e.code === 'Space' || e.code === 'Enter') {
       e.preventDefault();
-      cookie.style.transform = 'scale(.96)'; // Simule le mousedown
+      cookie.style.transform = 'scale(.96)';
+      cookie.setAttribute('aria-pressed', 'true');
       doClick(1);
     }
   });
   window.addEventListener('keyup', (e) => {
      if (e.code === 'Space' || e.code === 'Enter') {
-       cookie.style.transform = 'scale(1)'; // Simule le mouseup
+       cookie.style.transform = 'scale(1)';
+       cookie.setAttribute('aria-pressed', 'false');
      }
   });
 

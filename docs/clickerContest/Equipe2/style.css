@@ -339,8 +339,8 @@ h2 {
 
 .theme-switcher {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 30px;
+  right: 30px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -377,4 +377,66 @@ html[data-theme="dark"] .achievement.unlocked {
 
 html[data-theme="dark"] .theme-switcher {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 8. Pop-up de Victoire */
+    
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08); /* Animation de zoom */
+  }
+}
+
+.victory-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75); /* Fond sombre semi-transparent */
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000; /* Au-dessus de tout le reste */
+  cursor: pointer; /* Clic n'importe où pour fermer */
+}
+
+.victory-popup.hidden {
+  display: none;
+}
+
+.victory-content {
+  background: var(--card); /* Réutilise le style sombre des cartes */
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--accent); /* Bordure dorée */
+  animation: pulse 2.5s infinite ease-in-out; /* Application de l'animation */
+  cursor: default; /* Le curseur normal sur la boîte */
+}
+
+.victory-content h2 {
+  font-size: 3rem; /* Gros titre */
+  color: var(--accent);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.victory-content p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.victory-content small {
+  display: block;
+  margin-top: 20px;
+  color: var(--muted);
+  font-style: italic;
 }
