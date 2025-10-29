@@ -61,10 +61,12 @@
   const totalEarnedEl = document.getElementById('totalEarned');
   const lastSaveEl = document.getElementById('lastSave');
   const toastEl = document.getElementById('toast');
-  const achievementsEl = document.getElementById('achievements-container'); // NOUVEAU DOM
+  const achievementsEl = document.getElementById('achievements-container');
+  const themeSwitcherBtn = document.getElementById('theme-switcher');
 
   // --- sauvegarde clé ---
   const STORAGE_KEY = 'simple_clicker_v1';
+  const THEME_STORAGE_KEY = 'simple_clicker_theme';
   
   // Timer privé pour le toast (grâce à l'IIFE)
   let toastTimer = null;
@@ -149,6 +151,30 @@
     // Démarrer et arrêter le son
     oscillator.start(now);
     oscillator.stop(now + 0.4); // Durée totale de 400ms
+  }
+
+  // Gestion du Thème
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeSwitcherBtn.textContent = '🌙';
+      localStorage.setItem(THEME_STORAGE_KEY, 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      themeSwitcherBtn.textContent = '☀️';
+      localStorage.setItem(THEME_STORAGE_KEY, 'light');
+    }
+  }
+
+  function toggleTheme() {
+    const currentTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+  }
+
+  function loadTheme() {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    applyTheme(savedTheme);
   }
 
 
@@ -331,7 +357,7 @@
     // Redessine la boutique
     renderShop();
     
-    // Redessine les succès (MODIFIÉ)
+    // Redessine les succès
     renderAchievements();
     
     // Met à jour les éléments dynamiques (score, etc.)
@@ -477,6 +503,8 @@
   document.getElementById('resetBtn').addEventListener('click', resetGame);
   document.getElementById('exportBtn').addEventListener('click', exportJSON);
   document.getElementById('importBtn').addEventListener('click', importJSON);
+  
+  themeSwitcherBtn.addEventListener('click', toggleTheme);
 
   shopEl.addEventListener('click', (e) => {
     // On cherche si le clic vient d'un bouton '.buy'
@@ -506,6 +534,7 @@
   });
 
   // --- initial load ---
+  loadTheme(); // Charger le thème
   load();
   recalcDerived();
   renderFullUI(); // On fait le premier rendu complet (qui inclut les succès)
