@@ -44,7 +44,7 @@
     cps: 0,
     items: {
       // id: {name, basePrice, count, type, effect}
-      cursor: { name: "Cursor", desc: "+1 power par achat", basePrice: 15, count: 0, type: "power", effect: 1 },
+      cursor: { name: "Curseur", desc: "+1 power par achat", basePrice: 15, count: 0, type: "power", effect: 1 },
       autoclicker: { name: "Autoclicker", desc: "+0.5 CPS par achat", basePrice: 100, count: 0, type: "cps", effect: 0.5 },
       multiplier: { name: "Multiplicateur", desc: "x1.2 power (cumulatif)", basePrice: 500, count: 0, type: "mult", effect: 1.2 }
     },
@@ -121,6 +121,36 @@
     oscillator.stop(audioCtx.currentTime + 0.1); // Durée de 100ms
   }
 
+  // FONCTION SON SUCCÈS
+  function playAchievementSound() {
+    if (!audioCtx) return; // Ne rien faire si l'audio n'est pas prêt
+
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    const now = audioCtx.currentTime;
+
+    // Configuration du son
+    oscillator.type = 'triangle';
+    gainNode.gain.setValueAtTime(0.2, now); // Volume initial
+
+    // Arpège rapide (Do-Mi-Sol-Do)
+    oscillator.frequency.setValueAtTime(523.25, now);        // C5
+    oscillator.frequency.setValueAtTime(659.25, now + 0.07); // E5
+    oscillator.frequency.setValueAtTime(783.99, now + 0.14); // G5
+    oscillator.frequency.setValueAtTime(1046.50, now + 0.21); // C6 (octave)
+
+    // Fade out un peu plus long pour un effet "magique"
+    gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+
+    // Connexion des nœuds
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    // Démarrer et arrêter le son
+    oscillator.start(now);
+    oscillator.stop(now + 0.4); // Durée totale de 400ms
+  }
+
 
   // --- logic shop price scaling (exponential) ---
   function priceFor(item) {
@@ -128,7 +158,6 @@
     return Math.round(item.basePrice * Math.pow(1.15, item.count));
   }
   
-  // --- NOUVELLE FONCTION: Affichage des succès ---
   function renderAchievements() {
     if (!achievementsEl) return; // Sécurité si l'élément n'existe pas
     achievementsEl.innerHTML = ''; // On vide
@@ -152,7 +181,6 @@
     }
   }
   
-  // --- NOUVELLE FONCTION: Vérification des succès ---
   function checkAchievements() {
     let newUnlocked = false; // Pour savoir si on doit redessiner
 
@@ -183,6 +211,7 @@
       if (conditionMet) {
         state.unlockedAchievements.add(id); // On l'ajoute au Set
         showToast(`Succès débloqué : ${ach.name}`, 3000); // Notification
+        playAchievementSound(); // Appel du son
         newUnlocked = true;
       }
     }
