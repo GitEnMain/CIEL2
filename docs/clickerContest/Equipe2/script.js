@@ -1,5 +1,31 @@
 (function() {
 
+  // --- CONSTANTES (Succès) ---
+  // Définition de tous les succès possibles
+  // type: 'totalEarned' -> se débloque quand state.totalEarned >= value
+  // type: 'item' -> se débloque quand state.items[item].count >= value
+  // type: 'cps' -> se débloque quand state.cps >= value
+  const ACHIEVEMENTS = {
+    // Total gagné
+    'total_1': { name: "Initiation", desc: "Gagner 1 point.", type: 'totalEarned', value: 1, icon: '👆' },
+    'total_100': { name: "Centurion", desc: "Gagner 100 points.", type: 'totalEarned', value: 100, icon: '💯' },
+    'total_1000': { name: "Millier", desc: "Gagner 1000 points (1k).", type: 'totalEarned', value: 1000, icon: '💰' },
+    'total_10k': { name: "Grosse somme", desc: "Gagner 10 000 points (10k).", type: 'totalEarned', value: 10000, icon: '🤑' },
+    
+    // Items spécifiques
+    'cursor_1': { name: "Main aidante", desc: "Acheter 1 Curseur.", type: 'item', item: 'cursor', value: 1, icon: '🖱️' },
+    'cursor_10': { name: "Clic-manuel", desc: "Posséder 10 Curseur.", type: 'item', item: 'cursor', value: 10, icon: '🖐️' },
+    'autoclicker_1': { name: "Automatisation", desc: "Acheter 1 Autoclicker.", type: 'item', item: 'autoclicker', value: 1, icon: '⚙️' },
+    'autoclicker_10': { name: "L'usine", desc: "Posséder 10 Autoclickers.", type: 'item', item: 'autoclicker', value: 10, icon: '🏭' },
+    'multiplier_1': { name: "Puissance", desc: "Acheter 1 Multiplicateur.", type: 'item', item: 'multiplier', value: 1, icon: '💥' },
+
+    // Stats
+    'cps_1': { name: "Ça commence", desc: "Atteindre 1 CPS.", type: 'cps', value: 1, icon: '⏱️' },
+    'cps_5': { name: "Vitesse de croisière", desc: "Atteindre 5 CPS.", type: 'cps', value: 5, icon: '🚀' },
+    'power_10': { name: "Gros clic", desc: "Atteindre 10 de Puissance.", type: 'power', value: 10, icon: '💪' }
+  };
+
+
   // --- Etat du jeu ---
   const state = {
     score: 0,
@@ -12,7 +38,8 @@
       autoclicker: { name: "Autoclicker", desc: "+0.5 CPS par achat", basePrice: 100, count: 0, type: "cps", effect: 0.5 },
       multiplier: { name: "Multiplicateur", desc: "x1.2 power (cumulatif)", basePrice: 500, count: 0, type: "mult", effect: 1.2 }
     },
-    lastSaved: null
+    lastSaved: null,
+    unlockedAchievements: new Set() // NOUVEL ETAT: Stocke les IDs des succès débloqués
   };
 
   // --- DOM ---
@@ -24,6 +51,7 @@
   const totalEarnedEl = document.getElementById('totalEarned');
   const lastSaveEl = document.getElementById('lastSave');
   const toastEl = document.getElementById('toast');
+  const achievementsEl = document.getElementById('achievements-container'); // NOUVEAU DOM
 
   // --- sauvegarde clé ---
   const STORAGE_KEY = 'simple_clicker_v1';
@@ -88,6 +116,71 @@
   function priceFor(item) {
     // scaling: base * 1.15^count, rounded
     return Math.round(item.basePrice * Math.pow(1.15, item.count));
+  }
+  
+  // --- NOUVELLE FONCTION: Affichage des succès ---
+  function renderAchievements() {
+    if (!achievementsEl) return; // Sécurité si l'élément n'existe pas
+    achievementsEl.innerHTML = ''; // On vide
+    
+    for (const id in ACHIEVEMENTS) {
+      const ach = ACHIEVEMENTS[id];
+      const div = document.createElement('div');
+      const isUnlocked = state.unlockedAchievements.has(id);
+      
+      div.className = `achievement ${isUnlocked ? 'unlocked' : 'locked'}`;
+      
+      if (isUnlocked) {
+        div.innerHTML = ach.icon;
+        // Le \n crée un saut de ligne dans le tooltip
+        div.dataset.tooltip = `✅ ${ach.name}\n${ach.desc}`;
+      } else {
+        div.innerHTML = '🔒';
+        div.dataset.tooltip = `???\n(Succès verrouillé)`;
+      }
+      achievementsEl.appendChild(div);
+    }
+  }
+  
+  // --- NOUVELLE FONCTION: Vérification des succès ---
+  function checkAchievements() {
+    let newUnlocked = false; // Pour savoir si on doit redessiner
+
+    for (const id in ACHIEVEMENTS) {
+      // 1. On ignore s'il est déjà débloqué
+      if (state.unlockedAchievements.has(id)) continue; 
+      
+      const ach = ACHIEVEMENTS[id];
+      let conditionMet = false;
+
+      // 2. On vérifie la condition
+      switch(ach.type) {
+        case 'totalEarned':
+          conditionMet = state.totalEarned >= ach.value;
+          break;
+        case 'item':
+          conditionMet = state.items[ach.item] && state.items[ach.item].count >= ach.value;
+          break;
+        case 'cps':
+          conditionMet = state.cps >= ach.value;
+          break;
+        case 'power':
+          conditionMet = state.clickPower >= ach.value;
+          break;
+      }
+      
+      // 3. Si la condition est remplie
+      if (conditionMet) {
+        state.unlockedAchievements.add(id); // On l'ajoute au Set
+        showToast(`Succès débloqué : ${ach.name}`, 3000); // Notification
+        newUnlocked = true;
+      }
+    }
+    
+    // 4. Si on a débloqué au moins un succès, on met à jour l'UI
+    if (newUnlocked) {
+      renderAchievements();
+    }
   }
 
   // --- rebuild shop UI ---
@@ -156,11 +249,11 @@
     
     recalcDerived();
     renderFullUI(); // On fait un rendu complet après un achat
+    
+    checkAchievements(); // On vérifie les succès après un achat
+    
     showToast(`Acheté: ${item.name}`);
-    
     playBuySound(); // Joue le son d'achat
-    
-    // La sauvegarde se fera par l'autosave
   }
 
   // --- clicking ---
@@ -174,6 +267,7 @@
     
     // Un clic ne met à jour que le score, pas besoin de redessiner la boutique
     updateDynamicUI(); 
+    checkAchievements(); // On vérifie les succès après un clic
   }
 
   function updateDynamicUI() {
@@ -198,6 +292,9 @@
     // Redessine la boutique
     renderShop();
     
+    // Redessine les succès (MODIFIÉ)
+    renderAchievements();
+    
     // Met à jour les éléments dynamiques (score, etc.)
     updateDynamicUI();
   }
@@ -208,7 +305,8 @@
       score: state.score,
       totalEarned: state.totalEarned,
       items: {},
-      lastSaved: Date.now()
+      lastSaved: Date.now(),
+      achievements: Array.from(state.unlockedAchievements) // On sauvegarde les succès
     };
     for (const k in state.items) toSave.items[k] = state.items[k].count;
     
@@ -230,7 +328,13 @@
         if (state.items[k]) state.items[k].count = obj.items[k];
       }
       state.lastSaved = obj.lastSaved || null;
+      // On charge les succès (transforme le Array sauvegardé en Set)
+      state.unlockedAchievements = new Set(obj.achievements || []); 
+      
       recalcDerived(); // Important de recalculer après chargement
+      
+      checkAchievements(); // On vérifie si des succès ont été atteints "hors ligne"
+      
     } catch (e) {
       console.error("Erreur chargement", e);
     }
@@ -245,10 +349,11 @@
     state.score = 0;
     state.totalEarned = 0;
     state.lastSaved = null;
+    state.unlockedAchievements.clear(); // On vide les succès
     for (const k in state.items) { state.items[k].count = 0; }
     
     recalcDerived();
-    renderFullUI(); // Rendu complet
+    renderFullUI(); // Rendu complet (qui inclut renderAchievements)
     showToast("Progression réinitialisée");
   }
 
@@ -258,6 +363,7 @@
       score: state.score,
       totalEarned: state.totalEarned,
       items: Object.fromEntries(Object.entries(state.items).map(([k, v]) => [k, v.count])),
+      achievements: Array.from(state.unlockedAchievements), // Ajouté à l'export
       exportedAt: Date.now()
     }, null, 2);
     
@@ -288,7 +394,11 @@
           }
           state.score = obj.score ?? state.score;
           state.totalEarned = obj.totalEarned ?? state.totalEarned;
+          // Import des succès
+          state.unlockedAchievements = new Set(obj.achievements || []);
+
           recalcDerived();
+          checkAchievements(); // On vérifie au cas où
           renderFullUI(); // Rendu complet
           save(); // On sauvegarde l'état importé
           showToast("Importation réussie");
@@ -314,6 +424,7 @@
       state.totalEarned = Math.round((state.totalEarned + gain) * 100) / 100;
       
       updateDynamicUI();
+      checkAchievements(); // On vérifie les succès pendant le tick
     }
   }
   setInterval(gameTick, 200); // tick 5x/sec
@@ -358,11 +469,12 @@
   // --- initial load ---
   load();
   recalcDerived();
-  renderFullUI(); // On fait le premier rendu complet
+  renderFullUI(); // On fait le premier rendu complet (qui inclut les succès)
+  checkAchievements(); // Vérification finale au chargement
 
   // expose for debugging (optional)
   window.__clicker = {
-    state, save, load, resetGame, renderFullUI
+    state, save, load, resetGame, renderFullUI, checkAchievements
   };
 
 })();

@@ -248,3 +248,74 @@ h2 {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
   color: #dff3ff;
 }
+/* L'ACCOLADE EN TROP A ÉTÉ SUPPRIMÉE ICI */
+
+/* 5. Styles des Succès (Ajoutés) */
+
+.achievements-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start; /* Aligne au début */
+  align-content: flex-start; /* Aligne au début */
+}
+
+.achievement {
+  width: 48px;
+  height: 48px;
+  background: var(--bg3); /* Fond clair */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  position: relative; /* Pour le tooltip */
+  cursor: help;
+  transition: all 0.2s ease;
+}
+
+/* Style pour un succès non débloqué */
+.achievement.locked {
+  background: var(--bg1);
+  color: #bbb;
+  filter: grayscale(80%);
+  opacity: 0.6;
+}
+
+/* Style pour un succès débloqué */
+.achievement.unlocked {
+  background: #fff;
+  border-color: #ffd700; /* Bordure dorée */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* --- Système de Tooltip (Info-bulle) --- */
+
+.achievement[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%; /* Au-dessus de l'icône */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: var(--bg); /* Fond sombre (du thème .card) */
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: pre-wrap; /* Permet les sauts de ligne */
+  text-align: center;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 10;
+  width: 200px; /* Largeur fixe pour le tooltip */
+  pointer-events: none; /* N'intercepte pas la souris */
+}
+
+.achievement[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
