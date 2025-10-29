@@ -52,6 +52,12 @@ h2 {
 .col-2 { background: var(--bg2); }
 .col-3 { background: var(--bg3); }
 
+/* Ajout pour l'agencement de la colonne 2 */
+.column.col-2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .column + .column {
   border-left: 1px solid rgba(0, 0, 0, 0.06);
   padding-left: 19px;
@@ -248,7 +254,6 @@ h2 {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
   color: #dff3ff;
 }
-/* L'ACCOLADE EN TROP A ÉTÉ SUPPRIMÉE ICI */
 
 /* 5. Styles des Succès (Ajoutés) */
 
@@ -256,8 +261,9 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: flex-start; /* Aligne au début */
-  align-content: flex-start; /* Aligne au début */
+  justify-content: center; /* MODIFIÉ: centre les icônes horizontalement */
+  align-content: center;   /* MODIFIÉ: centre les lignes d'icônes verticalement */
+  flex-grow: 1;            /* AJOUTÉ: la grille prend tout l'espace vertical restant */
 }
 
 .achievement {
