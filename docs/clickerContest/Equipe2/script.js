@@ -30,6 +30,8 @@
   
   // Timer privé pour le toast (grâce à l'IIFE)
   let toastTimer = null;
+  
+  let audioCtx = null;
 
   // --- utilitaires ---
   function formatNumber(n) {
@@ -45,6 +47,42 @@
     clearTimeout(toastTimer); // On utilise le timer privé
     toastTimer = setTimeout(() => toastEl.style.display = 'none', ms);
   }
+
+  function initAudio() {
+    // Initialise le contexte audio (doit être fait après une interaction utilisateur)
+    if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
+      try {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      } catch (e) {
+        console.error("Web Audio API n'est pas supportée.", e);
+      }
+    }
+  }
+
+  function playBuySound() {
+    if (!audioCtx) return; // Ne rien faire si l'audio n'est pas prêt
+
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    // Configuration du son (un "bip" aigu)
+    oscillator.type = 'triangle'; // 'sine', 'square', 'sawtooth', 'triangle'
+    oscillator.frequency.setValueAtTime(900, audioCtx.currentTime); // Fréquence (aiguë)
+    gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime); // Volume (max 1)
+
+    // Fade out rapide pour faire "bip"
+    oscillator.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.05);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+
+    // Connexion des nœuds
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    // Démarrer et arrêter le son
+    oscillator.start(audioCtx.currentTime);
+    oscillator.stop(audioCtx.currentTime + 0.1); // Durée de 100ms
+  }
+
 
   // --- logic shop price scaling (exponential) ---
   function priceFor(item) {
@@ -119,11 +157,17 @@
     recalcDerived();
     renderFullUI(); // On fait un rendu complet après un achat
     showToast(`Acheté: ${item.name}`);
+    
+    playBuySound(); // Joue le son d'achat
+    
     // La sauvegarde se fera par l'autosave
   }
 
   // --- clicking ---
   function doClick(n = 1) {
+    // Initialise le contexte audio au premier clic
+    if (!audioCtx) initAudio();
+
     const gained = n * state.clickPower;
     state.score = Math.round((state.score + gained) * 100) / 100;
     state.totalEarned = Math.round((state.totalEarned + gained) * 100) / 100;
