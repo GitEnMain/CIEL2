@@ -153,6 +153,36 @@
     oscillator.stop(now + 0.4); // Durée totale de 400ms
   }
 
+  /* Joue un son pour avoir débloqué tous les succès. */
+  function playAllAchievementsSound() {
+    if (!audioCtx) return; // Ne rien faire si l'audio n'est pas prêt
+
+    const now = audioCtx.currentTime;
+    const gainNode = audioCtx.createGain();
+    gainNode.gain.setValueAtTime(0.3, now); // Volume
+    gainNode.connect(audioCtx.destination);
+
+    // Créer plusieurs oscillateurs pour un accord épique (Do, Mi, Sol + Do octave)
+    // Joués en fanfare (débuts décalés)
+    const freqs = [261.63, 329.63, 392.00, 523.25]; // C4, E4, G4, C5
+    const types = ['sawtooth', 'sawtooth', 'sawtooth', 'square'];
+    const startTimes = [0, 0.1, 0.2, 0.4]; // Débuts décalés
+
+    for (let i = 0; i < freqs.length; i++) {
+      const osc = audioCtx.createOscillator();
+      osc.type = types[i]; // Utilise des sons plus riches
+      osc.frequency.setValueAtTime(freqs[i], now + startTimes[i]);
+      osc.connect(gainNode);
+      osc.start(now + startTimes[i]);
+      // Arrête tous les sons après 1.5 secondes
+      osc.stop(now + 1.5);
+    }
+
+    // Fade out long pour un effet majestueux
+    gainNode.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
+  }
+
+
   // Gestion du Thème
   function applyTheme(theme) {
     if (theme === 'dark') {
@@ -167,13 +197,15 @@
   }
 
   function toggleTheme() {
-    const currentTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    // thème light / dark par défaut
+    const currentTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light'; 
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     applyTheme(newTheme);
   }
 
   function loadTheme() {
-    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+    // thème light / dark par défaut
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light'; 
     applyTheme(savedTheme);
   }
 
@@ -207,8 +239,16 @@
     }
   }
   
+  /**
+   * Vérifie tous les succès, débloque ceux dont les conditions sont remplies,
+   * et joue le son approprié (normal ou épique).
+   */
   function checkAchievements() {
     let newUnlocked = false; // Pour savoir si on doit redessiner
+    
+    // On sauvegarde le nombre de succès AVANT la vérification
+    const unlockedCountBefore = state.unlockedAchievements.size;
+    const totalAchievements = Object.keys(ACHIEVEMENTS).length;
 
     for (const id in ACHIEVEMENTS) {
       // 1. On ignore s'il est déjà débloqué
@@ -237,16 +277,27 @@
       if (conditionMet) {
         state.unlockedAchievements.add(id); // On l'ajoute au Set
         showToast(`Succès débloqué : ${ach.name}`, 3000); // Notification
-        playAchievementSound(); // Appel du son
         newUnlocked = true;
       }
     }
     
-    // 4. Si on a débloqué au moins un succès, on met à jour l'UI
+    // 4. Si on a débloqué au moins un succès, on décide quel son jouer
     if (newUnlocked) {
+      const unlockedCountAfter = state.unlockedAchievements.size;
+      
+      // On vérifie si on vient de débloquer le DERNIER succès
+      // (Le compte après est total, mais le compte avant ne l'était pas)
+      if (unlockedCountAfter === totalAchievements && unlockedCountBefore !== totalAchievements) {
+        playAllAchievementsSound(); // Son épique
+      } else {
+        playAchievementSound(); // Son normal pour un succès
+      }
+      
+      // On met à jour l'UI des succès
       renderAchievements();
     }
   }
+
 
   // --- rebuild shop UI ---
   function renderShop() {
