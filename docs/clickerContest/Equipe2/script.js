@@ -11,18 +11,28 @@
     'total_100': { name: "Centurion", desc: "Gagner 100 points.", type: 'totalEarned', value: 100, icon: '💯' },
     'total_1000': { name: "Millier", desc: "Gagner 1000 points (1k).", type: 'totalEarned', value: 1000, icon: '💰' },
     'total_10k': { name: "Grosse somme", desc: "Gagner 10 000 points (10k).", type: 'totalEarned', value: 10000, icon: '🤑' },
+    'total_100k': { name: "Magnat", desc: "Gagner 100 000 points (100k).", type: 'totalEarned', value: 100000, icon: '🏦' },
+    'total_1M': { name: "Milliardaire", desc: "Gagner 1 000 000 de points (1M).", type: 'totalEarned', value: 1000000, icon: '💎' },
     
     // Items spécifiques
     'cursor_1': { name: "Main aidante", desc: "Acheter 1 Curseur.", type: 'item', item: 'cursor', value: 1, icon: '🖱️' },
     'cursor_10': { name: "Clic-manuel", desc: "Posséder 10 Curseur.", type: 'item', item: 'cursor', value: 10, icon: '🖐️' },
+    'cursor_25': { name: "Armée de doigts", desc: "Posséder 25 Curseurs.", type: 'item', item: 'cursor', value: 25, icon: '🙌' },
     'autoclicker_1': { name: "Automatisation", desc: "Acheter 1 Autoclicker.", type: 'item', item: 'autoclicker', value: 1, icon: '⚙️' },
     'autoclicker_10': { name: "L'usine", desc: "Posséder 10 Autoclickers.", type: 'item', item: 'autoclicker', value: 10, icon: '🏭' },
+    'autoclicker_25': { name: "Division Robotique", desc: "Posséder 25 Autoclickers.", type: 'item', item: 'autoclicker', value: 25, icon: '🤖' },
     'multiplier_1': { name: "Puissance", desc: "Acheter 1 Multiplicateur.", type: 'item', item: 'multiplier', value: 1, icon: '💥' },
+    'multiplier_5': { name: "Exponentiel", desc: "Posséder 5 Multiplicateurs.", type: 'item', item: 'multiplier', value: 5, icon: '📈' },
+    'multiplier_10': { name: "Singularité", desc: "Posséder 10 Multiplicateurs.", type: 'item', item: 'multiplier', value: 10, icon: '🌌' },
 
     // Stats
     'cps_1': { name: "Ça commence", desc: "Atteindre 1 CPS.", type: 'cps', value: 1, icon: '⏱️' },
     'cps_5': { name: "Vitesse de croisière", desc: "Atteindre 5 CPS.", type: 'cps', value: 5, icon: '🚀' },
-    'power_10': { name: "Gros clic", desc: "Atteindre 10 de Puissance.", type: 'power', value: 10, icon: '💪' }
+    'cps_10': { name: "Plein régime", desc: "Atteindre 10 CPS.", type: 'cps', value: 10, icon: '🔥' },
+    'cps_50': { name: "Vitesse lumière", desc: "Atteindre 50 CPS.", type: 'cps', value: 50, icon: '⚡' },
+    'power_10': { name: "Gros clic", desc: "Atteindre 10 de Puissance.", type: 'power', value: 10, icon: '💪' },
+    'power_50': { name: "Main lourde", desc: "Atteindre 50 de Puissance.", type: 'power', value: 50, icon: '👊' },
+    'power_100': { name: "Destructeur", desc: "Atteindre 100 de Puissance.", type: 'power', value: 100, icon: '☄️' }
   };
 
 
