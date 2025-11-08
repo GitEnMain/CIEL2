@@ -110,7 +110,7 @@
     const gainNode = audioCtx.createGain();
 
     // Configuration du son (un "bip" aigu)
-    oscillator.type = 'triangle'; // 'sine', 'square', 'sawtooth', 'triangle'
+    oscillator.type = 'triangle'; // 'sinus', 'carré', 'dent de scie', 'triangle'
     oscillator.frequency.setValueAtTime(900, audioCtx.currentTime); // Fréquence (aiguë)
     gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime); // Volume (max 1)
 
@@ -169,7 +169,7 @@
     // Créer plusieurs oscillateurs pour un accord épique (Do, Mi, Sol + Do octave)
     // Joués en fanfare (débuts décalés)
     const freqs = [261.63, 329.63, 392.00, 523.25]; // C4, E4, G4, C5
-    const types = ['sawtooth', 'sawtooth', 'sawtooth', 'square'];
+    const types = ['sawtooth', 'sawtooth', 'sawtooth', 'square']; // 'dent de scie', 'dent de scie', 'dent de scie', 'carré'
     const startTimes = [0, 0.1, 0.2, 0.4]; // Débuts décalés
 
     for (let i = 0; i < freqs.length; i++) {
@@ -218,9 +218,9 @@
   }
 
 
-  // --- logic shop price scaling (exponential) ---
+  // --- logique de coût (scaling) exponentiel de la boutique ---
   function priceFor(item) {
-    // scaling: base * 1.15^count, rounded
+    // scaling : base * 1.15^count, arrondi
     return Math.round(item.basePrice * Math.pow(1.15, item.count));
   }
   
@@ -307,7 +307,7 @@
   }
 
 
-  // --- rebuild shop UI ---
+  // --- reconstruction de l'UI de la boutique ---
   function renderShop() {
     shopEl.innerHTML = '';
     // On vide le cache des boutons
@@ -364,7 +364,7 @@
     state.cps = Math.round(cps * 100) / 100;
   }
 
-  // --- purchase ---
+  // --- achat ---
   function buyItem(id) {
     const item = state.items[id];
     if (!item) return; // Sécurité
@@ -386,7 +386,7 @@
     playBuySound(); // Joue le son d'achat
   }
 
-  // --- clicking ---
+  // --- clic ---
   function doClick(n = 1) {
     // Initialise le contexte audio au premier clic
     if (!audioCtx) initAudio();
@@ -429,7 +429,7 @@
     updateDynamicUI();
   }
 
-  // --- autosave/load ---
+  // --- sauvegarde auto / chargement ---
   function save() {
     const toSave = {
       score: state.score,
@@ -470,12 +470,12 @@
     }
   }
 
-  // --- reset ---
+  // --- réinitialisation ---
   function resetGame() {
     if (!confirm("Réinitialiser la progression ?")) return;
     localStorage.removeItem(STORAGE_KEY);
     
-    // Reset state
+    // Réinitialiser l'état
     state.score = 0;
     state.totalEarned = 0;
     state.lastSaved = null;
@@ -541,7 +541,7 @@
     inp.click();
   }
 
-  // --- autoclick loop ---
+  // --- boucle d'autoclic ---
   let lastTick = Date.now();
   function gameTick() {
     const now = Date.now();
@@ -557,12 +557,12 @@
       checkAchievements(); // On vérifie les succès pendant le tick
     }
   }
-  setInterval(gameTick, 200); // tick 5x/sec
+  setInterval(gameTick, 200); // tick 5x/seconde
 
-  // autosave timer
+  // timer de sauvegarde auto
   setInterval(save, 10000);
 
-  // --- binds ---
+  // --- liaisons (événements) ---
   cookie.addEventListener('click', () => { doClick(1); });
   document.getElementById('saveBtn').addEventListener('click', () => { save(); showToast("Sauvegardé"); });
   document.getElementById('resetBtn').addEventListener('click', resetGame);
@@ -618,14 +618,14 @@
      }
   });
 
-  // --- initial load ---
+  // --- chargement initial ---
   loadTheme(); // Charger le thème
   load();
   recalcDerived();
   renderFullUI(); // On fait le premier rendu complet (qui inclut les succès)
   checkAchievements(); // Vérification finale au chargement
 
-  // expose for debugging (optional)
+  // exposer pour le débogage (optionnel)
   window.__clicker = {
     state, save, load, resetGame, renderFullUI, checkAchievements
   };
