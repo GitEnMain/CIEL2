@@ -4,8 +4,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  margin: 0;
   background: #BC7BD6;
 }
 
@@ -15,50 +13,48 @@ h3{color: #ffffff;}
 h4{color: #ffffff;}
 
 html, body {
-    cursor: url("img/diode_2.png"), auto;
-}
-/* Canvas ribbons (traînée lumineuse) */
-#ribbons-canvas {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; /* Allow clicks through canvas */
-  z-index: 1000; /* On top */
-  /* Retiré: mix-blend-mode: screen; provoquait une altération des couleurs du fond.
-    Nous dessinons en mode composite dans le canvas pour éviter la décoloration. */
-  mix-blend-mode: normal;
-  background: transparent; /* explicitly transparent */
-  isolation: isolate; /* isolate canvas to avoid blending with the page */
+    cursor: url("img/pollution.png"), auto;
 }
 
-/* Petite classe pour les boutons si besoin */
-.ribbon-glow-btn {
-  position: relative;
+
+.cards-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
-.slideshow {
-  width: 400px;
+.card {
+  width: 220px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px #A6CDFF33;
+  box-shadow: 0 30px 30px #a6cdff53;
   background: #596c9c41;
   text-align: center;
   padding: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* 🔑 The fix: only the active slide is visible */
-.slide {
-  display: none;
-}
-.slide.active {
-  display: block;
-}
-
-.slide img {
+.card img {
   width: 100%;
   height: auto;
   border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.card .title {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.card .caption {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .title {
@@ -73,20 +69,3 @@ html, body {
   color: #ffffff;
 }
 
-.buttons {
-  margin-top: 15px;
-}
-
-button {
-  padding: 8px 16px;
-  margin: 0 8px;
-  border: none;
-  border-radius: 5px;
-  background: #333;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #555;
-}
