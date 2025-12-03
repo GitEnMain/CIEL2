@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+#bouton-aide {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#bouton-aide:hover {
+    background-color: #2980b9;
+}
+
+.conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.carte {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    width: 260px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    height: 230px;
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.carte.active {
+    height: 320px;
+    transform: scale(1.05);
+    border: 2px solid #3498db;
+}
+
+.carte img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.informations {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.informations h3 {
+    margin: 0;
+    color: #e74c3c;
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+}
+
+.informations p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none;
+}
+
+.carte.active .informations p {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 5px;
+}
