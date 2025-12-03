@@ -1,0 +1,155 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #F5F5F7;
+    margin: 0;
+    padding: 40px 20px;
+    color: #1d1d1f;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+/* "Risks" en rouge */
+header h1 span {
+    color: #ff6961;
+}
+
+header p {
+    color: #86868b;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* pile cartes */
+.card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* design carte */
+.card {
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+/* en-tête carte */
+.card-header {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-bg {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chevron {
+    color: #C7C7CC;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+/* contenu carte */
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 24px;
+    background-color: white;
+    transition: max-height 0.5s ease, padding 0.5s ease; /* transition un peu plus lente */
+    font-size: 0.95rem;
+    color: #424245;
+}
+
+.card-content .label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #86868b;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+.card-content p {
+    margin: 0 0 15px 0;
+    line-height: 1.6; /* meilleure lisibilité pour le texte long */
+}
+
+.card-content hr {
+    border: 0;
+    height: 1px;
+    background: #E5E5EA;
+    margin: 15px 0;
+}
+
+/* état actif */
+.card.active .card-content {
+    max-height: 600px; 
+    padding-bottom: 24px;
+}
+
+.card.active .chevron {
+    transform: rotate(90deg);
+    color: #007AFF;
+}
+
+/* pied de page */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #86868b;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+footer strong {
+    color: #1d1d1f;         /* nom en plus fnocé */
+}
