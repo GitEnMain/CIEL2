@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Safety Risks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Workplace Safety Risks</h1>
+            <p class="lead">Understanding and mitigating hazards in industrial and IT environments</p>
+            <button id="helpBtn" class="help-button" title="Learn how this site works">❓ Help</button>
+        </div>
+    </header>
+
+    <nav id="toc" class="toc" aria-label="Table of Contents">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#industrial">Industrial Domain</a></li>
+            <li><a href="#it">IT Domain</a></li>
+            <li><a href="#prevention">Prevention</a></li>
+        </ul>
+    </nav>
+
+    <main id="main" class="content">
+        <section id="intro" class="section">
+            <h2>Introduction <a class="permalink" href="#intro" aria-hidden="true">#</a></h2>
+            <p>This page presents critical safety risks in two essential domains: industrial work and information technology. Both environments pose unique hazards that require awareness, proper training, and preventive measures. Use the interactive exercise in the Help menu to test your knowledge.</p>
+        </section>
+
+        <section id="industrial" class="section">
+            <h2>Industrial Domain – 5 Key Risks <a class="permalink" href="#industrial" aria-hidden="true">#</a></h2>
+            
+            <h3 id="mechanical">Mechanical Hazards</h3>
+            <p>Industrial environments often involve machines with moving parts. Without proper guarding, maintenance, or training, workers can face crushing, cutting, or entanglement injuries.</p>
+
+            <h3 id="chemical">Chemical Exposure</h3>
+            <p>Many industrial sites use solvents, cleaning agents, or other hazardous substances. Poor ventilation or insufficient protective equipment can lead to burns, poisoning, or long-term health issues.</p>
+
+            <h3 id="electrical-industrial">Electrical Risks</h3>
+            <p>Faulty wiring, damaged equipment, or improper handling of electrical systems can result in shocks, fires, or explosions. Regular inspections and strict safety procedures are essential.</p>
+
+            <h3 id="ergonomic-industrial">Ergonomic Strain</h3>
+            <p>Heavy lifting, repetitive motions, or awkward postures can cause musculoskeletal disorders. Proper workstation setup and training help reduce these risks.</p>
+
+            <h3 id="fire">Fire and Explosion Hazards</h3>
+            <p>Flammable materials, overheating equipment, or mishandled energy sources can trigger fires. Safety protocols, detection systems, and emergency plans are crucial.</p>
+        </section>
+
+        <section id="it" class="section">
+            <h2>IT Domain – 5 Key Risks <a class="permalink" href="#it" aria-hidden="true">#</a></h2>
+            
+            <h3 id="cybersecurity">Cybersecurity Threats</h3>
+            <p>IT environments face risks such as malware, phishing, and data breaches. Without strong security measures, sensitive information can be stolen or compromised.</p>
+
+            <h3 id="data-loss">Data Loss</h3>
+            <p>Hardware failure, software errors, or improper backup procedures can lead to the loss of critical data. Regular backups and redundancy solutions are essential.</p>
+
+            <h3 id="ergonomic-it">Ergonomic Issues</h3>
+            <p>Long hours at a computer can lead to back pain, eye strain, and repetitive strain injuries. Proper seating, screen positioning, and regular breaks help prevent these problems.</p>
+
+            <h3 id="network-downtime">Network Downtime</h3>
+            <p>System outages caused by technical failures, cyberattacks, or configuration errors can severely disrupt operations. Monitoring and preventive maintenance reduce this risk.</p>
+
+            <h3 id="overheating">Electrical and Overheating Risks</h3>
+            <p>Servers, computers, and network equipment generate heat. Poor ventilation or overloaded circuits can cause overheating, fire hazards, or equipment failure.</p>
+        </section>
+
+        <section id="prevention" class="section">
+            <h2>Prevention <a class="permalink" href="#prevention" aria-hidden="true">#</a></h2>
+            <p><strong>Key strategies for workplace safety:</strong></p>
+            <ul>
+                <li><strong>Training:</strong> Ensure all employees receive proper safety training</li>
+                <li><strong>Personal Protective Equipment (PPE):</strong> Provide appropriate equipment for each role</li>
+                <li><strong>Regular Audits:</strong> Conduct periodic safety assessments</li>
+                <li><strong>Ergonomics:</strong> Optimize workstations and work procedures</li>
+                <li><strong>Emergency Plans:</strong> Develop and practice evacuation procedures</li>
+                <li><strong>Maintenance:</strong> Keep equipment in proper working condition</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Help Modal Popup -->
+    <div id="helpModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>How This Site Works</h2>
+            <p>This workplace safety guide presents 10 critical risks across two domains: <strong>Industrial</strong> and <strong>IT</strong>. Each risk includes a description of the hazard and recommendations for prevention.</p>
+            
+            <h3>How to Navigate:</h3>
+            <ul>
+                <li>Use the <strong>Contents menu</strong> on the left to jump to different sections</li>
+                <li>Click on any section heading to scroll directly to it</li>
+                <li>Read each risk description carefully</li>
+            </ul>
+
+            <h3>Interactive Exercise: Risk Identification</h3>
+            <p><strong>Scenario:</strong> A factory supervisor notices an employee working at a computer station, slouched over without proper back support. The workstation has multiple power strips daisy-chained together. In the industrial area next door, a machine with exposed moving parts is running without proper guards, and there's a strong chemical smell in the ventilation system.</p>
+            
+            <div class="exercise-box">
+                <p><strong>Your Challenge:</strong> Identify all 5 risks present in this scenario.</p>
+                <button id="revealAnswer" class="reveal-btn">Show Answer</button>
+                <div id="answerBox" class="answer-box hidden">
+                    <h4>Identified Risks:</h4>
+                    <ol>
+                        <li><strong>Ergonomic Strain (Industrial)</strong> - Heavy workload causing improper posture</li>
+                        <li><strong>Ergonomic Issues (IT)</strong> - Computer work with poor seating ergonomics</li>
+                        <li><strong>Electrical and Overheating Risks (IT)</strong> - Overloaded power strips can cause fire hazards</li>
+                        <li><strong>Mechanical Hazards (Industrial)</strong> - Unguarded machinery</li>
+                        <li><strong>Chemical Exposure (Industrial)</strong> - Strong chemical smell indicating poor ventilation</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Workplace Safety Guide</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
