@@ -73,7 +73,7 @@ const students = [
     role: "Développeur Java & Spigot",
     email: "the-agag@exemple.com",
     github: "https://github.com/THE-AGAG",
-    web: "risksAtWork/Students_Works/Lenglet Gaëtan",
+    web: "risksAtWork/Students_Works/Lenglet Gaëtan/Risk at Work.html",
     tech: ["Java", "Spigot", "Bukkit", "Maven", "Git"],
     bio: "Créateur de plugins / Mods Minecraft."
   },
