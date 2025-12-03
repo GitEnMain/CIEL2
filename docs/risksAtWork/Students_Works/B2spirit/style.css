@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #BC7BD6;
+}
+
+h1{color: #ffffff;}
+h2{color: #ffffff;}
+h3{color: #ffffff;}
+h4{color: #ffffff;}
+
+html, body {
+    cursor: url("img/pollution.png"), auto;
+}
+
+
+.cards-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px #a6cdff53;
+  background: #596c9c41;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.card .title {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.card .caption {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.title {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.caption {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
