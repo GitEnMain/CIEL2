@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Website for risks at work.css">
+  <title>The cork board for workplace risks</title>
+</head>
+
+<body>
+
+<div class="title-card">
+  <div class="title-pin"></div>
+  <h1>The cork board for workplace risks</h1>
+</div>
+
+<a href="help.html" class="help-button">
+    <div class="help-content">Help</div>
+</a>
+
+<a href="#" class="diag-button">
+    <div class="diag-content">Diagram</div>
+</a>
+
+<div class="cards-container">
+  <div class="card">
+    <div class="pin-blocker"></div>
+    <div class="card-content" data-type="elec">
+      <div class="card-image"><img class="img-elec" src="danger elec.png"></div>
+      <div class="card-body">
+        <div class="card-title"><h3>risk n°1:</h3></div>
+        <div class="card-excerpt"><p>Electricity</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="pin-blocker"></div>
+    <div class="card-content" data-type="fire">
+      <div class="card-image"><img class="img-fire" src="fire.png"></div>
+      <div class="card-body">
+        <div class="card-title"><h3>risk n°2:</h3></div>
+        <div class="card-excerpt"><p>Fire hazard</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="pin-blocker"></div>
+    <div class="card-content" data-type="chem">
+      <div class="card-image"><img class="img-chem" src="toxic.png"></div>
+      <div class="card-body">
+        <div class="card-title"><h3>risk n°3:</h3></div>
+        <div class="card-excerpt"><p>Chemical Hazard</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="pin-blocker"></div>
+    <div class="card-content" data-type="slip">
+      <div class="card-image"><img class="img-slip" src="falls.png"></div>
+      <div class="card-body">
+        <div class="card-title"><h3>risk n°4:</h3></div>
+        <div class="card-excerpt"><p>Slips, Trips and Falls</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="pin-blocker"></div>
+    <div class="card-content" data-type="cut">
+      <div class="card-image"><img class="img-cut" src="cut.jpg"></div>
+      <div class="card-body">
+        <div class="card-title"><h3>risk n°5:</h3></div>
+        <div class="card-excerpt"><p>Cuts</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="modal-close" class="close">&times;</span>
+    
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+
+    <img id="modal-img" src="" style="display: none; max-width: 100%; margin-top: 15px;">
+  </div>
+</div>
+
+<script src="Website for risks at work.js"></script>
+</body>
+</html>
