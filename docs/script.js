@@ -110,7 +110,8 @@ const students = [
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
     web: "composantElectronique/condensateur/condensateur.html",
-	raw: "",
+	raw: "risksAtWork/Students_Works/risk_at_work_Mamadou/risque.html
+",
     tech: ["sport", "manga", "serie"],
     bio: "Visca Barca"
   },
