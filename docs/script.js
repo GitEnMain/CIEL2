@@ -205,6 +205,11 @@ function cardTemplate(p){
       <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
       <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="currentColor" stroke-width="2"/>
     </svg> Web</a>` : '';
+   const raw = p.raw ? `<a class="btn" href="${sanitize(p.raw)}" title="Risk at works">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+      <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="currentColor" stroke-width="2"/>
+    </svg> RaW</a>` : '';
   
 
   return `
@@ -221,7 +226,7 @@ function cardTemplate(p){
 
       <div class="card-footer">
         <div class="btn-row space-between">${email} ${gh}</div>
-        <div class="btn-row center">${web}</div>
+        <div class="btn-row center">${web} ${raw}</div>
       </div>
     </article>`;
 }
