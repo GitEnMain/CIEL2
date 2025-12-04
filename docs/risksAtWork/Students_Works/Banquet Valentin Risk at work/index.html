@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Risks — What You Should Know</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Work Risks — What You Should Know</h1>
+
+  <!-- BOUTONS CENTRÉS -->
+  <div class="buttons-container">
+    <button class="domain-btn" data-target="office">Office / Computer Work</button>
+    <button class="domain-btn" data-target="garden">Garden / Outdoor Work</button>
+    <button class="domain-btn" data-target="construction">Construction Site</button>
+    <button class="domain-btn" data-target="maintenance">Maintenance / Dangerous</button>
+    <button class="domain-btn" data-target="cleaner">Cleaning</button>
+
+    <!-- Bouton help -->
+    <button class="help-btn" data-target="help">❓ Help</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- SECTION AIDE -->
+  <section id="help" class="job-section hidden">
+    <img src="images/help.jpg" class="img-help">
+    <h2>Help / How to use this site?</h2>
+    <p>Welcome to the help section. Here is how to navigate:</p>
+
+    <ul>
+      <li>The buttons at the top represent different types of professions.</li>
+      <li>Click on a button to see the risks and recommendations.</li>
+      <li>Each section contains an image, risks and safety advice.</li>
+    </ul>
+
+    <p>To return, click on the back button at the bottom.</p>
+  </section>
+
+  <!-- OFFICE -->
+  <section id="office" class="job-section hidden">
+    <img src="images/office-job.jpg" class="img-office">
+    <h2>Office / Computer Work</h2>
+
+    <p><strong>Risks:</strong></p>
+    <ul>
+      <li>Poor posture → musculoskeletal disorders (back, neck, wrists…)</li>
+      <li>Eye strain, fatigue</li>
+    </ul>
+
+    <p><strong>Recommendations:</strong></p>
+    <ul>
+      <li>Use ergonomic chair, set screen at correct height</li>
+      <li>Take regular breaks, stretch regularly</li>
+    </ul>
+  </section>
+
+  <!-- GARDEN -->
+  <section id="garden" class="job-section hidden">
+    <img src="images/garden-job.jpg" class="img-garden">
+    <h2>Garden / Outdoor Work</h2>
+
+    <p><strong>Possible Risks:</strong></p>
+    <ul>
+      <li>Slips, trips, unstable ground</li>
+      <li>Injuries from tools or materials</li>
+      <li>Exposure to weather: sun, rain, heat or cold</li>
+    </ul>
+
+    <p><strong>Recommendations:</strong></p>
+    <ul>
+      <li>Wear proper non-slip shoes, use suitable tools</li>
+      <li>Maintain tools regularly</li>
+      <li>Protect from sun, stay hydrated, wear suitable clothing</li>
+    </ul>
+  </section>
+
+  <!-- CONSTRUCTION -->
+  <section id="construction" class="job-section hidden">
+    <img src="images/construction-job.jpg" class="img-construction">
+    <h2>Construction Site</h2>
+
+    <p><strong>Risks:</strong></p>
+    <ul>
+      <li>Falls from height, slips</li>
+      <li>Injuries with heavy tools or materials</li>
+      <li>Noise, dust, environmental hazards</li>
+    </ul>
+
+    <p><strong>Recommendations:</strong></p>
+    <ul>
+      <li>Wear helmet, gloves, safety boots, reflective vest</li>
+      <li>Use hearing and eye protection</li>
+      <li>Follow site safety rules and signage</li>
+    </ul>
+  </section>
+
+  <!-- MAINTENANCE -->
+  <section id="maintenance" class="job-section hidden">
+    <img src="images/maintenance-job.jpg" class="img-maintenance">
+    <h2>Maintenance / Dangerous</h2>
+
+    <p><strong>Risks:</strong></p>
+    <ul>
+      <li>Accidents from machines</li>
+      <li>Noise, vibrations, dust</li>
+      <li>Chemicals or hazardous atmosphere depending on activity</li>
+    </ul>
+
+    <p><strong>Recommendations:</strong></p>
+    <ul>
+      <li>Wear appropriate protection: helmet, gloves, safety glasses, hearing protection</li>
+      <li>Follow machine safety procedures</li>
+      <li>Ensure proper ventilation, use masks if necessary</li>
+    </ul>
+  </section>
+
+  <!-- CLEANING -->
+  <section id="cleaner" class="job-section hidden">
+    <img src="images/cleaner-job.jpg" class="img-cleaner">
+    <h2>Cleaning</h2>
+
+    <p><strong>Risks:</strong></p>
+    <ul>
+      <li>Risk of back injuries</li>
+      <li>Slips if floor is wet or cluttered</li>
+      <li>Contact with chemicals or irritants</li>
+    </ul>
+
+    <p><strong>Recommendations:</strong></p>
+    <ul>
+      <li>Wear gloves, non-slip shoes</li>
+      <li>Ensure floor is safe, clean obstacles</li>
+      <li>Ventilate area if chemicals used</li>
+    </ul>
+  </section>
+
+  <!-- BOUTON RETOUR EN BAS -->
+  <div id="return-container" class="hidden">
+    <button id="return-btn" class="return-btn">⬅ Retour</button>
+  </div>
+
+</main>
+
+<!-- SCRIPT -->
+<script>
+  const buttons = document.querySelectorAll(".domain-btn");
+  const helpButton = document.querySelector(".help-btn");
+  const sections = document.querySelectorAll(".job-section");
+  const returnContainer = document.getElementById("return-container");
+  const returnBtn = document.getElementById("return-btn");
+
+  function hideAllSections() {
+    sections.forEach(sec => sec.classList.add("hidden"));
+    buttons.forEach(b => b.classList.remove("active"));
+    helpButton.classList.remove("active");
+  }
+
+  // Clic sur un bouton métier
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      hideAllSections();
+      const target = document.getElementById(btn.dataset.target);
+      target.classList.remove("hidden");
+      btn.classList.add("active");
+      returnContainer.classList.remove("hidden");
+      target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  // Clic sur HELP
+  helpButton.addEventListener("click", () => {
+    hideAllSections();
+    const target = document.getElementById("help");
+    target.classList.remove("hidden");
+    helpButton.classList.add("active");
+    returnContainer.classList.remove("hidden");
+    target.scrollIntoView({ behavior: "smooth" });
+  });
+
+  // Clic sur RETOUR
+  returnBtn.addEventListener("click", () => {
+    hideAllSections();
+    returnContainer.classList.add("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>
