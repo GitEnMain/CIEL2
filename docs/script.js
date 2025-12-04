@@ -56,6 +56,7 @@ const students = [
     email: "nigel.delajungle@cocotier.com",
     github: "https://github.com/GitEnMain",
     web: "composantElectronique/raspberry/raspberry.html",
+	raw: "https://fr.wikipedia.org/wiki/Albert_Einstein",
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
@@ -66,6 +67,7 @@ const students = [
     email: "cars60@gmail.com",
     github: "https://github.com/GitEnMain/CIEL2.git",
     web: "composantElectronique/resistance/resistance.html",
+	raw: "risksAtWork/Students_Works/EL HADDAD Mohamed/risks_works.html",
     tech: ["Automobile", "Porsche", "Boxe Anglaise"],
     bio: "gt3rs."
   },
@@ -76,6 +78,7 @@ const students = [
     email: "the-agag@exemple.com",
     github: "https://github.com/THE-AGAG",
     web: "composantElectronique/Processeur/Choix_site/choix.html",
+	raw: "risksAtWork/Students_Works/Lenglet Gaëtan/Risk at Work.html",
     tech: ["Java", "Spigot", "Bukkit", "Maven", "Git"],
     bio: "Créateur de plugins / Mods Minecraft."
   },
@@ -85,6 +88,7 @@ const students = [
     role: "Étudiant BTS CIEL",
     github: "https://github.com/B2spirit66",
     web: "composantElectronique/diode/index.html",
+	raw: "risksAtWork/Students_Works/B2spirit/index.html",
     tech: ["pentesting", "modder", "Docker"],
     bio: "want to do pentesting."
   },
@@ -95,6 +99,7 @@ const students = [
     email: "antonin.lespagnol@etud.u-picardie.fr",
     github: "https://github.com/antonin-upjv",
     web: "composantElectronique/SoC_Apple_M4/Apple_M4_index.html",
+	raw: "risksAtWork/Students_Works/Antonin/index.html",
     tech: ["🧀", "🥖", "🍷", "🍇"],
     bio: "Tout le monde peut cuisiner. Gusteau"
   },
@@ -105,6 +110,7 @@ const students = [
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
     web: "composantElectronique/condensateur/condensateur.html",
+	raw: "",
     tech: ["sport", "manga", "serie"],
     bio: "Visca Barca"
   },
@@ -114,7 +120,9 @@ const students = [
     role: "Étudiant BTS CIEL",
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
-	  web: "composantElectronique/DS1307/DS1307.html",
+	web: "composantElectronique/DS1307/DS1307.html",
+	raw: "risksAtWork/Students_Works/risksatwork artur catteau/index.html
+",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
@@ -125,7 +133,8 @@ const students = [
     email: "",
     github: "https://github.com/orzo12",
     tech: ["dessiner", "manga"],
-	  web: "composantElectronique/Buzzer/buzzer.html",
+	web: "composantElectronique/Buzzer/buzzer.html",
+	raw: "",
     bio: "j'aime DBZ"
   },
   {
@@ -135,8 +144,9 @@ const students = [
     email: "bryancramer51@gmail.com",
     github: "https://github.com/raizoFR",
     tech: ["DBZ", "dormir", "manger"],
+	web: "composantElectronique/capteur_de_distance/capteur.html",
+	raw: "",
     bio: "Veut bosser en devops.",
-	  web: "composantElectronique/capteur_de_distance/capteur.html",
   },
   {
     name: "Valentin Valentin760",
@@ -145,6 +155,7 @@ const students = [
     email: "valentin.banquet@sfr.fr",
     github: "https://github.com/Valentin760",
     web: "composantElectronique/Hacheur/hacheur_electronique.html",
+	raw: "risksAtWork/Students_Works/Banquet Valentin Risk at work/index.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Veut bosser en devops."
   },
@@ -155,8 +166,9 @@ const students = [
     email: "a.pottier2006@gmail.com",
     github: "https://github.com/aAdri1",
     tech: ["Python", "HTML", "Docker"],
-    bio: "Veut bosser en devops.",
     web: "composantElectronique/Potentiometre/potentiomettre.html",
+	raw: "risksAtWork/Students_Works/Adrien Pottier Risk at work/Risk_at_work.html",
+    bio: "Veut bosser en devops.",
   },
   {
     name: "Lucas zwakss1",
@@ -165,6 +177,7 @@ const students = [
     email: "",
     github: "https://github.com/zwakss1",
     web:"composantElectronique/transistor/transistor.html",
+	raw: "risksAtWork/Students_Works/Malheude Lucas RisksAtWork/Website for risks at work.html",
     tech: ["Python", "HTML", "Docker"],
     bio: "Master sur pokemon Unite."
   },
