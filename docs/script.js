@@ -34,7 +34,7 @@ const students = [
     email: "albert.einstein@groscerveau.com",
     github: "https://github.com/albert-einstein",
     web: "https://fr.wikipedia.org/wiki/Albert_Einstein",
-	raw: "https://fr.wikipedia.org/wiki/Albert_Einstein",
+	raw: "",
     tech: ["Physique quantique", "Relativité générale"],
     bio: "L’imagination est plus importante que le savoir."
   },
@@ -45,7 +45,7 @@ const students = [
     email: "alice.liddell@jolienana.com",
     github: "https://github.com/alice-liddell",
     web: "https://fr.wikipedia.org/wiki/Alice_Liddell",
-	raw: "https://fr.wikipedia.org/wiki/Albert_Einstein",
+	raw: "",
     tech: ["Rabbit Hole", "Wonderland", "Clock Searcher"],
     bio: "Curiouser and curiouser !"
   },
@@ -56,7 +56,7 @@ const students = [
     email: "nigel.delajungle@cocotier.com",
     github: "https://github.com/GitEnMain",
     web: "composantElectronique/raspberry/raspberry.html",
-	raw: "https://fr.wikipedia.org/wiki/Albert_Einstein",
+	raw: "",
     tech: ["Multilingue animalier", "Écologie & biologie", "Docker"],
     bio: "Smashing !"
   },
@@ -110,8 +110,7 @@ const students = [
     email: "mthiam@eduhdf.fr",
     github: "https://github.com/mams05",
     web: "composantElectronique/condensateur/condensateur.html",
-	raw: "risksAtWork/Students_Works/risk_at_work_Mamadou/risque.html
-",
+	raw: "risksAtWork/Students_Works/risk_at_work_Mamadou/risque.html",
     tech: ["sport", "manga", "serie"],
     bio: "Visca Barca"
   },
@@ -122,8 +121,7 @@ const students = [
     email: "acatteau2@eduhdf.fr",
     github: "https://github.com/Tutur9",
 	web: "composantElectronique/DS1307/DS1307.html",
-	raw: "risksAtWork/Students_Works/risksatwork artur catteau/index.html
-",
+	raw: "risksAtWork/Students_Works/risksatwork artur catteau/index.html",
     tech: ["Recherche", "d'", "Argent"],
     bio: "Recherche d'argent."
   },
