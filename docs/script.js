@@ -34,6 +34,7 @@ const students = [
     email: "albert.einstein@groscerveau.com",
     github: "https://github.com/albert-einstein",
     web: "https://fr.wikipedia.org/wiki/Albert_Einstein",
+	raw: "https://fr.wikipedia.org/wiki/Albert_Einstein",
     tech: ["Physique quantique", "Relativité générale"],
     bio: "L’imagination est plus importante que le savoir."
   },
@@ -44,6 +45,7 @@ const students = [
     email: "alice.liddell@jolienana.com",
     github: "https://github.com/alice-liddell",
     web: "https://fr.wikipedia.org/wiki/Alice_Liddell",
+	raw: "https://fr.wikipedia.org/wiki/Albert_Einstein",
     tech: ["Rabbit Hole", "Wonderland", "Clock Searcher"],
     bio: "Curiouser and curiouser !"
   },
