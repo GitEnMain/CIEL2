@@ -228,7 +228,7 @@ function cardTemplate(p){
 
       <div class="card-footer">
         <div class="btn-row space-between">${email} ${gh}</div>
-        <div class="btn-row center">${web} ${raw}</div>
+        <div class="btn-row space-between">${web} ${raw}</div>
       </div>
     </article>`;
 }
