@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workplace Risks</title>
+    <link rel="stylesheet" href="risque.css" />
+  </head>
+  <body>
+    <h1>Workplace Risks</h1>
+
+    <div class="nav">
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('help')">Help</button>
+    </div>
+
+    <div id="home" class="page active">
+      <p><strong>5 common situations and how to protect yourself:</strong></p>
+
+      <div class="situation">
+        <img src="img/office.jpeg" alt="Office" />
+        <div class="situation-content">
+          <h3>1. Office</h3>
+          <p class="risk"><strong>Risk:</strong> Tripping over cables</p>
+          <p class="solution">Protection: Organize cables, clear walkways</p>
+        </div>
+      </div>
+
+      <div class="situation">
+        <img src="img/computer.jpeg" alt="Computer" />
+        <div class="situation-content">
+          <h3>2. Computer</h3>
+          <p class="risk"><strong>Risk:</strong> Eye strain, back pain</p>
+          <p class="solution">
+            Protection: Regular breaks, good lighting, proper posture
+          </p>
+        </div>
+      </div>
+
+      <div class="situation">
+        <img src="img/garden.jpeg" alt="Garden" />
+        <div class="situation-content">
+          <h3>3. Garden</h3>
+          <p class="risk"><strong>Risk:</strong> Sunburn, sharp tools</p>
+          <p class="solution">Protection: Sunscreen, hat, gloves</p>
+        </div>
+      </div>
+
+      <div class="situation">
+        <img src="img/construction_site.jpeg" alt="Construction Site" />
+        <div class="situation-content">
+          <h3>4. Construction Site</h3>
+          <p class="risk"><strong>Risk:</strong> Falling objects</p>
+          <p class="solution">Protection: Wear a safety helmet</p>
+        </div>
+      </div>
+
+      <div class="situation">
+        <img src="img/factory.jpeg" alt="Factory" />
+        <div class="situation-content">
+          <h3>5. Factory</h3>
+          <p class="risk"><strong>Risk:</strong> Hands caught in machinery</p>
+          <p class="solution">
+            Protection: Never remove guards, use emergency stop
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="help" class="page">
+      <h2>How to use this site</h2>
+
+      <ul>
+        <li><strong>See risks:</strong> Click on "Home"</li>
+        <li><strong>See solutions:</strong> Read the text in green</li>
+        <li><strong>New risk?</strong> Contact your manager</li>
+      </ul>
+
+      <p style="margin-top: 30px; color: #666">
+        In case of emergency, contact emergency services immediately.
+      </p>
+    </div>
+
+    <script>
+      function showPage(page) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document.getElementById(page).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
