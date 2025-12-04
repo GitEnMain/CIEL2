@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- STYLE GÉNÉRAL --- */
+body {
+    font-family: 'Segoe UI'; 
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* --- COULEURS --- */
+:root {
+    --primary: #003366;    
+    --accent: #ff6600;     
+    --white: #ffffff;
+    --grey: #e9ecef;
+}
+
+/* --- MISE EN PAGE (Conteneur principal) --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centre le contenu */
+}
+
+.section-padding {
+    padding: 60px 0; /* Espacement vertical des sections */
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: var(--primary);
+}
+
+/* --- EN-TÊTE --- */
+header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none; /* Enlève les puces */
+    display: flex;
+    gap: 20px;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- BANNIÈRE --- */
+#entete {
+    /* Image de fond sombre */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://cdn.prod.website-files.com/66e8a630e2afe13daa81e158/6828294b47ba362ebd2e06db_guide-risque-travail.png');
+    height: 50vh; /* Prend la moitié de la hauteur de l'écran */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+#entete h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e65c00; /* Change de couleur au survol */
+}
+
+/* --- GRILLE DES CARTES (Risks) --- */
+.cards-grid {
+    display: grid;
+    /* Colonnes automatiques qui s'adaptent à l'écran */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Ombre douce */
+    text-align: center;
+    border-top: 5px solid var(--primary); /* Ligne colorée en haut de la carte */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* La carte  survol */
+    border-top-color: var(--accent);
+}
+
+/* --- STYLE DES IMAGES DANS LES CARTES --- */
+.card .icon {
+    margin-bottom: 15px;
+    display: block;
+    justify-content: center; /* Centre l'image */
+}
+
+.card .icon img {
+    width: 100%;  /* LARGEUR DE TES IMAGES */
+    height: 200px; /* HAUTEUR DE TES IMAGES */
+    object-fit: contain;
+    
+}
+
+.card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* --- FONDS --- */
+.bg-light {
+    background-color: var(--grey);
+}
+
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    header nav ul {
+        margin-top: 15px;
+    }
+    #entete h2 {
+        font-size: 2rem;
+    }
+}
